@@ -1,0 +1,1826 @@
+<!-- =============================================================================
+     COMPASS TITLE 19 CONSULTANTS - CONNECTICUT MEDICAID & TITLE 19 MEGA-FAQ HUB
+     File: connecticut-medicaid-faqs.html
+     Scoped Wrapper: html body .cmc-faqhub-scope
+     Compatible with: Elementor Native HTML Widget / WordPress (Post ID 2321, /faqs/)
+     Elementor Pro Submissions AJAX Bridge Included
+     Zero Emojis: 100% Inline SVG Icons
+     Zero CSS Leaks / 100% Resilient Isolation
+============================================================================= -->
+
+<style>
+/* =============================================================================
+   1. RESET & ISOLATION SCOPE
+============================================================================= */
+html body .cmc-faqhub-scope {
+  --cmc-navy: #0F243E;
+  --cmc-navy-light: #16365c;
+  --cmc-navy-dark: #071220;
+  --cmc-gold: #E87722;
+  --cmc-gold-hover: #C45811;
+  --cmc-gold-light: #fbbf24;
+  --cmc-gold-bg: #fffbeb;
+  --cmc-slate-900: #0f172a;
+  --cmc-slate-800: #1e293b;
+  --cmc-slate-700: #334155;
+  --cmc-slate-600: #475569;
+  --cmc-slate-500: #64748b;
+  --cmc-slate-300: #cbd5e1;
+  --cmc-slate-200: #e2e8f0;
+  --cmc-slate-100: #f1f5f9;
+  --cmc-slate-50: #f8fafc;
+  --cmc-white: #ffffff;
+  --cmc-emerald: #059669;
+  --cmc-emerald-light: #d1fae5;
+  --cmc-emerald-border: #6ee7b7;
+  --cmc-red: #dc2626;
+  --cmc-red-light: #fee2e2;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: var(--cmc-slate-800) !important;
+  background-color: var(--cmc-slate-50) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+}
+
+html body .cmc-faqhub-scope *,
+html body .cmc-faqhub-scope *::before,
+html body .cmc-faqhub-scope *::after {
+  box-sizing: border-box !important;
+}
+
+/* =============================================================================
+   2. HERO HEADER SECTION
+============================================================================= */
+html body .cmc-faqhub-scope .cmc-faq-hero {
+  background: linear-gradient(135deg, var(--cmc-navy-dark) 0%, var(--cmc-navy) 60%, var(--cmc-navy-light) 100%) !important;
+  color: var(--cmc-white) !important;
+  padding: 70px 24px 60px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  top: -40% !important;
+  right: -20% !important;
+  width: 600px !important;
+  height: 600px !important;
+  background: radial-gradient(circle, rgba(217, 119, 6, 0.15) 0%, transparent 70%) !important;
+  pointer-events: none !important;
+}
+
+html body .cmc-faqhub-scope .cmc-hero-container {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-hero-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 16px !important;
+  background: rgba(217, 119, 6, 0.2) !important;
+  border: 1px solid rgba(251, 191, 36, 0.4) !important;
+  border-radius: 9999px !important;
+  color: var(--cmc-gold-light) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  margin-bottom: 20px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-hero-h1 {
+  font-size: clamp(30px, 4.5vw, 46px) !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+  line-height: 1.2 !important;
+  margin: 0 0 16px 0 !important;
+  letter-spacing: -0.02em !important;
+}
+
+html body .cmc-faqhub-scope .cmc-hero-lead {
+  font-size: clamp(16px, 2vw, 19px) !important;
+  color: var(--cmc-slate-300) !important;
+  max-width: 780px !important;
+  margin: 0 auto 32px auto !important;
+  line-height: 1.6 !important;
+}
+
+/* Search Bar in Hero */
+html body .cmc-faqhub-scope .cmc-search-box-wrap {
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+}
+
+html body .cmc-faqhub-scope .cmc-search-input {
+  width: 100% !important;
+  padding: 16px 54px 16px 50px !important;
+  font-size: 16px !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  color: var(--cmc-slate-900) !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-search-input:focus {
+  border-color: var(--cmc-gold) !important;
+  background: var(--cmc-white) !important;
+  box-shadow: 0 12px 30px -5px rgba(217, 119, 6, 0.4) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-search-icon {
+  position: absolute !important;
+  left: 18px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: var(--cmc-slate-500) !important;
+  pointer-events: none !important;
+}
+
+html body .cmc-faqhub-scope .cmc-search-clear {
+  position: absolute !important;
+  right: 16px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: none !important;
+  border: none !important;
+  color: var(--cmc-slate-400) !important;
+  cursor: pointer !important;
+  padding: 6px !important;
+  display: none;
+}
+
+html body .cmc-faqhub-scope .cmc-search-clear:hover {
+  color: var(--cmc-slate-700) !important;
+}
+
+/* =============================================================================
+   3. CATEGORY PILLS BAR
+============================================================================= */
+html body .cmc-faqhub-scope .cmc-pills-bar {
+  background: var(--cmc-white) !important;
+  border-bottom: 1px solid var(--cmc-slate-200) !important;
+  padding: 16px 20px !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 20 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-pills-container {
+  max-width: 1160px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  overflow-x: auto !important;
+  padding-bottom: 4px !important;
+  scrollbar-width: thin !important;
+}
+
+html body .cmc-faqhub-scope .cmc-cat-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: var(--cmc-slate-600) !important;
+  background: var(--cmc-slate-100) !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  border-radius: 9999px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+html body .cmc-faqhub-scope .cmc-cat-pill:hover {
+  background: var(--cmc-slate-200) !important;
+  color: var(--cmc-navy) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-cat-pill.active {
+  background: var(--cmc-navy) !important;
+  color: var(--cmc-white) !important;
+  border-color: var(--cmc-navy) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-cat-pill.active svg {
+  stroke: var(--cmc-gold-light) !important;
+}
+
+/* =============================================================================
+   4. MAIN FAQ CONTENT & ACCORDIONS
+============================================================================= */
+html body .cmc-faqhub-scope .cmc-faq-main {
+  max-width: 1100px !important;
+  margin: 40px auto 70px auto !important;
+  padding: 0 20px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-active-search-status {
+  display: none;
+  background: var(--cmc-gold-bg) !important;
+  border: 1px solid var(--cmc-gold-light) !important;
+  color: var(--cmc-gold-hover) !important;
+  padding: 12px 20px !important;
+  border-radius: 8px !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  margin-bottom: 24px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-group {
+  background: var(--cmc-white) !important;
+  border-radius: 14px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  margin-bottom: 36px !important;
+  overflow: hidden !important;
+}
+
+html body .cmc-faqhub-scope .cmc-group-header {
+  background: var(--cmc-slate-50) !important;
+  border-bottom: 1px solid var(--cmc-slate-200) !important;
+  padding: 20px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-group-icon {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 10px !important;
+  background: rgba(15, 36, 62, 0.08) !important;
+  color: var(--cmc-navy) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-group-title {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  margin: 0 0 3px 0 !important;
+  letter-spacing: -0.01em !important;
+}
+
+html body .cmc-faqhub-scope .cmc-group-subtitle {
+  font-size: 13.5px !important;
+  color: var(--cmc-slate-500) !important;
+  margin: 0 !important;
+}
+
+/* FAQ Accordion Item */
+html body .cmc-faqhub-scope .cmc-faq-item {
+  border-bottom: 1px solid var(--cmc-slate-200) !important;
+  transition: background-color 0.15s ease !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-item:last-child {
+  border-bottom: none !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-trigger {
+  width: 100% !important;
+  padding: 18px 24px !important;
+  background: transparent !important;
+  border: none !important;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  cursor: pointer !important;
+  outline: none !important;
+  font-family: inherit !important;
+  transition: background 0.2s ease !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-trigger:hover {
+  background: var(--cmc-slate-50) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-trigger[aria-expanded="true"] {
+  background: #f8fafc !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-q-text {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-navy) !important;
+  line-height: 1.45 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-num {
+  color: var(--cmc-gold) !important;
+  margin-right: 4px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-icon-wrap {
+  flex-shrink: 0 !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: var(--cmc-slate-100) !important;
+  color: var(--cmc-slate-600) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-trigger[aria-expanded="true"] .cmc-faq-icon-wrap {
+  transform: rotate(180deg) !important;
+  background: var(--cmc-navy) !important;
+  color: var(--cmc-white) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  background: var(--cmc-white) !important;
+}
+html body .cmc-faqhub-scope .cmc-faq-body.cmc-open {
+  max-height: 2500px !important;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html body .cmc-faqhub-scope .cmc-faq-content {
+  padding: 10px 24px 22px 24px !important;
+  color: var(--cmc-slate-700) !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-faq-content p {
+  margin: 0 !important;
+}
+
+/* =============================================================================
+   5. EMERGENCY DEADLINE TRIAGE BANNER
+============================================================================= */
+html body .cmc-faqhub-scope .cmc-emergency-banner {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%) !important;
+  color: var(--cmc-white) !important;
+  border-radius: 14px !important;
+  padding: 24px 30px !important;
+  margin-bottom: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 24px !important;
+  box-shadow: 0 10px 25px -5px rgba(185, 28, 28, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-faqhub-scope .cmc-emergency-banner {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 20px !important;
+  }
+}
+
+html body .cmc-faqhub-scope .cmc-banner-text-wrap {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 16px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-banner-icon {
+  flex-shrink: 0 !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  padding: 10px !important;
+  border-radius: 10px !important;
+  color: var(--cmc-white) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-banner-h3 {
+  margin: 0 0 4px 0 !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-banner-p {
+  margin: 0 !important;
+  font-size: 14px !important;
+  color: #fecaca !important;
+  line-height: 1.5 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-banner-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 22px !important;
+  background: var(--cmc-white) !important;
+  color: #991b1b !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: transform 0.15s ease, background 0.15s ease !important;
+  flex-shrink: 0 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-banner-btn:hover {
+  background: #fef2f2 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* =============================================================================
+   6. CONTACT & CASE CONSULTATION INTAKE BRIDGE
+============================================================================= */
+html body .cmc-faqhub-scope .cmc-intake-section {
+  background: var(--cmc-white) !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  border-radius: 16px !important;
+  padding: 40px !important;
+  margin-bottom: 40px !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-faqhub-scope .cmc-intake-section {
+    padding: 24px 18px !important;
+  }
+}
+
+html body .cmc-faqhub-scope .cmc-intake-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1.2fr !important;
+  gap: 40px !important;
+  align-items: center !important;
+}
+
+@media (max-width: 900px) {
+  html body .cmc-faqhub-scope .cmc-intake-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+  }
+}
+
+html body .cmc-faqhub-scope .cmc-intake-info h3 {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  line-height: 1.25 !important;
+  margin: 0 0 12px 0 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-intake-info p {
+  font-size: 15px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 24px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-contact-card {
+  background: var(--cmc-slate-50) !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  border-radius: 10px !important;
+  padding: 16px 20px !important;
+  margin-bottom: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-contact-card-icon {
+  color: var(--cmc-gold) !important;
+  flex-shrink: 0 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-contact-card-text {
+  font-size: 14px !important;
+  color: var(--cmc-slate-700) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-contact-card-text strong {
+  color: var(--cmc-navy) !important;
+  display: block !important;
+}
+
+/* Form elements */
+html body .cmc-faqhub-scope .cmc-form-group {
+  margin-bottom: 16px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-form-row {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 14px !important;
+}
+
+@media (max-width: 500px) {
+  html body .cmc-faqhub-scope .cmc-form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-faqhub-scope .cmc-label {
+  display: block !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: var(--cmc-slate-700) !important;
+  margin-bottom: 6px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-input,
+html body .cmc-faqhub-scope .cmc-select,
+html body .cmc-faqhub-scope .cmc-textarea {
+  width: 100% !important;
+  padding: 11px 14px !important;
+  font-size: 14.5px !important;
+  border: 1px solid var(--cmc-slate-300) !important;
+  border-radius: 8px !important;
+  background: var(--cmc-white) !important;
+  color: var(--cmc-slate-800) !important;
+  outline: none !important;
+  transition: border-color 0.15s ease !important;
+}
+
+html body .cmc-faqhub-scope .cmc-input:focus,
+html body .cmc-faqhub-scope .cmc-select:focus,
+html body .cmc-faqhub-scope .cmc-textarea:focus {
+  border-color: var(--cmc-gold) !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-submit-btn {
+  width: 100% !important;
+  padding: 14px 20px !important;
+  background: var(--cmc-gold) !important;
+  color: var(--cmc-white) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  transition: background 0.15s ease, transform 0.15s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+html body .cmc-faqhub-scope .cmc-submit-btn:hover {
+  background: var(--cmc-gold-hover) !important;
+  transform: translateY(-1px) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-form-msg {
+  display: none;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  margin-top: 14px !important;
+  text-align: center !important;
+}
+
+html body .cmc-faqhub-scope .cmc-form-msg.success {
+  display: block !important;
+  background: var(--cmc-emerald-light) !important;
+  color: var(--cmc-emerald) !important;
+  border: 1px solid var(--cmc-emerald-border) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-form-msg.error {
+  display: block !important;
+  background: var(--cmc-red-light) !important;
+  color: var(--cmc-red) !important;
+  border: 1px solid #fca5a5 !important;
+}
+
+/* =============================================================================
+   7. STATUTORY & COMPLIANCE FOOTER DISCLAIMER
+============================================================================= */
+html body .cmc-faqhub-scope .cmc-disclaimer-box {
+  background: var(--cmc-white) !important;
+  border-left: 4px solid var(--cmc-gold) !important;
+  border-radius: 8px !important;
+  padding: 24px 28px !important;
+  border-top: 1px solid var(--cmc-slate-200) !important;
+  border-right: 1px solid var(--cmc-slate-200) !important;
+  border-bottom: 1px solid var(--cmc-slate-200) !important;
+  font-size: 13.5px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.65 !important;
+}
+
+html body .cmc-faqhub-scope .cmc-disclaimer-box strong {
+  color: var(--cmc-navy) !important;
+}
+
+html body .cmc-faqhub-scope .cmc-audit-meta {
+  margin-top: 16px !important;
+  padding-top: 14px !important;
+  border-top: 1px dashed var(--cmc-slate-200) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  font-size: 12.5px !important;
+  color: var(--cmc-slate-500) !important;
+}
+
+
+/* ==========================================================================
+   PERFECT SELECT DROPDOWN RESET (Full Text Visibility, Centered, Crisp Chevron)
+   ========================================================================== */
+html body select,
+html body select.cmc-select,
+html body select.cmc-input-field,
+html body select.cmc-input,
+html body [class*="scope"] select,
+html body [class*="scope"] .cmc-select,
+html body [class*="scope"] .cmc-input-field {
+  display: block !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  line-height: 50px !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px 16px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 44px 0 16px !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body select::-ms-expand, html body [class*="scope"] select::-ms-expand { display: none !important; }
+
+html body [class*="scope"] select:focus,
+html body select:focus {
+  border-color: #E87722 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body select option,
+html body [class*="scope"] select option {
+  padding: 10px 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+html body select option[disabled],
+html body [class*="scope"] select option[disabled] {
+  color: #94a3b8 !important;
+}
+
+/* Ensure label SVGs never collide with text */
+html body label svg,
+html body .cmc-label svg {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+/* =============================================================================
+   STANDARDIZED BREADCRUMBS (Matches About Compass Page)
+============================================================================= */
+.cmc-breadcrumbs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  margin-bottom: 22px !important;
+  flex-wrap: wrap !important;
+}
+
+.cmc-breadcrumbs a {
+  color: #cbd5e1 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.cmc-breadcrumbs a:hover {
+  color: #fbbf24 !important;
+}
+
+.cmc-breadcrumbs svg {
+  flex-shrink: 0 !important;
+  stroke: #94a3b8 !important;
+}
+
+.cmc-breadcrumbs span.current {
+  color: #fbbf24 !important;
+  font-weight: 600 !important;
+}
+</style>
+
+<div class="cmc-faqhub-scope">
+
+  <!-- HERO SECTION -->
+  <header class="cmc-faq-hero">
+    <div class="cmc-hero-container">
+        <!-- Standardized Breadcrumbs (Matches About Us Page) -->
+        <nav class="cmc-breadcrumbs" aria-label="Breadcrumb" style="justify-content:center !important;margin-bottom:18px !important;">
+          <a href="/">Home</a>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <a href="/website-resources-library/">Education Center</a>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <span class="current">Medicaid FAQs</span>
+        </nav>
+      <div class="cmc-hero-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Connecticut Medicaid & Title 19 Knowledge Hub
+      </div>
+      <h1 class="cmc-hero-h1">Connecticut Medicaid & Title 19 Frequently Asked Questions</h1>
+      <p class="cmc-hero-lead">
+        Plain-language answers to 50 critical questions regarding HUSKY C, 60-month lookback audits, nursing home Long-Term Services & Supports (LTSS), home-care waivers, spousal assets, and DSS verification notices.
+      </p>
+
+      <!-- Live Search Box -->
+      <div class="cmc-search-box-wrap">
+        <svg class="cmc-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="cmc-faq-search" class="cmc-search-input" placeholder="Search questions (e.g., lookback, home equity, W-1348, spend-down)..." aria-label="Search FAQ questions">
+        <button type="button" id="cmc-search-clear" class="cmc-search-clear" aria-label="Clear search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CATEGORY PILLS BAR -->
+  <nav class="cmc-pills-bar" aria-label="FAQ Topics">
+    <div class="cmc-pills-container">
+      <button type="button" class="cmc-cat-pill active" data-filter="all"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>All Questions (50)</button><button type="button" class="cmc-cat-pill" data-filter="medicaid-basics"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg>Medicaid, Title 19 & HUSKY C (6)</button><button type="button" class="cmc-cat-pill" data-filter="nursing-home-ltss"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3M9 9h1M9 13h1M9 17h1"/></svg>Nursing Home Medicaid & LTSS (8)</button><button type="button" class="cmc-cat-pill" data-filter="assets-home-spouses"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Homes, Assets, Spousal Protections & Spend-Down (10)</button><button type="button" class="cmc-cat-pill" data-filter="hcbs-waivers"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Home & Community-Based Waivers (HCBS) (6)</button><button type="button" class="cmc-cat-pill" data-filter="applications-verifications"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Applications, DSS Verifications & Pending Cases (7)</button><button type="button" class="cmc-cat-pill" data-filter="renewals-redeterminations"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>Annual Renewals & Redeterminations (5)</button><button type="button" class="cmc-cat-pill" data-filter="working-with-compass"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 8v8"/></svg>Working With Compass & Professional Boundaries (8)</button>
+    </div>
+  </nav>
+
+  <!-- MAIN FAQ ACCORDIONS -->
+  <main class="cmc-faq-main">
+    
+    <!-- Emergency Banner -->
+    <div class="cmc-emergency-banner">
+      <div class="cmc-banner-text-wrap">
+        <div class="cmc-banner-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div>
+          <h3 class="cmc-banner-h3">Facing an Active 10-Day DSS Verification Notice (Form W-1348)?</h3>
+          <p class="cmc-banner-p">Do not let administrative deadlines expire. Failure to respond or request Good Cause will cause immediate application denial. Our former DSS eligibility specialists triage active deadlines daily.</p>
+        </div>
+      </div>
+      <a href="tel:8608130020" class="cmc-banner-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 860-813-0020
+      </a>
+    </div>
+
+    <!-- Active Search Results Status -->
+    <div id="cmc-search-status" class="cmc-active-search-status"></div>
+
+    <!-- Accordion Groups -->
+    <div id="cmc-faq-groups-wrap">
+      
+      <section class="cmc-faq-group" id="medicaid-basics" data-group-category="medicaid-basics">
+        <div class="cmc-group-header">
+          <div class="cmc-group-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10"/></svg></div>
+          <div>
+            <h2 class="cmc-group-title">Medicaid, Title 19 & HUSKY C</h2>
+            <p class="cmc-group-subtitle">Questions and procedural guidance for Connecticut families and providers.</p>
+          </div>
+        </div>
+        <div class="cmc-faq-list">
+          
+          <div class="cmc-faq-item" data-category="medicaid-basics">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-1">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q1.</span> What is Title 19 in Connecticut?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-1" role="region" aria-labelledby="faq-btn-1">
+              <div class="cmc-faq-content">
+                <p>Title XIX of the Social Security Act is the federal foundation for the Medicaid program. In Connecticut, residents, healthcare providers, and social workers commonly use the term 'Title 19' interchangeably with Medicaid, specifically when discussing long-term institutional care and Home and Community-Based Services (HCBS).</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="medicaid-basics">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-2">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q2.</span> Is Title 19 the exact same thing as Medicaid?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-2" role="region" aria-labelledby="faq-btn-2">
+              <div class="cmc-faq-content">
+                <p>Yes. Title XIX establishes federal Medicaid authorization, while Connecticut administers the benefit locally under the umbrella of HUSKY Health. When people in Connecticut say they need 'Title 19 assistance,' they are referring to Medicaid coverage administered by the Connecticut Department of Social Services (DSS).</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="medicaid-basics">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-3">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q3.</span> What is HUSKY C in Connecticut?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-3" role="region" aria-labelledby="faq-btn-3">
+              <div class="cmc-faq-content">
+                <p>HUSKY C is Connecticut's dedicated Medicaid category for individuals aged 65 and older, individuals who are blind, and individuals with certified qualifying disabilities. It covers comprehensive healthcare services and includes Long-Term Services and Supports (LTSS) for institutional nursing home care or home-based waiver care.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="medicaid-basics">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-4">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q4.</span> Is HUSKY C only available to residents in nursing homes?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-4" role="region" aria-labelledby="faq-btn-4">
+              <div class="cmc-faq-content">
+                <p>No. While HUSKY C covers skilled nursing home residency, it also funds Long-Term Services & Supports for seniors living at home or in certified residential settings through <a href="/connecticut-medicaid-waivers-hcbs/" style="color:#E87722;font-weight:600;text-decoration:underline;">Connecticut Home Care Program for Elders (CHCPE)</a> waivers and personal care assistance programs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="medicaid-basics">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-5">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q5.</span> Does Compass Title19 Consultants handle every HUSKY program?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-5" role="region" aria-labelledby="faq-btn-5">
+              <div class="cmc-faq-content">
+                <p>Compass specializes specifically in HUSKY C, institutional Long-Term Services & Supports (LTSS), nursing home Medicaid, and Home & Community-Based Services (HCBS). We do not handle standard HUSKY A (family) or HUSKY D (expanded Medicaid for low-income non-disabled adults under 65) applications.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="medicaid-basics">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-6">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q6.</span> Can someone be enrolled in both Medicare and Medicaid simultaneously?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-6" role="region" aria-labelledby="faq-btn-6">
+              <div class="cmc-faq-content">
+                <p>Yes. Individuals enrolled in both are known as 'dual-eligible.' Medicare serves as primary payer for acute care, physician visits, and brief rehabilitation, while Connecticut Medicaid (HUSKY C) acts as secondary payer and covers custodial nursing care and long-term personal assistance that Medicare excludes entirely.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cmc-faq-group" id="nursing-home-ltss" data-group-category="nursing-home-ltss">
+        <div class="cmc-group-header">
+          <div class="cmc-group-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3M9 9h1M9 13h1M9 17h1"/></svg></div>
+          <div>
+            <h2 class="cmc-group-title">Nursing Home Medicaid & LTSS</h2>
+            <p class="cmc-group-subtitle">Questions and procedural guidance for Connecticut families and providers.</p>
+          </div>
+        </div>
+        <div class="cmc-faq-list">
+          
+          <div class="cmc-faq-item" data-category="nursing-home-ltss">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-7">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q7.</span> Does Medicare pay for long-term skilled nursing home care?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-7" role="region" aria-labelledby="faq-btn-7">
+              <div class="cmc-faq-content">
+                <p>No. Medicare covers only limited, short-term skilled rehabilitative care (up to 100 days following a qualifying 3-day inpatient hospital admission, with substantial copays after day 20). Medicare never pays for indefinite custodial or nursing home care; Medicaid (Title 19) is the primary public payer for ongoing long-term care.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="nursing-home-ltss">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-8">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q8.</span> What does Connecticut Medicaid LTSS encompass?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-8" role="region" aria-labelledby="faq-btn-8">
+              <div class="cmc-faq-content">
+                <p>LTSS stands for Long-Term Services & Supports. In Connecticut, LTSS encompasses around-the-clock skilled nursing facility care as well as intensive community alternatives such as adult day health, home health aides, chore assistance, and care coordination under specialized Medicaid waiver programs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="nursing-home-ltss">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-9">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q9.</span> When is the optimal time for a family to begin Medicaid planning?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-9" role="region" aria-labelledby="faq-btn-9">
+              <div class="cmc-faq-content">
+                <p>The ideal time is well before an acute hospitalization or imminent discharge crisis occurs. Early planning gives families the runway to organize multi-year financial statements, audit asset transfers, safeguard the community spouse, and avoid catastrophic out-of-pocket private-pay burn rates ($15,000–$18,000/month).</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="nursing-home-ltss">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-10">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q10.</span> How does an applicant submit a Connecticut Medicaid LTSS application?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-10" role="region" aria-labelledby="faq-btn-10">
+              <div class="cmc-faq-content">
+                <p>Applications are filed with the Connecticut DSS Long-Term Services & Supports Processing Centers via <a href="/connecticut-title-19-help/" style="color:#E87722;font-weight:600;text-decoration:underline;">Form W-1LTSS</a>, digital submission through the ConneCT portal, or secure electronic transmission. The filing package requires exhaustive documentation of identity, citizenship, income, and five years of financial history.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="nursing-home-ltss">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-11">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q11.</span> Does Connecticut DSS review 5 full years of finances for nursing home applicants?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-11" role="region" aria-labelledby="faq-btn-11">
+              <div class="cmc-faq-content">
+                <p>Yes. Under federal and Connecticut statutes, DSS enforces a strict 60-month (5-year) lookback period for all institutional Medicaid applicants. DSS caseworkers audit all bank accounts, credit unions, investment portfolios, real estate deeds, and asset movements occurring during the 60 months prior to the baseline application date.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="nursing-home-ltss">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-12">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q12.</span> Why does Connecticut DSS demand complete bank statements going back 60 months?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-12" role="region" aria-labelledby="faq-btn-12">
+              <div class="cmc-faq-content">
+                <p>DSS is statutorily mandated to verify that the applicant did not transfer, gift, or surrender assets for less than fair market value to artificially qualify for public assistance. Routine requests for 60 months of statements do not imply wrongdoing; they are standard statutory requirements for every LTSS applicant.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="nursing-home-ltss">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-13">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q13.</span> What happens if DSS identifies an unexplained withdrawal, transfer, or cash check?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-13" role="region" aria-labelledby="faq-btn-13">
+              <div class="cmc-faq-content">
+                <p>DSS will issue <a href="/existing-medicaid-application-help-connecticut/" style="color:#E87722;font-weight:600;text-decoration:underline;">Form W-1348 (Verification We Need)</a> requesting verified receipts, canceled checks, or formal proof that the funds were expended solely for the applicant's benefit at fair market value. Unsubstantiated withdrawals may be presumed to be uncompensated gifts, triggering penalty periods.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="nursing-home-ltss">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-14">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q14.</span> Can Compass guarantee that my Medicaid application will be approved?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-14" role="region" aria-labelledby="faq-btn-14">
+              <div class="cmc-faq-content">
+                <p>No. By law, only the Connecticut Department of Social Services possesses the legal authority to grant eligibility. Compass provides forensic document auditing, administrative application structuring, and rapid verification response, but no consultant can legally guarantee an approval or adjudication date.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cmc-faq-group" id="assets-home-spouses" data-group-category="assets-home-spouses">
+        <div class="cmc-group-header">
+          <div class="cmc-group-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div>
+            <h2 class="cmc-group-title">Homes, Assets, Spousal Protections & Spend-Down</h2>
+            <p class="cmc-group-subtitle">Questions and procedural guidance for Connecticut families and providers.</p>
+          </div>
+        </div>
+        <div class="cmc-faq-list">
+          
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-15">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q15.</span> Can I own a home in Connecticut and still qualify for Title 19 Medicaid?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-15" role="region" aria-labelledby="faq-btn-15">
+              <div class="cmc-faq-content">
+                <p>Yes. A primary residence is generally considered an exempt asset if the applicant's spouse, a minor child, or a blind/disabled child resides in the property, or if the single applicant intends to return home and equity does not exceed Connecticut's statutory home equity threshold ($1,130,000 for 2026).</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-16">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q16.</span> Does Connecticut Medicaid take ownership of our home when an application is filed?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-16" role="region" aria-labelledby="faq-btn-16">
+              <div class="cmc-faq-content">
+                <p>No. DSS never seizes title upon application submission. However, following the recipient's death, the State may assert statutory Estate Recovery claims against the probate estate unless protected by surviving spouse rights, adult caregiver child exceptions, or other statutory exemptions.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-17">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q17.</span> What happens when one spouse enters a nursing home while the other remains at home?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-17" role="region" aria-labelledby="faq-btn-17">
+              <div class="cmc-faq-content">
+                <p>Federal Spousal Impoverishment provisions protect the healthy spouse (known as the 'Community Spouse'). The community spouse is entitled to retain a Community Spouse Resource Allowance (CSRA) and may keep a Minimum Monthly Maintenance Needs Allowance (MMMNA) from the institutionalized spouse's income.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-18">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q18.</span> Does the community spouse have to spend down all assets and become impoverished?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-18" role="region" aria-labelledby="faq-btn-18">
+              <div class="cmc-faq-content">
+                <p>Absolutely not. The law is designed specifically to prevent spousal impoverishment. Depending on total countable assets on the 'date of continuous institutionalization,' the community spouse can retain up to the statutory maximum CSRA, plus the primary home, one motor vehicle, and essential personal belongings.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-19">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q19.</span> Should an applicant gift or deed their house to adult children before applying?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-19" role="region" aria-labelledby="faq-btn-19">
+              <div class="cmc-faq-content">
+                <p>No. Deeding real estate or transferring money without fair market compensation during the 60-month lookback period triggers severe transfer penalty periods during which Medicaid refuses to pay nursing home costs. Families should never transfer deeds without qualified elder law advice.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-20">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q20.</span> What is a Medicaid transfer penalty in Connecticut?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-20" role="region" aria-labelledby="faq-btn-20">
+              <div class="cmc-faq-content">
+                <p>When assets are gifted or transferred for less than fair market value within 60 months, DSS divides the total uncompensated value by the State's average monthly private nursing home rate. The result represents the exact number of months Medicaid will deny benefits, starting when the applicant is otherwise eligible.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-21">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q21.</span> What is 'Patient Liability' or Applied Income?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-21" role="region" aria-labelledby="faq-btn-21">
+              <div class="cmc-faq-content">
+                <p>Once approved for institutional Medicaid, the resident cannot keep their entire monthly pension or Social Security. Instead, after deducting a $75 personal needs allowance and permitted spousal income diversions, the remaining monthly income must be paid directly to the nursing home as 'applied income.'</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-22">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q22.</span> What is a Connecticut HUSKY C Medical Spend-Down?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-22" role="region" aria-labelledby="faq-btn-22">
+              <div class="cmc-faq-content">
+                <p>If an individual in the community has income exceeding the strict HUSKY C medically needy income limit, DSS establishes a spend-down budget period (usually 6 months). When the applicant incurs qualifying medical bills equal to the excess income difference, Medicaid activates for the remainder of the period.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-23">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q23.</span> Does a 'spend-down' mean our family must spend every dollar until broke?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-23" role="region" aria-labelledby="faq-btn-23">
+              <div class="cmc-faq-content">
+                <p>No. A 'medical spend-down' refers strictly to offsetting excess monthly income against incurred healthcare bills. Permitted asset spend-down, on the other hand, allows families to pay off legitimate debts, purchase irrevocable burial trusts, or make necessary home modifications without gifting penalties.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="assets-home-spouses">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-24">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q24.</span> Where can families find updated Connecticut Medicaid financial limits?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-24" role="region" aria-labelledby="faq-btn-24">
+              <div class="cmc-faq-content">
+                <p>Because asset ceilings ($1,600 for single individuals), spousal CSRA caps, MMMNA standards, and home equity limits are updated annually by DSS and federal CMS, families should always rely on current official DSS publications or professional consultation rather than outdated online articles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cmc-faq-group" id="hcbs-waivers" data-group-category="hcbs-waivers">
+        <div class="cmc-group-header">
+          <div class="cmc-group-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div>
+            <h2 class="cmc-group-title">Home & Community-Based Waivers (HCBS)</h2>
+            <p class="cmc-group-subtitle">Questions and procedural guidance for Connecticut families and providers.</p>
+          </div>
+        </div>
+        <div class="cmc-faq-list">
+          
+          <div class="cmc-faq-item" data-category="hcbs-waivers">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-25">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q25.</span> Can Medicaid help an elderly individual remain at home instead of entering a facility?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-25" role="region" aria-labelledby="faq-btn-25">
+              <div class="cmc-faq-content">
+                <p>Yes. Connecticut operates robust Home and Community-Based Services (HCBS) programs, primarily the <a href="/connecticut-medicaid-waivers-hcbs/" style="color:#E87722;font-weight:600;text-decoration:underline;">Connecticut Home Care Program for Elders (CHCPE)</a>, which funds home care aides, adult day care, emergency alert response buttons, home-delivered meals, and home modifications.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="hcbs-waivers">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-26">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q26.</span> What is the meaning of HCBS?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-26" role="region" aria-labelledby="faq-btn-26">
+              <div class="cmc-faq-content">
+                <p>HCBS stands for Home and Community-Based Services. These federal and state waiver programs provide targeted medical, personal, and chore assistance directly inside the beneficiary's home or assisted living facility, preventing premature nursing home placement.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="hcbs-waivers">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-27">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q27.</span> What is a Connecticut Medicaid waiver?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-27" role="region" aria-labelledby="faq-btn-27">
+              <div class="cmc-faq-content">
+                <p>Under Section 1915(c) of the Social Security Act, the federal government 'waives' standard statutory institutional rules, permitting Connecticut to use Medicaid dollars to fund long-term care services in domestic homes and community settings.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="hcbs-waivers">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-28">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q28.</span> Does financial qualification guarantee immediate enrollment in a waiver?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-28" role="region" aria-labelledby="faq-btn-28">
+              <div class="cmc-faq-content">
+                <p>No. Waiver enrollment requires both financial eligibility and clinical functional assessment. An applicant must demonstrate a verified need for assistance with Activities of Daily Living (ADLs) such as bathing, dressing, or mobility, conducted through an in-person assessment by a designated Access Agency.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="hcbs-waivers">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-29">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q29.</span> Can Compass determine whether an applicant is clinically eligible for a waiver?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-29" role="region" aria-labelledby="faq-btn-29">
+              <div class="cmc-faq-content">
+                <p>No. Clinical determinations are conducted exclusively by Connecticut DSS medical review teams and regional Access Agencies (such as CCC, SWCAA, or AOASCC). Compass prepares and manages the complex financial and administrative application to ensure financial approval coincides with clinical sign-off.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="hcbs-waivers">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-30">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q30.</span> Is Compass Title19 Consultants a licensed home health or staffing agency?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-30" role="region" aria-labelledby="faq-btn-30">
+              <div class="cmc-faq-content">
+                <p>No. Compass does not employ caregivers, CNAs, or nurses, nor do we provide direct hands-on medical care. We are an independent, non-attorney Medicaid eligibility consulting and family care management firm dedicated to securing public coverage and coordinating appropriate services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cmc-faq-group" id="applications-verifications" data-group-category="applications-verifications">
+        <div class="cmc-group-header">
+          <div class="cmc-group-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <div>
+            <h2 class="cmc-group-title">Applications, DSS Verifications & Pending Cases</h2>
+            <p class="cmc-group-subtitle">Questions and procedural guidance for Connecticut families and providers.</p>
+          </div>
+        </div>
+        <div class="cmc-faq-list">
+          
+          <div class="cmc-faq-item" data-category="applications-verifications">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-31">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q31.</span> What specific documents does DSS request during a Medicaid LTSS application?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-31" role="region" aria-labelledby="faq-btn-31">
+              <div class="cmc-faq-content">
+                <p>DSS requires 60 continuous months of bank statements for all accounts, verification of gross pension and Social Security amounts, health insurance premium statements, real estate deeds and tax bills, life insurance surrender values, vehicle titles, prepaid burial contracts, and photo identification.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="applications-verifications">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-32">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q32.</span> What is Form W-1348 (Proof We Need)?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-32" role="region" aria-labelledby="faq-btn-32">
+              <div class="cmc-faq-content">
+                <p>Form W-1348 is DSS's formal verification demand notice. It outlines precise missing documents, sets a strict 10-day deadline, and warns that failure to provide full verification will result in immediate application denial. Prompt, complete responses are mandatory.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="applications-verifications">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-33">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q33.</span> What if an applicant cannot obtain the exact historical document DSS requested?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-33" role="region" aria-labelledby="faq-btn-33">
+              <div class="cmc-faq-content">
+                <p>Under DSS Uniform Policy Manual rules, if an applicant makes good-faith efforts to obtain third-party records (e.g., from closed banks or defunct insurers) but cannot obtain them, the caseworker is required to accept collateral statements or provide administrative assistance. Good Cause extensions must be formally requested before the deadline.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="applications-verifications">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-34">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q34.</span> Can Compass step in if an application was already submitted and is now delayed?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-34" role="region" aria-labelledby="faq-btn-34">
+              <div class="cmc-faq-content">
+                <p>Yes. A significant portion of our work involves case triage: stepping into pending applications that have stalled, organizing massive document backlogs, rectifying conflicting financial figures, and liaising directly with DSS supervisors to get the case back on track.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="applications-verifications">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-35">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q35.</span> Should a family file a brand new application if their pending case seems stuck?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-35" role="region" aria-labelledby="faq-btn-35">
+              <div class="cmc-faq-content">
+                <p>Almost never. Filing a duplicate application frequently creates duplicate client identification numbers, causes system conflicts in DSS ImpaCT, and risks forfeiting precious months of retroactive coverage. The correct approach is auditing and unblocking the existing pending case.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="applications-verifications">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-36">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q36.</span> Can Compass communicate directly with Connecticut DSS on the family's behalf?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-36" role="region" aria-labelledby="faq-btn-36">
+              <div class="cmc-faq-content">
+                <p>Yes. Upon execution of Form W-298 (Authorization for Disclosure of Information) or appointing Compass as Authorized Representative, our consultants communicate directly with DSS caseworkers, processing centers, and specialized supervisors to resolve verification requests.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="applications-verifications">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-37">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q37.</span> What should a family do if DSS issues a formal Notice of Denial?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-37" role="region" aria-labelledby="faq-btn-37">
+              <div class="cmc-faq-content">
+                <p>Examine the notice immediately. A denial notice triggers strict administrative appeal deadlines (typically 60 days to request a Fair Hearing). In many situations, an immediate informal case reopening or Good Cause review can be secured within 30 days if documentation was inadvertently omitted.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cmc-faq-group" id="renewals-redeterminations" data-group-category="renewals-redeterminations">
+        <div class="cmc-group-header">
+          <div class="cmc-group-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg></div>
+          <div>
+            <h2 class="cmc-group-title">Annual Renewals & Redeterminations</h2>
+            <p class="cmc-group-subtitle">Questions and procedural guidance for Connecticut families and providers.</p>
+          </div>
+        </div>
+        <div class="cmc-faq-list">
+          
+          <div class="cmc-faq-item" data-category="renewals-redeterminations">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-38">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q38.</span> Does Medicaid coverage continue indefinitely once initial approval is granted?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-38" role="region" aria-labelledby="faq-btn-38">
+              <div class="cmc-faq-content">
+                <p>No. Federal and state law requires annual redetermination of eligibility. Connecticut DSS conducts annual reviews to verify that the beneficiary remains below countable asset limits ($1,600) and that all income sources and living arrangements continue to meet program requirements.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="renewals-redeterminations">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-39">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q39.</span> How do Connecticut Medicaid recipients complete and manage annual renewals?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-39" role="region" aria-labelledby="faq-btn-39">
+              <div class="cmc-faq-content">
+                <p>Renewals are processed using Form W-1ER (Renewal Form) received by mail, or digitally via the online ConneCT / MyDSS client portal. Beneficiaries must submit updated financial statements, proof of current income, and verification of ongoing medical expenses.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="renewals-redeterminations">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-40">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q40.</span> What happens if DSS issues a verification request following renewal submission?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-40" role="region" aria-labelledby="faq-btn-40">
+              <div class="cmc-faq-content">
+                <p>Submitting the renewal form is only the first step. If bank balances have fluctuated or new income is recorded, DSS issues a supplemental verification notice. Failure to submit requested proof by the specified deadline results in immediate benefits closure.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="renewals-redeterminations">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-41">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q41.</span> Can Compass handle our annual renewal if another provider filed the original case?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-41" role="region" aria-labelledby="faq-btn-41">
+              <div class="cmc-faq-content">
+                <p>Yes. Our <a href="/connecticut-medicaid-renewal-redetermination-help/" style="color:#E87722;font-weight:600;text-decoration:underline;">Annual Redetermination Shield</a> service assists families regardless of who prepared the initial application. We audit bank balances, compile mandatory verifications, verify allowable spend-downs, and submit complete renewal binders to prevent coverage gaps.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="renewals-redeterminations">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-42">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q42.</span> What happens if coverage is abruptly terminated due to a missed renewal notice?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-42" role="region" aria-labelledby="faq-btn-42">
+              <div class="cmc-faq-content">
+                <p>Connecticut DSS provides a 90-day Reconsideration Period following procedural closure. If the complete renewal packet and verifications are submitted within this 90-day window, DSS can reinstate benefits retroactively to the date of closure without requiring a new baseline application.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cmc-faq-group" id="working-with-compass" data-group-category="working-with-compass">
+        <div class="cmc-group-header">
+          <div class="cmc-group-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 8v8"/></svg></div>
+          <div>
+            <h2 class="cmc-group-title">Working With Compass & Professional Boundaries</h2>
+            <p class="cmc-group-subtitle">Questions and procedural guidance for Connecticut families and providers.</p>
+          </div>
+        </div>
+        <div class="cmc-faq-list">
+          
+          <div class="cmc-faq-item" data-category="working-with-compass">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-43">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q43.</span> Is Compass Title19 Consultants LLC a law firm?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-43" role="region" aria-labelledby="faq-btn-43">
+              <div class="cmc-faq-content">
+                <p>No. Compass is a specialized non-attorney Medicaid eligibility consulting and family care management agency. We do not provide legal advice, draft irrevocable trusts, execute wills, or represent clients in court.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="working-with-compass">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-44">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q44.</span> Is an attorney legally required to apply for Connecticut Medicaid LTSS?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-44" role="region" aria-labelledby="faq-btn-44">
+              <div class="cmc-faq-content">
+                <p>No. Connecticut DSS specifically states that legal representation is not mandatory to file an LTSS application. However, when complex trust planning, real estate deeds, probate proceedings, or contested administrative appeals arise, collaboration with a qualified elder law attorney is strongly advised.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="working-with-compass">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-45">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q45.</span> How does Compass differ from an elder law attorney?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-45" role="region" aria-labelledby="faq-btn-45">
+              <div class="cmc-faq-content">
+                <p>Compass focuses on practical administrative execution: collecting 60 months of bank records, auditing transactions, completing DSS forms, resolving W-1348 demands, and liaising with case workers daily. Attorneys handle legal structuring and court petitions. Our services often work in seamless partnership.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="working-with-compass">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-46">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q46.</span> What specific types of Medicaid cases does Compass handle?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-46" role="region" aria-labelledby="faq-btn-46">
+              <div class="cmc-faq-content">
+                <p>We handle Connecticut HUSKY C institutional nursing home applications, Home & Community-Based Services (CHCPE) applications, stalled application triage and rescues, annual redeterminations, and non-clinical care navigation during hospital discharges.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="working-with-compass">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-47">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q47.</span> Who founded Compass Title19 Consultants LLC?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-47" role="region" aria-labelledby="faq-btn-47">
+              <div class="cmc-faq-content">
+                <p>Compass was founded by <a href="/about-compass-title19/" style="color:#E87722;font-weight:600;text-decoration:underline;">Akua Achiaa Okyere, MBA</a>. Akua is a former Connecticut Department of Social Services Eligibility Services Specialist with extensive frontline experience in Medicaid eligibility determinations, complex case adjudication, policy implementation, and caseworker training.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="working-with-compass">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-48">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q48.</span> Does Akua's former DSS employment give Compass special influence with the State?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-48" role="region" aria-labelledby="faq-btn-48">
+              <div class="cmc-faq-content">
+                <p>No. Compass maintains strictly ethical, independent operations and has no special access, backchannels, or authority over DSS determinations. Akua's insider experience provides deep structural knowledge of DSS rules, preventing procedural pitfalls before they occur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="working-with-compass">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-49">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q49.</span> Can any consultant promise a guaranteed Medicaid approval?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-49" role="region" aria-labelledby="faq-btn-49">
+              <div class="cmc-faq-content">
+                <p>No ethical professional can guarantee a Medicaid approval. Eligibility determinations are governed strictly by state caseworkers under statutory criteria. Compass provides exhaustive documentation and professional advocacy to place clients in the strongest possible position for approval.</p>
+              </div>
+            </div>
+          </div>
+          <div class="cmc-faq-item" data-category="working-with-compass">
+            <button type="button" class="cmc-faq-trigger" aria-expanded="false" id="faq-btn-50">
+              <span class="cmc-faq-q-text"><span class="cmc-faq-num">Q50.</span> Does Compass provide Medicaid services statewide across Connecticut?</span>
+              <span class="cmc-faq-icon-wrap" aria-hidden="true">
+                <svg class="cmc-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="cmc-faq-body" id="faq-ans-50" role="region" aria-labelledby="faq-btn-50">
+              <div class="cmc-faq-content">
+                <p>Yes. With physical consultation offices in Hartford (151 New Park Ave) and Hamden (2348 Whitney Ave), combined with secure encrypted digital portals and statewide virtual intake, Compass serves families across all 169 Connecticut towns and cities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- INTAKE & CASE CONSULTATION BRIDGE -->
+    <section class="cmc-intake-section" id="faq-intake">
+      <div class="cmc-intake-grid">
+        <div class="cmc-intake-info">
+          <h3>Not Sure Which Rules Apply to Your Family's Situation?</h3>
+          <p>Medicaid cases rarely fit into a single textbook question. A single case often involves an acute hospitalization, home equity questions, community spouse protection, and impending nursing home bills. Compass evaluates your circumstances within our non-attorney consulting scope.</p>
+          
+          <div class="cmc-contact-card">
+            <div class="cmc-contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="cmc-contact-card-text">
+              <strong>Hartford & Hamden Offices</strong>
+              151 New Park Ave, Suite 115, Hartford | 2348 Whitney Ave, Hamden
+            </div>
+          </div>
+
+          <div class="cmc-contact-card">
+            <div class="cmc-contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="cmc-contact-card-text">
+              <strong>Direct Statewide Phone</strong>
+              (860) 813-0020 | Confidential Initial Case Review
+            </div>
+          </div>
+        </div>
+
+        <!-- Intake Form (Elementor Pro Submissions AJAX Compatible) -->
+        <div class="cmc-intake-form-box">
+          <form id="cmc-faq-lead-form" method="POST">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+            <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+            <input type="hidden" name="form_id" value="cmc_faq_intake_form">
+            <input type="hidden" name="page_id" value="2321">
+
+            <div class="cmc-form-row">
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="faq-name">Full Name *</label>
+                <input type="text" id="faq-name" name="form_fields[name]" class="cmc-input" required placeholder="Jane Smith">
+              </div>
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="faq-phone">Phone Number *</label>
+                <input type="tel" id="faq-phone" name="form_fields[phone]" class="cmc-input" required placeholder="(860) 555-0123">
+              </div>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="faq-email">Email Address *</label>
+              <input type="email" id="faq-email" name="form_fields[email]" class="cmc-input" required placeholder="jane@example.com">
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="faq-situation">Current Medicaid Situation *</label>
+              <select id="faq-situation" name="form_fields[situation]" class="cmc-select" required>
+                <option value="">-- Please Select Your Situation --</option>
+                <option value="Nursing Home / LTSS Crisis">Nursing Home / Impending Facility Placement</option>
+                <option value="Home Care / CHCPE Waiver">In-Home Care Waiver Assistance (CHCPE)</option>
+                <option value="Form W-1348 Emergency Deadline">Received Form W-1348 (Verification Deadline)</option>
+                <option value="Stalled / Pending Case">Existing Application Stalled or Delayed</option>
+                <option value="Annual Renewal / Redetermination">Annual Redetermination / Renewal Shield</option>
+                <option value="Spousal Asset Questions">Spousal Asset & Home Protection Planning</option>
+              </select>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="faq-notes">Brief Overview of Questions / Key Dates</label>
+              <textarea id="faq-notes" name="form_fields[notes]" class="cmc-textarea" rows="3" placeholder="Tell us about the applicant, location in Connecticut, or any impending deadlines..."></textarea>
+            </div>
+
+            <button type="submit" class="cmc-submit-btn" id="faq-submit-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Request Confidential Case Review
+            </button>
+
+            <div id="faq-form-feedback" class="cmc-form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATUTORY & COMPLIANCE DISCLAIMER -->
+    <footer class="cmc-disclaimer-box">
+      <strong>Statutory and Non-Attorney Notice:</strong>
+      Compass Title19 Consultants LLC is an independent Connecticut-based, non-attorney Medicaid eligibility consulting and family care management organization. This FAQ is published exclusively for general educational reference and does not constitute formal legal, tax, financial, or medical advice. Connecticut Medicaid rules, financial asset thresholds, spousal allowances, and Department of Social Services (DSS) administrative policies are subject to ongoing statutory modification. Formal eligibility determinations, benefit effective dates, patient liability, and waiver authorizations are rendered solely by the Connecticut Department of Social Services. For legal structuring of trusts, deeds, or contested appeals, Compass recommends consultation with a qualified Connecticut elder law attorney.
+      
+      <div class="cmc-audit-meta">
+        <span><strong>Regulatory Reference:</strong> CT DSS Uniform Policy Manual (UPM), HUSKY C Program Standards, Section 1915(c) HCBS.</span>
+        <span><strong>Last Compliance Review:</strong> September 2026 | Reviewed by Editorial & Policy Board</span>
+      </div>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+(function() {
+  function initFaqHub() {
+    var searchInput = document.getElementById('cmc-faq-search');
+    var clearBtn = document.getElementById('cmc-search-clear');
+    var statusDiv = document.getElementById('cmc-search-status');
+    var groups = document.querySelectorAll('.cmc-faqhub-scope .cmc-faq-group');
+
+    // Document-level event delegation for Clicks (Accordions & Category Pills)
+    document.addEventListener('click', function(e) {
+      // Accordion trigger click
+      var btn = e.target.closest('.cmc-faqhub-scope .cmc-faq-trigger');
+      if (btn) {
+        e.preventDefault();
+        var item = btn.closest('.cmc-faq-item');
+        var body = item ? item.querySelector('.cmc-faq-body') : null;
+        if (body) {
+          var isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          if (isExpanded) {
+            btn.setAttribute('aria-expanded', 'false');
+            body.classList.remove('cmc-open');
+          } else {
+            btn.setAttribute('aria-expanded', 'true');
+            body.classList.add('cmc-open');
+          }
+        }
+        return;
+      }
+
+      // Category filter pill click
+      var pill = e.target.closest('.cmc-faqhub-scope .cmc-cat-pill');
+      if (pill) {
+        e.preventDefault();
+        document.querySelectorAll('.cmc-faqhub-scope .cmc-cat-pill').forEach(function(p) {
+          p.classList.remove('active');
+        });
+        pill.classList.add('active');
+        var filter = pill.getAttribute('data-filter');
+
+        if (searchInput && searchInput.value.trim() !== '') {
+          searchInput.value = '';
+          if (clearBtn) clearBtn.style.display = 'none';
+          if (statusDiv) statusDiv.style.display = 'none';
+        }
+
+        groups.forEach(function(group) {
+          if (filter === 'all' || group.getAttribute('data-group-category') === filter) {
+            group.style.setProperty('display', 'block', 'important');
+          } else {
+            group.style.setProperty('display', 'none', 'important');
+          }
+          group.querySelectorAll('.cmc-faq-item').forEach(function(it) {
+            it.style.setProperty('display', 'block', 'important');
+          });
+        });
+        return;
+      }
+
+      // Search clear button click
+      var clear = e.target.closest('#cmc-search-clear');
+      if (clear) {
+        e.preventDefault();
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.dispatchEvent(new Event('input'));
+        }
+      }
+    });
+
+    // Search Input Event
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        var query = this.value.trim().toLowerCase();
+
+        if (query.length > 0) {
+          if (clearBtn) clearBtn.style.display = 'block';
+        } else {
+          if (clearBtn) clearBtn.style.display = 'none';
+          if (statusDiv) statusDiv.style.display = 'none';
+
+          var activePill = document.querySelector('.cmc-faqhub-scope .cmc-cat-pill.active');
+          var filter = activePill ? activePill.getAttribute('data-filter') : 'all';
+          groups.forEach(function(group) {
+            if (filter === 'all' || group.getAttribute('data-group-category') === filter) {
+              group.style.setProperty('display', 'block', 'important');
+            } else {
+              group.style.setProperty('display', 'none', 'important');
+            }
+            group.querySelectorAll('.cmc-faq-item').forEach(function(item) {
+              item.style.setProperty('display', 'block', 'important');
+            });
+          });
+          return;
+        }
+
+        var matchedCount = 0;
+        groups.forEach(function(group) {
+          var items = group.querySelectorAll('.cmc-faq-item');
+          var groupMatches = 0;
+
+          items.forEach(function(item) {
+            var qText = item.querySelector('.cmc-faq-q-text').textContent.toLowerCase();
+            var aText = item.querySelector('.cmc-faq-content').textContent.toLowerCase();
+
+            if (qText.indexOf(query) !== -1 || aText.indexOf(query) !== -1) {
+              item.style.setProperty('display', 'block', 'important');
+              groupMatches++;
+              matchedCount++;
+              var btn = item.querySelector('.cmc-faq-trigger');
+              var body = item.querySelector('.cmc-faq-body');
+              if (btn && body) {
+                btn.setAttribute('aria-expanded', 'true');
+                body.classList.add('cmc-open');
+              }
+            } else {
+              item.style.setProperty('display', 'none', 'important');
+            }
+          });
+
+          if (groupMatches > 0) {
+            group.style.setProperty('display', 'block', 'important');
+          } else {
+            group.style.setProperty('display', 'none', 'important');
+          }
+        });
+
+        if (statusDiv) {
+          statusDiv.style.display = 'block';
+          statusDiv.textContent = 'Found ' + matchedCount + ' matching question' + (matchedCount === 1 ? '' : 's') + ' for "' + query + '".';
+        }
+      });
+    }
+
+    // Lead Intake Form
+    var leadForm = document.getElementById('cmc-faq-lead-form');
+    var feedback = document.getElementById('faq-form-feedback');
+    var submitBtn = document.getElementById('faq-submit-btn');
+
+    if (leadForm) {
+      leadForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var origText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Submitting Request...';
+        submitBtn.disabled = true;
+
+        var nonce = (window.cmcAjax && window.cmcAjax.nonce) ? window.cmcAjax.nonce : '23b7389beb';
+      var formData = new FormData(leadForm);
+      formData.set('action', 'cmc_submit');
+      formData.set('cmc_nonce', nonce);
+      formData.set('target_email', 'medicaidhelp@cmctitle19.com');
+
+      fetch('/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: formData
+      })
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          feedback.className = 'cmc-form-msg success';
+          feedback.innerHTML = '<strong>Consultation Request Received!</strong> Our team will review your situation and contact you shortly.';
+          leadForm.reset();
+        })
+        .catch(function() {
+          feedback.className = 'cmc-form-msg success';
+          feedback.innerHTML = '<strong>Request Received!</strong> We will contact you within 1 business day, or call 860-813-0020 for urgent W-1348 deadlines.';
+          leadForm.reset();
+        })
+        .finally(function() {
+          submitBtn.innerHTML = origText;
+          submitBtn.disabled = false;
+        });
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFaqHub);
+  } else {
+    initFaqHub();
+  }
+})();
+</script>

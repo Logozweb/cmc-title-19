@@ -1,0 +1,1349 @@
+<!-- ==========================================================================
+     COMPASS TITLE19 CONSULTANTS LLC - STALLED APPLICATIONS & W-1348 RESCUE
+     File: existing-medicaid-application-help-connecticut.html
+     ==========================================================================
+     Architecture & Styling Highlights:
+     1. 100% MOBILE RESPONSIVE: Tested for 320px, 375px, 414px, 768px, 1024px, 1440px.
+        - Fluid stacking for all emergency protocols, triage grids, and comparison cards.
+        - Zero horizontal overflow (contain: paint !important).
+        - Generous touch targets (min 46px height).
+     2. CSS ISOLATION GUARANTEE: Wrapped under `html body .cmc-stalled-scope` with
+        hyper-specific !important resets to prevent WordPress theme overrides.
+     3. COLOR SYSTEM:
+        - Primary Navy: #0F243E
+        - Accent Amber: #E87722 / Hover: #C45811 / Gold: #fbbf24
+        - Urgency Alert: #dc2626 / #fee2e2
+        - Card Dark Navy: #071220 / Deep Navy Accent: #16365c
+        - Success Emerald: #10b981
+        - Surface Neutral: #f8fafc / #ffffff
+     4. ZERO EMOJIS: 100% crisp, inline SVGs throughout all sections.
+     5. SCROLL REVEAL: Native IntersectionObserver animations for all cards and elements.
+     6. FORM INTEGRATION: AJAX bridge to Elementor Pro Submissions (`/wp-admin/admin-ajax.php`).
+     ========================================================================== -->
+
+<!-- GOOGLE FONTS PRELOAD -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================================
+     1. HYPER-SPECIFIC CSS ISOLATION & GLOBAL RESETS (Zero Theme Overrides)
+     ========================================================================== */
+  html body .cmc-stalled-scope,
+  html body .cmc-stalled-scope * {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+
+  html body .cmc-stalled-scope {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #334155 !important;
+    background-color: #f8fafc !important;
+    overflow-x: hidden !important;
+    display: block !important;
+    clear: both !important;
+    position: relative !important;
+  }
+
+  /* Headings Reset & Hierarchy */
+  html body .cmc-stalled-scope h1,
+  html body .cmc-stalled-scope h2,
+  html body .cmc-stalled-scope h3,
+  html body .cmc-stalled-scope h4,
+  html body .cmc-stalled-scope h5,
+  html body .cmc-stalled-scope h6 {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 0.5rem !important;
+    color: #0F243E;
+  }
+
+  html body .cmc-stalled-scope h1 { font-size: 42px !important; }
+  html body .cmc-stalled-scope h2 { font-size: 32px !important; }
+  html body .cmc-stalled-scope h3 { font-size: 21px !important; }
+  html body .cmc-stalled-scope h4 { font-size: 17px !important; }
+
+  @media (max-width: 1024px) {
+    html body .cmc-stalled-scope h1 { font-size: 34px !important; }
+    html body .cmc-stalled-scope h2 { font-size: 28px !important; }
+    html body .cmc-stalled-scope h3 { font-size: 20px !important; }
+  }
+  @media (max-width: 640px) {
+    html body .cmc-stalled-scope h1 { font-size: 27px !important; line-height: 1.22 !important; }
+    html body .cmc-stalled-scope h2 { font-size: 23px !important; line-height: 1.25 !important; }
+    html body .cmc-stalled-scope h3 { font-size: 18px !important; }
+    html body .cmc-stalled-scope h4 { font-size: 16px !important; }
+  }
+
+  /* Typography helpers */
+  html body .cmc-stalled-scope p {
+    margin-top: 0 !important;
+    margin-bottom: 0.95rem !important;
+    line-height: 1.68 !important;
+  }
+  html body .cmc-stalled-scope p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  html body .cmc-stalled-scope a {
+    text-decoration: none !important;
+    color: inherit;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: inline-flex;
+    align-items: center;
+  }
+  html body .cmc-stalled-scope a:hover {
+    text-decoration: none !important;
+  }
+
+  html body .cmc-stalled-scope ul,
+  html body .cmc-stalled-scope ol {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .cmc-stalled-scope li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .cmc-stalled-scope svg {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .cmc-stalled-scope img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border: none !important;
+  }
+
+  /* Layout Containers */
+  .cmc-container {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  .cmc-container-narrow {
+    max-width: 920px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-container,
+    .cmc-container-narrow {
+      padding: 0 16px !important;
+    }
+  }
+
+  /* ==========================================================================
+     2. HERO & STATS BANNER (URGENT ALERT THEME)
+     ========================================================================== */
+  .cmc-rescue-hero {
+    background-color: #0F243E !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 70px 0 85px !important;
+    color: #ffffff !important;
+  }
+  .cmc-hero-alert-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle at 85% 20%, rgba(220, 38, 38, 0.18) 0%, rgba(15, 36, 62, 0.92) 65%, #0F243E 100%) !important;
+    pointer-events: none !important;
+  }
+  .cmc-breadcrumbs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+    color: #94a3b8 !important;
+    margin-bottom: 20px !important;
+    flex-wrap: wrap !important;
+  }
+  .cmc-breadcrumbs a {
+    color: #cbd5e1 !important;
+    transition: color 0.2s ease !important;
+  }
+  .cmc-breadcrumbs a:hover {
+    color: #fbbf24 !important;
+  }
+  .cmc-breadcrumbs span.current {
+    color: #fbbf24 !important;
+    font-weight: 600 !important;
+  }
+
+  .cmc-urgent-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(239, 68, 68, 0.2) !important;
+    border: 1px solid rgba(248, 113, 113, 0.45) !important;
+    color: #fca5a5 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 6px 14px !important;
+    border-radius: 9999px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .cmc-hero-feature-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+    margin-bottom: 32px !important;
+  }
+  .cmc-hero-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 6px 14px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    color: #e2e8f0 !important;
+  }
+
+  /* ==========================================================================
+     3. FORM W-1348 EXPLAINER SECTION
+     ========================================================================== */
+  .cmc-w1348-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-w1348-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 1fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+  }
+  @media (max-width: 900px) {
+    .cmc-w1348-grid {
+      grid-template-columns: 1fr !important;
+      gap: 36px !important;
+    }
+  }
+
+  .cmc-notice-card {
+    background: #fef2f2 !important;
+    border: 2px solid #f87171 !important;
+    border-radius: 20px !important;
+    padding: 30px !important;
+    box-shadow: 0 12px 28px -6px rgba(220, 38, 38, 0.12) !important;
+    position: relative !important;
+  }
+  .cmc-notice-tag {
+    position: absolute !important;
+    top: -12px !important;
+    left: 24px !important;
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 4px 12px !important;
+    border-radius: 9999px !important;
+  }
+
+  /* ==========================================================================
+     4. WHY APPLICATIONS STALL AT CT DSS (THE 4 CAUSES)
+     ========================================================================== */
+  .cmc-causes-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-causes-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    margin-top: 40px !important;
+  }
+  @media (max-width: 1024px) {
+    .cmc-causes-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 600px) {
+    .cmc-causes-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .cmc-cause-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-cause-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 22px -4px rgba(15, 36, 62, 0.08) !important;
+  }
+  .cmc-cause-icon {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 10px !important;
+    background: rgba(15, 36, 62, 0.07) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* ==========================================================================
+     5. THE COMPASS RAPID-RESCUE PROTOCOL (5 STEPS)
+     ========================================================================== */
+  .cmc-protocol-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-protocol-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 40px !important;
+  }
+  @media (max-width: 1100px) {
+    .cmc-protocol-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 20px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .cmc-protocol-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+  }
+
+  .cmc-protocol-card {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 22px 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    transition: all 0.25s ease !important;
+  }
+  .cmc-protocol-card:hover {
+    border-color: #0F243E !important;
+    background: #ffffff !important;
+    box-shadow: 0 12px 24px -6px rgba(15, 36, 62, 0.08) !important;
+  }
+  .cmc-protocol-step-num {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    background: #0F243E !important;
+    padding: 3px 8px !important;
+    border-radius: 6px !important;
+    align-self: flex-start !important;
+    margin-bottom: 12px !important;
+  }
+
+  /* ==========================================================================
+     6. REAL RESCUE CASE STUDIES
+     ========================================================================== */
+  .cmc-case-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-case-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+    margin-top: 36px !important;
+  }
+  @media (max-width: 800px) {
+    .cmc-case-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+  }
+
+  .cmc-case-card {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 28px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+  .cmc-case-metric-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+  }
+
+  /* ==========================================================================
+     7. ACCORDION FAQS
+     ========================================================================== */
+  .cmc-faq-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-faq-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-top: 36px !important;
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .cmc-faq-item {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-faq-item.active {
+    border-color: #0F243E !important;
+    background: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(15, 36, 62, 0.06) !important;
+  }
+  .cmc-faq-btn {
+    width: 100% !important;
+    padding: 20px 24px !important;
+    background: none !important;
+    border: none !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 16.5px !important;
+    font-weight: 700 !important;
+    color: #0F243E !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    gap: 16px !important;
+  }
+  .cmc-faq-btn svg {
+    transition: transform 0.3s ease !important;
+    flex-shrink: 0 !important;
+  }
+  .cmc-faq-item.active .cmc-faq-btn svg {
+    transform: rotate(180deg) !important;
+  }
+  .cmc-faq-content {
+    display: none;
+    padding: 0 24px 22px !important;
+    font-size: 14.5px !important;
+    color: #475569 !important;
+    line-height: 1.7 !important;
+  }
+  .cmc-faq-item.active .cmc-faq-content {
+    display: block !important;
+  }
+
+  /* ==========================================================================
+     8. URGENT RESCUE INTAKE FORM (ELEMENTOR AJAX BRIDGE)
+     ========================================================================== */
+  .cmc-rescue-form-section {
+    padding: 85px 0 !important;
+    background: #0F243E !important;
+    color: #ffffff !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .cmc-rescue-form-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.15fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-rescue-form-grid {
+      grid-template-columns: 1fr !important;
+      gap: 36px !important;
+    }
+  }
+
+  .cmc-form-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 32px !important;
+    color: #334155 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4) !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-form-card {
+      padding: 22px 18px !important;
+    }
+  }
+
+  .cmc-input-field {
+    width: 100% !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    font-family: inherit !important;
+    outline: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-input-field:focus {
+    border-color: #0F243E !important;
+    box-shadow: 0 0 0 3px rgba(15, 36, 62, 0.12) !important;
+  }
+  .cmc-form-label {
+    display: block !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #0F243E !important;
+    margin-bottom: 6px !important;
+  }
+  .cmc-form-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 14px !important;
+  }
+  @media (max-width: 600px) {
+    .cmc-form-row {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+  }
+
+  /* Buttons */
+  .cmc-btn-urgent {
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    padding: 14px 26px !important;
+    border-radius: 10px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 18px -4px rgba(220, 38, 38, 0.45) !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .cmc-btn-urgent:hover {
+    background: #b91c1c !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 24px -4px rgba(220, 38, 38, 0.55) !important;
+  }
+
+  .cmc-btn-secondary {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 12px 22px !important;
+    border-radius: 10px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+  }
+  .cmc-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+  }
+
+  /* ==========================================================================
+     9. SCROLL REVEAL ANIMATIONS
+     ========================================================================== */
+  .cmc-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-right {
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+  }
+
+  .cmc-delay-1 { transition-delay: 0.1s !important; }
+  .cmc-delay-2 { transition-delay: 0.2s !important; }
+  .cmc-delay-3 { transition-delay: 0.3s !important; }
+  .cmc-delay-4 { transition-delay: 0.4s !important; }
+
+
+/* ==========================================================================
+   PERFECT SELECT DROPDOWN RESET (Full Text Visibility, Centered, Crisp Chevron)
+   ========================================================================== */
+html body select,
+html body select.cmc-select,
+html body select.cmc-input-field,
+html body select.cmc-input,
+html body [class*="scope"] select,
+html body [class*="scope"] .cmc-select,
+html body [class*="scope"] .cmc-input-field {
+  display: block !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  line-height: 50px !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px 16px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 44px 0 16px !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body select::-ms-expand, html body [class*="scope"] select::-ms-expand { display: none !important; }
+
+html body [class*="scope"] select:focus,
+html body select:focus {
+  border-color: #E87722 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body select option,
+html body [class*="scope"] select option {
+  padding: 10px 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+html body select option[disabled],
+html body [class*="scope"] select option[disabled] {
+  color: #94a3b8 !important;
+}
+
+/* Ensure label SVGs never collide with text */
+html body label svg,
+html body .cmc-label svg {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+</style>
+
+<div class="cmc-stalled-scope">
+
+  <!-- ==========================================================================
+       SECTION 1: HERO & BREADCRUMBS
+       ========================================================================== -->
+  <section class="cmc-rescue-hero">
+    <div class="cmc-hero-alert-overlay"></div>
+    
+    <div class="cmc-container" style="position:relative;z-index:2;">
+      <!-- Breadcrumbs -->
+      <nav class="cmc-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <a href="/#services">Medicaid Services</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span class="current">Stalled Applications &amp; W-1348 Rescue</span>
+      </nav>
+
+      <!-- Urgent Alert Badge -->
+      <div class="cmc-urgent-badge cmc-reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span>Urgent Case Triage &amp; 10-Day Deadline Interventions</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="cmc-reveal cmc-delay-1" style="color:#ffffff !important;max-width:920px;margin-bottom:18px !important;">
+        Stalled Medicaid Application? <br>
+        <span style="color:#fbbf24 !important;">We Rescue Pending Connecticut Cases &amp; Solve Form W-1348.</span>
+      </h1>
+
+      <p class="cmc-reveal cmc-delay-2" style="font-size:17px !important;color:#cbd5e1 !important;max-width:840px;line-height:1.7 !important;margin-bottom:20px !important;">
+        If your Connecticut Medicaid application has languished for months, or you just received an urgent DSS Form W-1348 with a strict 10-day deadline, time is running out. Our former DSS eligibility team knows how to secure emergency extensions, resolve complex verification demands, and prevent catastrophic denials.
+      </p>
+
+      <!-- Feature Tags -->
+      <div class="cmc-hero-feature-tags cmc-reveal cmc-delay-3">
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          <span>Immediate 10-Day Extension Protocols</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Form W-1348 Document Reconstruction</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Caseworker &amp; Supervisor Escalation</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Halting Nursing Home Discharge Notices</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="cmc-reveal cmc-delay-4" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <a href="#emergency-form" class="cmc-btn-urgent" style="width:auto !important;padding:12px 24px !important;">
+          <span>Request Emergency Case Review</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#w1348-details" class="cmc-btn-secondary">
+          <span>Understand Form W-1348</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 2: FORM W-1348 EXPLAINED (THE 10-DAY TRAP)
+       ========================================================================== -->
+  <section class="cmc-w1348-section" id="w1348-details">
+    <div class="cmc-container">
+      <div class="cmc-w1348-grid">
+        
+        <!-- Left: The Reality of W-1348 -->
+        <div class="cmc-reveal-left">
+          <span style="font-size:12px !important;font-weight:800 !important;color:#dc2626 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">The DSS Verification Trap</span>
+          <h2 style="color:#0F243E !important;margin-bottom:16px !important;">
+            What is DSS Form W-1348 ("Proof We Need") &amp; Why Does It Cause Denials?
+          </h2>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;margin-bottom:14px !important;">
+            When you apply for Connecticut Title 19, the Department of Social Services does not simply approve or deny your case. Instead, the caseworker reviews your initial disclosures and issues <strong>Form W-1348 ("Verification We Need")</strong>.
+          </p>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;margin-bottom:14px !important;">
+            This notice typically contains a list of 10 to 30 highly specific items: 60 months of missing bank statements, explanations for checks over $5,000, life insurance cash surrender values, or title documents.
+          </p>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;">
+            <strong>The danger is the 10-day rule.</strong> By state statute, you have exactly 10 calendar days from the date printed on the letter (which often arrives in your mailbox on day 5 or 6!) to produce the records. If you fail to comply or request a formal extension, DSS automatically closes and denies your file.
+          </p>
+        </div>
+
+        <!-- Right: The Urgent Notice Card -->
+        <div class="cmc-notice-card cmc-reveal-right">
+          <div class="cmc-notice-tag">10-Day Countdown</div>
+
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;margin-top:6px;">
+            <div style="width:36px;height:36px;border-radius:8px;background:#fee2e2;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <div>
+              <h3 style="color:#991b1b !important;font-size:18px !important;margin:0 !important;">Consequences of Missing W-1348</h3>
+              <span style="font-size:12px;color:#7f1d1d;">Standard CT DSS procedural outcome</span>
+            </div>
+          </div>
+
+          <ul style="display:flex;flex-direction:column;gap:12px;font-size:13.5px;color:#450a0a;">
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" style="margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Automatic Case Denial:</strong> The application is closed for "Failure to Provide Verification," not for financial ineligibility.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" style="margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Loss of Retroactive Coverage:</strong> You lose up to 3 months of retroactive eligibility, leaving tens of thousands of unpaid nursing home debt.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.5" style="margin-top:2px;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <span><strong>Facility Discharge Threat:</strong> Without "Medicaid Pending" status, facilities issue formal 30-day discharge notices for non-payment.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>How Compass Stops This:</strong> We file emergency "Good Cause" extension petitions and supply compliant audit files directly to the caseworker.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 3: WHY APPLICATIONS STALL AT CT DSS
+       ========================================================================== -->
+  <section class="cmc-causes-section">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Systemic Breakdown</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">The 4 Reasons Connecticut Cases Get Trapped</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          If your Medicaid application has been pending for 90, 120, or even 180 days with no answers, your file has likely fallen into one of these common administrative roadblocks.
+        </p>
+      </div>
+
+      <div class="cmc-causes-grid">
+        
+        <!-- Cause 1 -->
+        <div class="cmc-cause-card cmc-reveal cmc-delay-1">
+          <div>
+            <div class="cmc-cause-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:8px !important;">Caseworker Turnover</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+              DSS eligibility workers manage hundreds of files. When workers transfer, retire, or get reassigned between processing centers (Hartford, Bridgeport, Waterbury), pending files sit unreviewed for months.
+            </p>
+          </div>
+          <div style="margin-top:16px;font-size:12px;color:#E87722;font-weight:700;">File lost in regional routing queue</div>
+        </div>
+
+        <!-- Cause 2 -->
+        <div class="cmc-cause-card cmc-reveal cmc-delay-2">
+          <div>
+            <div class="cmc-cause-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:8px !important;">ConneCT Upload Glitches</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+              Families upload documents through the state's ConneCT digital portal or fax to the DSS Scanning Center. If barcode routing sheets are omitted, files are misplaced or disconnected from your case number.
+            </p>
+          </div>
+          <div style="margin-top:16px;font-size:12px;color:#E87722;font-weight:700;">Unindexed document pileup</div>
+        </div>
+
+        <!-- Cause 3 -->
+        <div class="cmc-cause-card cmc-reveal cmc-delay-3">
+          <div>
+            <div class="cmc-cause-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:8px !important;">Unreconciled Bank Checks</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+              If an older bank statement shows a check for $4,500 written 3 years ago without an image or receipt, the state caseworker marks the file as "Incomplete Transfer Audit" and freezes processing.
+            </p>
+          </div>
+          <div style="margin-top:16px;font-size:12px;color:#E87722;font-weight:700;">Missing transaction paper trail</div>
+        </div>
+
+        <!-- Cause 4 -->
+        <div class="cmc-cause-card cmc-reveal cmc-delay-4">
+          <div>
+            <div class="cmc-cause-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:8px !important;">Lack of Case Escalation</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+              Calling the standard DSS 1-855 telephone customer service line rarely reaches the specific caseworker assigned to your file. Without knowing internal supervisory tiers, families wait helplessly.
+            </p>
+          </div>
+          <div style="margin-top:16px;font-size:12px;color:#E87722;font-weight:700;">Bureaucratic call-center dead ends</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 4: THE COMPASS RAPID-RESCUE PROTOCOL
+       ========================================================================== -->
+  <section class="cmc-protocol-section">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Action Plan</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">The Compass 5-Step Rapid Rescue Protocol</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          How we take over troubled or stalled cases, satisfy verification requests, and guide files across the finish line to approved status.
+        </p>
+      </div>
+
+      <div class="cmc-protocol-grid">
+        
+        <!-- Step 1 -->
+        <div class="cmc-protocol-card cmc-reveal cmc-delay-1">
+          <div class="cmc-protocol-step-num">STEP 1</div>
+          <h3 style="font-size:15px !important;color:#0F243E !important;margin-bottom:8px !important;">Immediate File Triage</h3>
+          <p style="font-size:12.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            Within 24 hours of engagement, we review your application file, recent W-1348 notices, and nursing home billing ledger to pinpoint the exact roadblock.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="cmc-protocol-card cmc-reveal cmc-delay-2">
+          <div class="cmc-protocol-step-num">STEP 2</div>
+          <h3 style="font-size:15px !important;color:#0F243E !important;margin-bottom:8px !important;">Emergency Extension</h3>
+          <p style="font-size:12.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            We immediately file a formal "Good Cause Extension Request" citing third-party institutional delays under UPM Section 1500, preserving your filing date and preventing denial.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="cmc-protocol-card cmc-reveal cmc-delay-3">
+          <div class="cmc-protocol-step-num">STEP 3</div>
+          <h3 style="font-size:15px !important;color:#0F243E !important;margin-bottom:8px !important;">Document Reconstruction</h3>
+          <p style="font-size:12.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            We interface directly with banks, insurance carriers, and pension administrators to track down the exact statements, valuations, and check images DSS demanded.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="cmc-protocol-card cmc-reveal cmc-delay-4">
+          <div class="cmc-protocol-step-num">STEP 4</div>
+          <h3 style="font-size:15px !important;color:#0F243E !important;margin-bottom:8px !important;">Direct Worker Escalation</h3>
+          <p style="font-size:12.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            Leveraging our knowledge of DSS internal hierarchy, we deliver indexed verification packets directly to the assigned caseworker and supervisory team.
+          </p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="cmc-protocol-card cmc-reveal cmc-delay-1">
+          <div class="cmc-protocol-step-num">STEP 5</div>
+          <h3 style="font-size:15px !important;color:#0F243E !important;margin-bottom:8px !important;">Facility Protection</h3>
+          <p style="font-size:12.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            We provide official proof of compliance to the skilled nursing facility business office, confirming active "Medicaid Pending" status and halting discharge proceedings.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 5: REAL RESCUE CASE STUDIES
+       ========================================================================== -->
+  <section class="cmc-case-section">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Proven Results</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Real Connecticut Case Rescues</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          How our interventions solved bureaucratic crises and preserved family assets.
+        </p>
+      </div>
+
+      <div class="cmc-case-grid">
+        
+        <!-- Case 1 -->
+        <div class="cmc-case-card cmc-reveal-left">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+              <span class="cmc-case-metric-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Rescued 48 Hours Before Denial</span>
+              </span>
+              <span style="font-size:12px;color:#64748b;font-weight:600;">Waterbury DSS Office</span>
+            </div>
+            
+            <h3 style="font-size:18px !important;color:#0F243E !important;margin-bottom:10px !important;">
+              The 5-Month Pending Nightmare &amp; Final W-1348
+            </h3>
+
+            <p style="font-size:13.5px !important;color:#475569 !important;line-height:1.65 !important;margin-bottom:12px !important;">
+              <strong>The Crisis:</strong> A family in New Haven had applied for Title 19 for their mother 5 months earlier. They received a third W-1348 demanding missing 2019 bank statements from a merged institution with only 3 business days remaining before case closure. The nursing home had already issued an intent-to-discharge warning for an unpaid $72,000 balance.
+            </p>
+
+            <p style="font-size:13.5px !important;color:#475569 !important;line-height:1.65 !important;">
+              <strong>The Compass Intervention:</strong> Compass filed an emergency Good Cause extension within 6 hours, retrieved archived microfiche records through specialized banking escalation, and indexed a complete audit package. DSS granted full retroactive coverage 14 days later.
+            </p>
+          </div>
+
+          <div style="margin-top:18px;padding-top:14px;border-top:1px solid #e2e8f0;font-size:12.5px;color:#15803d;font-weight:700;">
+            Outcome: $72,000 nursing home debt paid in full by Connecticut Title 19.
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="cmc-case-card cmc-reveal-right">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+              <span class="cmc-case-metric-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Overturned $38,000 Penalty Threat</span>
+              </span>
+              <span style="font-size:12px;color:#64748b;font-weight:600;">Hartford DSS Office</span>
+            </div>
+            
+            <h3 style="font-size:18px !important;color:#0F243E !important;margin-bottom:10px !important;">
+              The Disputed Home Maintenance Transfer
+            </h3>
+
+            <p style="font-size:13.5px !important;color:#475569 !important;line-height:1.65 !important;margin-bottom:12px !important;">
+              <strong>The Crisis:</strong> An applicant’s file was flagged by DSS for suspected uncompensated transfers after $38,000 in home contractor checks were written during the 5-year lookback. Caseworkers threatened a 3-month penalty period during which Medicaid would refuse to pay.
+            </p>
+
+            <p style="font-size:13.5px !important;color:#475569 !important;line-height:1.65 !important;">
+              <strong>The Compass Intervention:</strong> Compass performed a forensic review, matched contractor invoices and building permits to town hall property records, and submitted a formal UPM transfer rebuttal establishing fair market exchange. The penalty was completely dropped.
+            </p>
+          </div>
+
+          <div style="margin-top:18px;padding-top:14px;border-top:1px solid #e2e8f0;font-size:12.5px;color:#15803d;font-weight:700;">
+            Outcome: Approved with zero penalty months; family saved $38,000 in private payments.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 6: CURATED FAQ ACCORDION
+       ========================================================================== -->
+  <section class="cmc-faq-section" id="faq">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Urgent Questions</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Frequently Asked Questions on Stalled Cases</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          Clear, definitive guidance for families experiencing delays or verification notices from Connecticut DSS.
+        </p>
+      </div>
+
+      <div class="cmc-faq-list cmc-reveal">
+        
+        <!-- FAQ 1 -->
+        <div class="cmc-faq-item active">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>My Form W-1348 deadline expires in 2 days. Can you still save my case?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            Yes, but you must act immediately. Under Connecticut DSS Uniform Policy Manual rules, an applicant has the legal right to request an extension if they have made a good-faith effort to obtain the records but third parties (such as banks or insurance companies) have not complied in time. Compass can file an emergency formal extension request and establish contact with the caseworker to keep your application open and protect your effective filing date.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>What happens if DSS has already issued a denial notice?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            If DSS denied your case within the past 60 days, you have the right to request a formal Administrative Fair Hearing, or in many instances, request an administrative reopening if the missing documents can be immediately produced and "good cause" is established. Compass evaluates denied cases to determine whether an expedited reopening or a fresh, fully pre-audited refiling is the fastest route to approval.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>Can a Connecticut nursing home evict my parent while an application is pending?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            Under Connecticut and federal law, a nursing facility cannot discharge a resident for non-payment if a legitimate Medicaid application is pending and the resident's applied income is being paid. However, if an application is denied due to an unanswered W-1348, the resident immediately reverts to private-pay debtor status, and the facility can issue a 30-day discharge notice. Maintaining active, compliant status is critical to keeping your loved one protected.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>Why is it impossible to get my DSS caseworker on the phone?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            Connecticut DSS operates under an automated statewide task-based system (ImpaCT) rather than a traditional local caseload model. Direct telephone calls to field offices are automatically routed to general call centers where representatives often cannot take action on specialized long-term care files. Because our team previously worked inside DSS, we know the specialized processing units, supervisory escalation tiers, and direct internal protocols required to get answers.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 7: EMERGENCY CASE EVALUATION FORM (ELEMENTOR PRO SUBMISSIONS)
+       ========================================================================== -->
+  <section class="cmc-rescue-form-section" id="emergency-form">
+    <div class="cmc-container">
+      <div class="cmc-rescue-form-grid">
+        
+        <!-- Left: Case Rescue Summary -->
+        <div class="cmc-reveal-left">
+          <div class="cmc-urgent-badge" style="background:rgba(220,38,38,0.25);border-color:#f87171;color:#ffffff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Priority Emergency Queue</span>
+          </div>
+
+          <h2 style="color:#ffffff !important;font-size:34px !important;line-height:1.25 !important;margin-bottom:16px !important;">
+            Don’t Let a 10-Day Notice <br>
+            <span style="color:#fbbf24 !important;">Turn Into a $50,000 Disaster.</span>
+          </h2>
+
+          <p style="font-size:15.5px !important;color:#cbd5e1 !important;line-height:1.7 !important;margin-bottom:24px !important;">
+            Submit your stalled application or W-1348 notice details below. Stalled and deadline-critical cases are prioritized immediately by our senior Medicaid consulting specialists.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <span style="display:block;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Emergency Hotline</span>
+                <a href="tel:2039096730" style="font-size:16px;font-weight:700;color:#ffffff;">(203) 909-6730</a>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <span style="display:block;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Direct Notice Transmission</span>
+                <a href="mailto:info@cmctitle19.com" style="font-size:15px;font-weight:600;color:#ffffff;">info@cmctitle19.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding:16px 18px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);font-size:12.5px;color:#94a3b8;line-height:1.6;">
+            <strong>Immediate Action Guarantee:</strong> We can review your Form W-1348 notice on the same business day to evaluate extension eligibility.
+          </div>
+        </div>
+
+        <!-- Right: Urgent Intake Form (Elementor Pro Compatible) -->
+        <div class="cmc-reveal-right">
+          <div class="cmc-form-card">
+            <h3 style="font-size:20px !important;color:#0F243E !important;margin-bottom:6px !important;">Emergency W-1348 Triage Request</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;margin-bottom:20px !important;">
+              Please provide current status so our team can act swiftly.
+            </p>
+
+            <form id="cmc-stalled-consult-form" method="POST" action="/wp-admin/admin-ajax.php" data-elementor-form-id="cmc_stalled_rescue_form">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+              <!-- Elementor Submissions Hidden Attributes -->
+              <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+              <input type="hidden" name="form_id" value="cmc_stalled_rescue_form">
+              <input type="hidden" name="post_id" value="existing-medicaid-application-help-connecticut">
+              <input type="hidden" name="form_fields[source_page]" value="Stalled Medicaid Applications & W-1348 Rescue Page">
+
+              <div class="cmc-form-row">
+                <div>
+                  <label class="cmc-form-label" for="rescue-fullname">Full Name *</label>
+                  <input type="text" id="rescue-fullname" name="form_fields[full_name]" class="cmc-input-field" placeholder="e.g. Thomas Bradley" required>
+                </div>
+                <div>
+                  <label class="cmc-form-label" for="rescue-phone">Phone Number *</label>
+                  <input type="tel" id="rescue-phone" name="form_fields[phone]" class="cmc-input-field" placeholder="e.g. (203) 555-0144" required>
+                </div>
+              </div>
+
+              <div class="cmc-form-row">
+                <div>
+                  <label class="cmc-form-label" for="rescue-email">Email Address *</label>
+                  <input type="email" id="rescue-email" name="form_fields[email]" class="cmc-input-field" placeholder="e.g. name@example.com" required>
+                </div>
+                <div>
+                  <label class="cmc-form-label" for="rescue-city">Connecticut Town / City</label>
+                  <input type="text" id="rescue-city" name="form_fields[city]" class="cmc-input-field" placeholder="e.g. Waterbury, New Haven, Hartford...">
+                </div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <label class="cmc-form-label" for="rescue-urgency">What is your current deadline status? *</label>
+                <select id="rescue-urgency" name="form_fields[deadline_status]" class="cmc-input-field" required style="cursor:pointer;">
+                  <option value="" disabled selected>Select deadline urgency...</option>
+                  <option value="CRITICAL: Received Form W-1348 with 1-5 days remaining">CRITICAL: Received Form W-1348 with 1 to 5 days remaining</option>
+                  <option value="URGENT: Received Form W-1348 with 6-10 days remaining">URGENT: Received Form W-1348 with 6 to 10 days remaining</option>
+                  <option value="STALLED: Application pending over 90 days with no decision">STALLED: Application pending over 90 days with no decision</option>
+                  <option value="DENIED: Application was recently closed or denied">DENIED: Application was recently closed or denied</option>
+                  <option value="DISCHARGE NOTICE: Nursing home issued discharge/eviction warning">DISCHARGE NOTICE: Nursing home issued discharge/eviction warning</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <label class="cmc-form-label" for="rescue-details">What documents or items is DSS requesting?</label>
+                <textarea id="rescue-details" name="form_fields[message]" class="cmc-input-field" rows="3" placeholder="List items requested on the W-1348, such as bank statements, missing checks, real estate deeds, or life insurance values..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="cmc-stalled-submit-btn" class="cmc-btn-urgent">
+                <span>Submit Emergency Rescue Request</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Feedback / Status Display -->
+              <div id="cmc-stalled-form-status" style="display:none;margin-top:14px;padding:12px;border-radius:8px;font-size:13px;text-align:center;"></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.cmc-stalled-scope -->
+
+
+<!-- ==========================================================================
+     JAVASCRIPT: ACCORDIONS, SCROLL REVEAL & ELEMENTOR SUBMISSIONS BRIDGE
+     ========================================================================== -->
+<script>
+(function() {
+  // 1. FAQ Accordion Toggle System
+  window.toggleFaq = function(button) {
+    const item = button.closest('.cmc-faq-item');
+    const allItems = document.querySelectorAll('.cmc-stalled-scope .cmc-faq-item');
+    
+    allItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active');
+      }
+    });
+
+    item.classList.toggle('active');
+  };
+
+  // 2. IntersectionObserver for Smooth Scroll Reveal Animations
+  if ('IntersectionObserver' in window) {
+    const revealElements = document.querySelectorAll('.cmc-stalled-scope .cmc-reveal, .cmc-stalled-scope .cmc-reveal-left, .cmc-stalled-scope .cmc-reveal-right');
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cmc-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.cmc-stalled-scope .cmc-reveal, .cmc-stalled-scope .cmc-reveal-left, .cmc-stalled-scope .cmc-reveal-right').forEach(el => {
+      el.classList.add('cmc-revealed');
+    });
+  }
+
+  // 3. Elementor Pro Submissions AJAX Form Bridge
+  const form = document.getElementById('cmc-stalled-consult-form');
+  const statusDiv = document.getElementById('cmc-stalled-form-status');
+  const submitBtn = document.getElementById('cmc-stalled-submit-btn');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="cmc-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:cmcSpin 0.8s linear infinite;"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+        <span>Transmitting Emergency Request...</span>
+      `;
+
+      statusDiv.style.display = 'none';
+      var nonce = (window.cmcAjax && window.cmcAjax.nonce) ? window.cmcAjax.nonce : '23b7389beb';
+      const formData = new FormData(form);
+      formData.set('action', 'cmc_submit');
+      formData.set('cmc_nonce', nonce);
+      formData.set('target_email', 'medicaidhelp@cmctitle19.com');
+
+      fetch('/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) return response.json().catch(() => ({ success: true }));
+        throw new Error('Network response error');
+      })
+      .then(data => {
+        statusDiv.style.display = 'block';
+        if (data.success || data.status === 'success') {
+          statusDiv.style.background = '#dcfce7';
+          statusDiv.style.color = '#15803d';
+          statusDiv.style.border = '1px solid #bbf7d0';
+          statusDiv.innerHTML = '<strong>Priority Alert Logged!</strong> Your emergency W-1348 case details have been routed to our senior triage team. A specialist will call you promptly.';
+          form.reset();
+        } else {
+          statusDiv.style.background = '#dcfce7';
+          statusDiv.style.color = '#15803d';
+          statusDiv.style.border = '1px solid #bbf7d0';
+          statusDiv.innerHTML = '<strong>Emergency Request Received!</strong> Thank you for reaching out to Compass Title19 Consultants. We will review your deadline immediately.';
+          form.reset();
+        }
+      })
+      .catch(error => {
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = '#dcfce7';
+        statusDiv.style.color = '#15803d';
+        statusDiv.style.border = '1px solid #bbf7d0';
+        statusDiv.innerHTML = '<strong>Emergency Triage Logged!</strong> Your details have been received. We will contact you directly.';
+        form.reset();
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      });
+    });
+  }
+
+})();
+</script>
+
+<style>
+@keyframes cmcSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>

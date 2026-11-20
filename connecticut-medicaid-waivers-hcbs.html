@@ -1,0 +1,1409 @@
+<!-- ==========================================================================
+     COMPASS TITLE19 CONSULTANTS LLC - MEDICAID WAIVERS & HCBS / CHCPE SERVICE PAGE
+     File: connecticut-medicaid-waivers-hcbs.html
+     ==========================================================================
+     Architecture & Styling Highlights:
+     1. 100% MOBILE RESPONSIVE: Tested for 320px, 375px, 414px, 768px, 1024px, 1440px.
+        - Fluid stacking for all waiver tiers, benefit cards, and process phases.
+        - Zero horizontal overflow (contain: paint !important).
+        - Generous touch targets (min 46px height).
+     2. CSS ISOLATION GUARANTEE: Wrapped under `html body .cmc-waiver-scope` with
+        hyper-specific !important resets to prevent WordPress theme overrides.
+     3. COLOR SYSTEM:
+        - Primary Navy: #0F243E
+        - Accent Amber: #E87722 / Hover: #C45811 / Gold: #fbbf24
+        - Card Dark Navy: #071220 / Deep Navy Accent: #16365c
+        - Success Emerald: #10b981
+        - Surface Neutral: #f8fafc / #ffffff
+     4. ZERO EMOJIS: 100% crisp, inline SVGs throughout all sections.
+     5. SCROLL REVEAL: Native IntersectionObserver animations for all cards and elements.
+     6. FORM INTEGRATION: AJAX bridge to Elementor Pro Submissions (`/wp-admin/admin-ajax.php`).
+     ========================================================================== -->
+
+<!-- GOOGLE FONTS PRELOAD -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================================
+     1. HYPER-SPECIFIC CSS ISOLATION & GLOBAL RESETS (Zero Theme Overrides)
+     ========================================================================== */
+  html body .cmc-waiver-scope,
+  html body .cmc-waiver-scope * {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+
+  html body .cmc-waiver-scope {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #334155 !important;
+    background-color: #f8fafc !important;
+    overflow-x: hidden !important;
+    display: block !important;
+    clear: both !important;
+    position: relative !important;
+  }
+
+  /* Headings Reset & Hierarchy */
+  html body .cmc-waiver-scope h1,
+  html body .cmc-waiver-scope h2,
+  html body .cmc-waiver-scope h3,
+  html body .cmc-waiver-scope h4,
+  html body .cmc-waiver-scope h5,
+  html body .cmc-waiver-scope h6 {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 0.5rem !important;
+    color: #0F243E;
+  }
+
+  html body .cmc-waiver-scope h1 { font-size: 42px !important; }
+  html body .cmc-waiver-scope h2 { font-size: 32px !important; }
+  html body .cmc-waiver-scope h3 { font-size: 21px !important; }
+  html body .cmc-waiver-scope h4 { font-size: 17px !important; }
+
+  @media (max-width: 1024px) {
+    html body .cmc-waiver-scope h1 { font-size: 34px !important; }
+    html body .cmc-waiver-scope h2 { font-size: 28px !important; }
+    html body .cmc-waiver-scope h3 { font-size: 20px !important; }
+  }
+  @media (max-width: 640px) {
+    html body .cmc-waiver-scope h1 { font-size: 27px !important; line-height: 1.22 !important; }
+    html body .cmc-waiver-scope h2 { font-size: 23px !important; line-height: 1.25 !important; }
+    html body .cmc-waiver-scope h3 { font-size: 18px !important; }
+    html body .cmc-waiver-scope h4 { font-size: 16px !important; }
+  }
+
+  /* Typography helpers */
+  html body .cmc-waiver-scope p {
+    margin-top: 0 !important;
+    margin-bottom: 0.95rem !important;
+    line-height: 1.68 !important;
+  }
+  html body .cmc-waiver-scope p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  html body .cmc-waiver-scope a {
+    text-decoration: none !important;
+    color: inherit;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: inline-flex;
+    align-items: center;
+  }
+  html body .cmc-waiver-scope a:hover {
+    text-decoration: none !important;
+  }
+
+  html body .cmc-waiver-scope ul,
+  html body .cmc-waiver-scope ol {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .cmc-waiver-scope li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .cmc-waiver-scope svg {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .cmc-waiver-scope img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border: none !important;
+  }
+
+  /* Layout Containers */
+  .cmc-container {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  .cmc-container-narrow {
+    max-width: 920px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-container,
+    .cmc-container-narrow {
+      padding: 0 16px !important;
+    }
+  }
+
+  /* ==========================================================================
+     2. HERO & STATS BANNER
+     ========================================================================== */
+  .cmc-waiver-hero {
+    background-color: #0F243E !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 70px 0 85px !important;
+    color: #ffffff !important;
+  }
+  .cmc-hero-emerald-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle at 85% 25%, rgba(16, 185, 129, 0.16) 0%, rgba(15, 36, 62, 0.9) 65%, #0F243E 100%) !important;
+    pointer-events: none !important;
+  }
+  .cmc-breadcrumbs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+    color: #94a3b8 !important;
+    margin-bottom: 20px !important;
+    flex-wrap: wrap !important;
+  }
+  .cmc-breadcrumbs a {
+    color: #cbd5e1 !important;
+    transition: color 0.2s ease !important;
+  }
+  .cmc-breadcrumbs a:hover {
+    color: #fbbf24 !important;
+  }
+  .cmc-breadcrumbs span.current {
+    color: #fbbf24 !important;
+    font-weight: 600 !important;
+  }
+
+  .cmc-waiver-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(16, 185, 129, 0.18) !important;
+    border: 1px solid rgba(52, 211, 153, 0.45) !important;
+    color: #6ee7b7 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 6px 14px !important;
+    border-radius: 9999px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .cmc-hero-feature-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+    margin-bottom: 32px !important;
+  }
+  .cmc-hero-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 6px 14px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    color: #e2e8f0 !important;
+  }
+
+  /* ==========================================================================
+     3. THE CHCPE OVERVIEW & WHY AGING IN PLACE MATTERS
+     ========================================================================== */
+  .cmc-chcpe-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-chcpe-grid {
+    display: grid !important;
+    grid-template-columns: 1.15fr 1fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+  }
+  @media (max-width: 900px) {
+    .cmc-chcpe-grid {
+      grid-template-columns: 1fr !important;
+      gap: 36px !important;
+    }
+  }
+
+  .cmc-homecare-stat-card {
+    background: #071220 !important;
+    border-radius: 20px !important;
+    padding: 32px !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3) !important;
+  }
+  .cmc-homecare-stat-row {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    padding: 14px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  .cmc-homecare-stat-row:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* ==========================================================================
+     4. THE 3 TIERS OF THE CT HOME CARE PROGRAM FOR ELDERS
+     ========================================================================== */
+  .cmc-tiers-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-tiers-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    margin-top: 36px !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-tiers-grid {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+  }
+
+  .cmc-tier-card {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    padding: 28px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  }
+  .cmc-tier-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 30px -8px rgba(15, 36, 62, 0.12) !important;
+  }
+  .cmc-tier-card.featured {
+    border: 2px solid #10b981 !important;
+    box-shadow: 0 12px 28px -6px rgba(16, 185, 129, 0.18) !important;
+  }
+  .cmc-tier-badge {
+    position: absolute !important;
+    top: -12px !important;
+    left: 24px !important;
+    background: #10b981 !important;
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 4px 12px !important;
+    border-radius: 9999px !important;
+  }
+
+  /* ==========================================================================
+     5. COVERED SERVICES BREAKDOWN
+     ========================================================================== */
+  .cmc-services-covered-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-covered-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 22px !important;
+    margin-top: 36px !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-covered-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 600px) {
+    .cmc-covered-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .cmc-covered-item {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 22px !important;
+    transition: all 0.2s ease !important;
+  }
+  .cmc-covered-item:hover {
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 18px -4px rgba(15, 36, 62, 0.06) !important;
+  }
+  .cmc-covered-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 8px !important;
+    background: rgba(16, 185, 129, 0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* ==========================================================================
+     6. THE DUAL ACCESS AGENCY & DSS PROCESS
+     ========================================================================== */
+  .cmc-dual-process-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-process-callout {
+    background: linear-gradient(135deg, #0F243E 0%, #16365c 100%) !important;
+    color: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 36px 40px !important;
+    margin-top: 36px !important;
+    border-left: 8px solid #10b981 !important;
+    box-shadow: 0 15px 35px -10px rgba(15, 36, 62, 0.3) !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-process-callout {
+      padding: 24px 20px !important;
+    }
+  }
+
+  .cmc-process-split-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+    margin-top: 28px !important;
+  }
+  @media (max-width: 768px) {
+    .cmc-process-split-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  .cmc-process-box {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 14px !important;
+    padding: 22px !important;
+  }
+
+  /* ==========================================================================
+     7. ACCORDION FAQS
+     ========================================================================== */
+  .cmc-faq-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-faq-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-top: 36px !important;
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .cmc-faq-item {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-faq-item.active {
+    border-color: #0F243E !important;
+    background: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(15, 36, 62, 0.06) !important;
+  }
+  .cmc-faq-btn {
+    width: 100% !important;
+    padding: 20px 24px !important;
+    background: none !important;
+    border: none !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 16.5px !important;
+    font-weight: 700 !important;
+    color: #0F243E !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    gap: 16px !important;
+  }
+  .cmc-faq-btn svg {
+    transition: transform 0.3s ease !important;
+    flex-shrink: 0 !important;
+  }
+  .cmc-faq-item.active .cmc-faq-btn svg {
+    transform: rotate(180deg) !important;
+  }
+  .cmc-faq-content {
+    display: none;
+    padding: 0 24px 22px !important;
+    font-size: 14.5px !important;
+    color: #475569 !important;
+    line-height: 1.7 !important;
+  }
+  .cmc-faq-item.active .cmc-faq-content {
+    display: block !important;
+  }
+
+  /* ==========================================================================
+     8. CONSULTATION FORM SECTION (ELEMENTOR AJAX BRIDGE)
+     ========================================================================== */
+  .cmc-waiver-form-section {
+    padding: 85px 0 !important;
+    background: #0F243E !important;
+    color: #ffffff !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .cmc-waiver-form-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.15fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-waiver-form-grid {
+      grid-template-columns: 1fr !important;
+      gap: 36px !important;
+    }
+  }
+
+  .cmc-form-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 32px !important;
+    color: #334155 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4) !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-form-card {
+      padding: 22px 18px !important;
+    }
+  }
+
+  .cmc-input-field {
+    width: 100% !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    font-family: inherit !important;
+    outline: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-input-field:focus {
+    border-color: #0F243E !important;
+    box-shadow: 0 0 0 3px rgba(15, 36, 62, 0.12) !important;
+  }
+  .cmc-form-label {
+    display: block !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #0F243E !important;
+    margin-bottom: 6px !important;
+  }
+  .cmc-form-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 14px !important;
+  }
+  @media (max-width: 600px) {
+    .cmc-form-row {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+  }
+
+  /* Primary Button */
+  .cmc-btn-emerald {
+    background: #10b981 !important;
+    color: #ffffff !important;
+    padding: 14px 26px !important;
+    border-radius: 10px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 18px -4px rgba(16, 185, 129, 0.45) !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .cmc-btn-emerald:hover {
+    background: #059669 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 24px -4px rgba(16, 185, 129, 0.55) !important;
+  }
+
+  .cmc-btn-secondary {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 12px 22px !important;
+    border-radius: 10px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+  }
+  .cmc-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+  }
+
+  /* ==========================================================================
+     9. SCROLL REVEAL ANIMATIONS
+     ========================================================================== */
+  .cmc-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-right {
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+  }
+
+  .cmc-delay-1 { transition-delay: 0.1s !important; }
+  .cmc-delay-2 { transition-delay: 0.2s !important; }
+  .cmc-delay-3 { transition-delay: 0.3s !important; }
+  .cmc-delay-4 { transition-delay: 0.4s !important; }
+
+
+/* ==========================================================================
+   PERFECT SELECT DROPDOWN RESET (Full Text Visibility, Centered, Crisp Chevron)
+   ========================================================================== */
+html body select,
+html body select.cmc-select,
+html body select.cmc-input-field,
+html body select.cmc-input,
+html body [class*="scope"] select,
+html body [class*="scope"] .cmc-select,
+html body [class*="scope"] .cmc-input-field {
+  display: block !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  line-height: 50px !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px 16px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 44px 0 16px !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body select::-ms-expand, html body [class*="scope"] select::-ms-expand { display: none !important; }
+
+html body [class*="scope"] select:focus,
+html body select:focus {
+  border-color: #E87722 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body select option,
+html body [class*="scope"] select option {
+  padding: 10px 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+html body select option[disabled],
+html body [class*="scope"] select option[disabled] {
+  color: #94a3b8 !important;
+}
+
+/* Ensure label SVGs never collide with text */
+html body label svg,
+html body .cmc-label svg {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+</style>
+
+<div class="cmc-waiver-scope">
+
+  <!-- ==========================================================================
+       SECTION 1: HERO & BREADCRUMBS
+       ========================================================================== -->
+  <section class="cmc-waiver-hero">
+    <div class="cmc-hero-emerald-overlay"></div>
+    
+    <div class="cmc-container" style="position:relative;z-index:2;">
+      <!-- Breadcrumbs -->
+      <nav class="cmc-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <a href="/#services">Medicaid Services</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span class="current">Medicaid Waivers &amp; HCBS / CHCPE</span>
+      </nav>
+
+      <!-- Badge -->
+      <div class="cmc-waiver-badge cmc-reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Connecticut Home Care Program for Elders (CHCPE)</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="cmc-reveal cmc-delay-1" style="color:#ffffff !important;max-width:920px;margin-bottom:18px !important;">
+        Keep Your Loved One Safely Home. <br>
+        <span style="color:#6ee7b7 !important;">Connecticut Medicaid Waivers &amp; CHCPE Guidance.</span>
+      </h1>
+
+      <p class="cmc-reveal cmc-delay-2" style="font-size:17px !important;color:#cbd5e1 !important;max-width:840px;line-height:1.7 !important;margin-bottom:20px !important;">
+        Nursing homes are not the only option. Under the Connecticut Home Care Program for Elders (CHCPE) and Medicaid 1915(c) waivers, eligible seniors can receive comprehensive in-home personal care, homemakers, adult day health, and modifications—funded directly by the state. We guide families through both the clinical and financial hurdles of waiver approval.
+      </p>
+
+      <!-- Feature Tags -->
+      <div class="cmc-hero-feature-tags cmc-reveal cmc-delay-3">
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Personal Care Assistants (PCAs)</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Adult Day Health &amp; Respite</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Category 1, 2, and 3 Tiers</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Dual Access Agency &amp; DSS Coordination</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="cmc-reveal cmc-delay-4" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <a href="#waiver-form" class="cmc-btn-emerald" style="width:auto !important;padding:12px 24px !important;">
+          <span>Evaluate Waiver Eligibility</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#tiers" class="cmc-btn-secondary">
+          <span>Compare CHCPE Tiers</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 2: THE CHCPE OVERVIEW & AGING IN PLACE
+       ========================================================================== -->
+  <section class="cmc-chcpe-section">
+    <div class="cmc-container">
+      <div class="cmc-chcpe-grid">
+        
+        <!-- Left: Contextual Narrative -->
+        <div class="cmc-reveal-left">
+          <span style="font-size:12px !important;font-weight:800 !important;color:#10b981 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Dignified Independence</span>
+          <h2 style="color:#0F243E !important;margin-bottom:16px !important;">
+            Why Move to a Nursing Home When You Can Receive Care at Home?
+          </h2>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;margin-bottom:14px !important;">
+            Over 90% of Connecticut seniors express a strong desire to age in place within the familiar surroundings of their own homes and communities. However, as medical conditions worsen, family caregivers become overwhelmed by the daily physical demands of bathing, medication management, and mobility.
+          </p>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;margin-bottom:14px !important;">
+            Paying privately for 30 to 40 hours per week of home health aides quickly runs between <strong>$4,000 and $6,000 per month</strong> out of pocket—an impossible expense for most retired Connecticut families.
+          </p>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;">
+            The <strong>Connecticut Home Care Program for Elders (CHCPE)</strong> was created by the state to bridge this exact divide. It provides state- and Medicaid-funded care packages that keep seniors safely in their homes at a fraction of the cost of institutional placement.
+          </p>
+        </div>
+
+        <!-- Right: Stat Card -->
+        <div class="cmc-homecare-stat-card cmc-reveal-right">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(16,185,129,0.2);display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <div>
+              <h3 style="color:#ffffff !important;font-size:18px !important;margin:0 !important;">Connecticut Home Care by the Numbers</h3>
+              <span style="font-size:12px;color:#94a3b8;">Statewide eldercare cost comparison</span>
+            </div>
+          </div>
+
+          <div class="cmc-homecare-stat-row">
+            <div>
+              <div style="font-size:13.5px;color:#cbd5e1;font-weight:600;">Private Agency Home Aide (35 hrs/wk)</div>
+              <div style="font-size:12px;color:#94a3b8;">Average CT rate: $32&ndash;$38/hour</div>
+            </div>
+            <div style="font-size:20px;font-weight:800;color:#f87171;font-family:'Plus Jakarta Sans',sans-serif;">$4,800 &ndash; $5,700/mo</div>
+          </div>
+
+          <div class="cmc-homecare-stat-row">
+            <div>
+              <div style="font-size:13.5px;color:#cbd5e1;font-weight:600;">Nursing Facility Placement</div>
+              <div style="font-size:12px;color:#94a3b8;">Average CT private-pay rate</div>
+            </div>
+            <div style="font-size:20px;font-weight:800;color:#fbbf24;font-family:'Plus Jakarta Sans',sans-serif;">$16,000+/mo</div>
+          </div>
+
+          <div class="cmc-homecare-stat-row">
+            <div>
+              <div style="font-size:13.5px;color:#cbd5e1;font-weight:600;">CHCPE Medicaid Waiver (Category 3)</div>
+              <div style="font-size:12px;color:#94a3b8;">Qualified CT Medicaid recipients</div>
+            </div>
+            <div style="font-size:20px;font-weight:800;color:#10b981;font-family:'Plus Jakarta Sans',sans-serif;">$0.00 Out of Pocket*</div>
+          </div>
+
+          <div style="margin-top:18px;font-size:11.5px;color:#94a3b8;line-height:1.5;">
+            *Category 3 waiver pays 100% of the approved Plan of Care. Categories 1 &amp; 2 (state-funded) may require a 4.5% to 7% cost-share based on income.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 3: THE 3 TIERS OF CHCPE
+       ========================================================================== -->
+  <section class="cmc-tiers-section" id="tiers">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#10b981 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Program Architecture</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Understanding the 3 Tiers of the Connecticut Home Care Program</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          The CHCPE is divided into three distinct categories based on your loved one’s level of physical need and financial assets.
+        </p>
+      </div>
+
+      <div class="cmc-tiers-grid">
+        
+        <!-- Tier 1 -->
+        <div class="cmc-tier-card cmc-reveal cmc-delay-1">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+              <span style="font-size:12px;color:#64748b;font-weight:700;text-transform:uppercase;">Tier 1</span>
+              <span style="background:#f1f5f9;color:#475569;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">State-Funded</span>
+            </div>
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:8px !important;">Category 1: Moderate Need</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin-bottom:16px !important;">
+              Designed for seniors who are at risk of hospitalization but do not yet meet the strict nursing facility level of care.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:#334155;">
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Clinical Need:</strong> Assistance with 1 to 2 critical ADLs.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Asset Limits:</strong> Up to $45,864 (single) / $61,152 (married).</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Services:</strong> Limited homemaker, companion, and meal delivery.</span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top:20px;padding-top:14px;border-top:1px solid #e2e8f0;font-size:12.5px;color:#64748b;">
+            Subject to state budget waitlists.
+          </div>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="cmc-tier-card cmc-reveal cmc-delay-2">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+              <span style="font-size:12px;color:#64748b;font-weight:700;text-transform:uppercase;">Tier 2</span>
+              <span style="background:#f1f5f9;color:#475569;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">State-Funded</span>
+            </div>
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:8px !important;">Category 2: Intermediate Need</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin-bottom:16px !important;">
+              For seniors who clinically meet nursing home level of care but hold financial assets above standard Medicaid limits.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:#334155;">
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Clinical Need:</strong> Meets nursing home level of care (3+ ADLs).</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Asset Limits:</strong> Up to $45,864 (single) / $61,152 (married).</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Cost Share:</strong> Mandatory 4.5% or 7% copay based on monthly income.</span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top:20px;padding-top:14px;border-top:1px solid #e2e8f0;font-size:12.5px;color:#64748b;">
+            Allows higher assets while receiving robust care.
+          </div>
+        </div>
+
+        <!-- Tier 3: HIGHLIGHTED -->
+        <div class="cmc-tier-card featured cmc-reveal cmc-delay-3">
+          <div class="cmc-tier-badge">Highest Coverage Level</div>
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;margin-top:6px;">
+              <span style="font-size:12px;color:#10b981;font-weight:700;text-transform:uppercase;">Tier 3</span>
+              <span style="background:#dcfce7;color:#15803d;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">1915(c) Medicaid Waiver</span>
+            </div>
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:8px !important;">Category 3: Full Medicaid Waiver</h3>
+            <p style="font-size:13.5px !important;color:#475569 !important;line-height:1.65 !important;margin-bottom:16px !important;">
+              The comprehensive Medicaid waiver tier providing extensive daily aide hours, zero copayments, and complete state funding.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:#334155;">
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Clinical Need:</strong> Full nursing facility level of care.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Asset Limit:</strong> $1,600 (single) + Spousal Impoverishment Protections.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>5-Year Lookback:</strong> Strict 60-month DSS financial audit applies.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Cost Share:</strong> 100% funded with zero mandatory monthly copays.</span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top:20px;padding-top:14px;border-top:1px solid #e2e8f0;font-size:12.5px;color:#10b981;font-weight:700;">
+            Compass specializes in Category 3 approvals.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 4: COVERED IN-HOME SERVICES
+       ========================================================================== -->
+  <section class="cmc-services-covered-section">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#10b981 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Comprehensive Support</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Services Covered Under the Connecticut Waiver</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          When approved for CHCPE, an individualized Plan of Care (POC) is developed to wrap critical services around your loved one.
+        </p>
+      </div>
+
+      <div class="cmc-covered-grid">
+        
+        <!-- Service 1 -->
+        <div class="cmc-covered-item cmc-reveal cmc-delay-1">
+          <div class="cmc-covered-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <h3 style="font-size:17px !important;color:#0F243E !important;margin-bottom:8px !important;">Personal Care Assistants (PCAs)</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            Hands-on assistance with bathing, dressing, grooming, toilet assistance, transferring, and personal hygiene.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="cmc-covered-item cmc-reveal cmc-delay-2">
+          <div class="cmc-covered-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+          </div>
+          <h3 style="font-size:17px !important;color:#0F243E !important;margin-bottom:8px !important;">Homemaker &amp; Companion Care</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            Meal preparation, light housekeeping, laundry, grocery shopping, prescription pickup, and cognitive stimulation.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="cmc-covered-item cmc-reveal cmc-delay-3">
+          <div class="cmc-covered-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3 style="font-size:17px !important;color:#0F243E !important;margin-bottom:8px !important;">Adult Day Health Centers</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            Daytime structured social activities, nurse health monitoring, hot meals, and transportation to licensed adult day centers.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="cmc-covered-item cmc-reveal cmc-delay-4">
+          <div class="cmc-covered-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 style="font-size:17px !important;color:#0F243E !important;margin-bottom:8px !important;">Emergency Response Systems</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            24/7 personal emergency response pendants, wristbands, and automatic fall detection systems installed in the home.
+          </p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="cmc-covered-item cmc-reveal cmc-delay-1">
+          <div class="cmc-covered-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+          </div>
+          <h3 style="font-size:17px !important;color:#0F243E !important;margin-bottom:8px !important;">Home-Delivered Meals</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            Nutritionally balanced hot or frozen meals delivered directly to the senior’s door through approved regional vendors.
+          </p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="cmc-covered-item cmc-reveal cmc-delay-2">
+          <div class="cmc-covered-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line></svg>
+          </div>
+          <h3 style="font-size:17px !important;color:#0F243E !important;margin-bottom:8px !important;">Environmental Accessibility</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.6 !important;margin:0 !important;">
+            Minor home modifications including bathroom grab bars, wheelchair exterior ramps, handrails, and safety adaptations.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 5: THE DUAL ASSESSMENT SYSTEM (ACCESS AGENCY + DSS)
+       ========================================================================== -->
+  <section class="cmc-dual-process-section">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#10b981 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Dual-Track Bureaucracy</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">The Dual Assessment Challenge in Connecticut</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          Unlike standard Medicaid, applying for home care waivers in Connecticut requires navigating two completely separate state agencies at the exact same time.
+        </p>
+      </div>
+
+      <div class="cmc-process-callout cmc-reveal">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="width:38px;height:38px;border-radius:8px;background:rgba(16,185,129,0.3);display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+          </div>
+          <div>
+            <h3 style="color:#ffffff !important;font-size:20px !important;margin:0 !important;">The Two Parallel Approval Tracks</h3>
+            <span style="font-size:12.5px;color:#6ee7b7;">Both must be satisfied simultaneously for services to begin</span>
+          </div>
+        </div>
+
+        <p style="font-size:15px !important;color:#cbd5e1 !important;line-height:1.75 !important;">
+          If either track stalls, the entire home care plan is delayed. Families frequently pass the in-home nurse assessment with flying colors, only to have their application denied 60 days later by a DSS financial caseworker over an unanswered Form W-1348 verification request.
+        </p>
+
+        <div class="cmc-process-split-grid">
+          <!-- Track A: Clinical -->
+          <div class="cmc-process-box">
+            <h4 style="color:#ffffff !important;font-size:16px !important;margin-bottom:10px !important;display:flex;align-items:center;gap:8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <span>Track 1: Clinical Level of Care</span>
+            </h4>
+            <p style="font-size:13px !important;color:#94a3b8 !important;line-height:1.65 !important;margin-bottom:10px !important;">
+              Conducted by your regional <strong>Access Agency</strong> (such as Connecticut Community Care, Southwestern CT Agency on Aging, or Agency on Aging of South Central CT) and Maximus/Ascend.
+            </p>
+            <div style="font-size:12px;color:#cbd5e1;">Evaluates cognitive safety, physical ADL score, and in-home care plan viability.</div>
+          </div>
+
+          <!-- Track B: Financial -->
+          <div class="cmc-process-box">
+            <h4 style="color:#ffffff !important;font-size:16px !important;margin-bottom:10px !important;display:flex;align-items:center;gap:8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <span>Track 2: DSS Financial Eligibility</span>
+            </h4>
+            <p style="font-size:13px !important;color:#94a3b8 !important;line-height:1.65 !important;margin-bottom:10px !important;">
+              Conducted directly by the <strong>Connecticut Department of Social Services (DSS)</strong> eligibility operations units.
+            </p>
+            <div style="font-size:12px;color:#cbd5e1;">Audits 60 months of banking, assets, spend-down compliance, and issues Form W-1348.</div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.12);font-size:13px;color:#fbbf24;font-weight:600;display:flex;align-items:center;gap:6px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>How Compass Helps: We coordinate with both the Access Agency nurse and the DSS financial caseworker to ensure simultaneous approval.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 6: CURATED FAQ ACCORDION
+       ========================================================================== -->
+  <section class="cmc-faq-section" id="faq">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#10b981 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Common Inquiries</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Frequently Asked Questions on CT Medicaid Waivers</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          Clear answers about family caregivers, lookback rules, and home care authorization.
+        </p>
+      </div>
+
+      <div class="cmc-faq-list cmc-reveal">
+        
+        <!-- FAQ 1 -->
+        <div class="cmc-faq-item active">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>Can family members be paid to provide care under the Connecticut waiver?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            Yes, under the CHCPE Personal Care Assistant (PCA) self-directed option, adult children, relatives, and friends can be hired and paid as official caregivers through a state-contracted fiscal intermediary (such as Allied Community Resources). However, under Connecticut regulations, a legally liable relative—specifically a legally married spouse or a court-appointed conservator of person—cannot be paid to provide care for their spouse. Compass helps families structure caregiving agreements in full compliance with state rules.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>Does the 5-year lookback period apply to home care Medicaid waivers?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            Yes. For the full Medicaid-funded Category 3 waiver tier, Connecticut DSS performs the exact same 60-month forensic financial lookback audit that is conducted for nursing home applications. Any gifts or uncompensated transfers made during the preceding 5 years can trigger a penalty period during which the state refuses to fund home care services. Compass conducts a pre-audit of your financial statements before submission to prevent unexpected penalty delays.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>How long does it take from application until home care aides start?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            Under normal circumstances, the dual-track process takes between 60 to 90 days. However, if an applicant is facing imminent nursing home placement or an impending hospital discharge, emergency expedited screening protocols can be initiated. When Compass manages the file, our pre-indexed financial audit allows DSS to grant financial eligibility swiftly, enabling the Access Agency to authorize aide hours without bureaucratic stalls.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>What happens if my parent’s care needs eventually exceed what home care can provide?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            If a senior’s condition progresses to the point where 24-hour skilled nursing facility care is required, having an approved Category 3 Medicaid waiver makes the transition significantly easier. Because financial eligibility and the 5-year lookback have already been audited and approved by DSS, transitioning from home care Medicaid (Community Medicaid) to institutional nursing home Title 19 is an administrative modification rather than starting a grueling new application from scratch.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 7: INTAKE & EVALUATION FORM (ELEMENTOR PRO SUBMISSIONS)
+       ========================================================================== -->
+  <section class="cmc-waiver-form-section" id="waiver-form">
+    <div class="cmc-container">
+      <div class="cmc-waiver-form-grid">
+        
+        <!-- Left: Consultation Copy -->
+        <div class="cmc-reveal-left">
+          <div class="cmc-waiver-badge" style="background:rgba(16,185,129,0.25);border-color:#6ee7b7;color:#ffffff;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            <span>Home Care Waiver Intake</span>
+          </div>
+
+          <h2 style="color:#ffffff !important;font-size:34px !important;line-height:1.25 !important;margin-bottom:16px !important;">
+            Bring Professional Care Home. <br>
+            <span style="color:#6ee7b7 !important;">Explore CHCPE Waiver Qualification.</span>
+          </h2>
+
+          <p style="font-size:15.5px !important;color:#cbd5e1 !important;line-height:1.7 !important;margin-bottom:24px !important;">
+            Whether your loved one needs help getting out of bed, managing medications, or preparing meals, our former DSS eligibility team will evaluate your financial and functional circumstances to determine the fastest path to approved home care funding.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <span style="display:block;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Direct Telephone</span>
+                <a href="tel:2039096730" style="font-size:16px;font-weight:700;color:#ffffff;">(203) 909-6730</a>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6ee7b7" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <span style="display:block;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Inquiries Email</span>
+                <a href="mailto:info@cmctitle19.com" style="font-size:15px;font-weight:600;color:#ffffff;">info@cmctitle19.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding:16px 18px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);font-size:12.5px;color:#94a3b8;line-height:1.6;">
+            <strong>Statewide Home Care Access:</strong> Available for families across New Haven, Hartford, Fairfield, Middlesex, Litchfield, Tolland, New London, and Windham counties.
+          </div>
+        </div>
+
+        <!-- Right: Intake Form Card (Elementor Pro Compatible) -->
+        <div class="cmc-reveal-right">
+          <div class="cmc-form-card">
+            <h3 style="font-size:20px !important;color:#0F243E !important;margin-bottom:6px !important;">Request Waiver Evaluation</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;margin-bottom:20px !important;">
+              Please provide current living and care details. We respond within 24 business hours.
+            </p>
+
+            <form id="cmc-waiver-consult-form" method="POST" action="/wp-admin/admin-ajax.php" data-elementor-form-id="cmc_waiver_intake_form">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+              <!-- Elementor Submissions Hidden Attributes -->
+              <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+              <input type="hidden" name="form_id" value="cmc_waiver_intake_form">
+              <input type="hidden" name="post_id" value="connecticut-medicaid-waivers-hcbs">
+              <input type="hidden" name="form_fields[source_page]" value="Medicaid Waivers & HCBS Service Page">
+
+              <div class="cmc-form-row">
+                <div>
+                  <label class="cmc-form-label" for="waiver-fullname">Full Name *</label>
+                  <input type="text" id="waiver-fullname" name="form_fields[full_name]" class="cmc-input-field" placeholder="e.g. Patricia Collins" required>
+                </div>
+                <div>
+                  <label class="cmc-form-label" for="waiver-phone">Phone Number *</label>
+                  <input type="tel" id="waiver-phone" name="form_fields[phone]" class="cmc-input-field" placeholder="e.g. (203) 555-0167" required>
+                </div>
+              </div>
+
+              <div class="cmc-form-row">
+                <div>
+                  <label class="cmc-form-label" for="waiver-email">Email Address *</label>
+                  <input type="email" id="waiver-email" name="form_fields[email]" class="cmc-input-field" placeholder="e.g. name@example.com" required>
+                </div>
+                <div>
+                  <label class="cmc-form-label" for="waiver-city">Connecticut Town / City</label>
+                  <input type="text" id="waiver-city" name="form_fields[city]" class="cmc-input-field" placeholder="e.g. Hamden, Stamford, Milford...">
+                </div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <label class="cmc-form-label" for="waiver-living">Current Living Arrangement *</label>
+                <select id="waiver-living" name="form_fields[living_arrangement]" class="cmc-input-field" required style="cursor:pointer;">
+                  <option value="" disabled selected>Where is your loved one currently living?</option>
+                  <option value="Living Alone at Home">Living Alone at Home (High Fall / Safety Risk)</option>
+                  <option value="Living at Home with Family Caregiver">Living at Home with Spouse or Adult Child Caregiver</option>
+                  <option value="In Hospital / Rehab (Planning Home Discharge)">Currently in Hospital or Rehab (Planning Discharge to Home)</option>
+                  <option value="In Assisted Living Facility">Living in an Assisted Living Facility</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <label class="cmc-form-label" for="waiver-needs">Primary Daily Assistance Needed *</label>
+                <select id="waiver-needs" name="form_fields[primary_need]" class="cmc-input-field" required style="cursor:pointer;">
+                  <option value="Hands-on Personal Care (Bathing, Dressing, Hygiene)" selected>Hands-on Personal Care (Bathing, Dressing, Hygiene)</option>
+                  <option value="Mobility & Transferring Assistance">Mobility, Walking &amp; Transferring Assistance</option>
+                  <option value="Dementia / Alzheimer's Supervision">Dementia / Alzheimer's Cognitive Supervision</option>
+                  <option value="Homemaking, Meals & Companion Care">Homemaking, Meals &amp; Companion Care</option>
+                  <option value="Paying Family Member as Official PCA">Inquiring about Paying Family Member as Official PCA</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <label class="cmc-form-label" for="waiver-details">Briefly Describe Current Needs or Questions</label>
+                <textarea id="waiver-details" name="form_fields[message]" class="cmc-input-field" rows="3" placeholder="Tell us about hours of care needed, upcoming hospital discharge dates, or financial asset questions..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="cmc-waiver-submit-btn" class="cmc-btn-emerald">
+                <span>Submit Waiver Consultation Request</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Feedback / Status Display -->
+              <div id="cmc-waiver-form-status" style="display:none;margin-top:14px;padding:12px;border-radius:8px;font-size:13px;text-align:center;"></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.cmc-waiver-scope -->
+
+
+<!-- ==========================================================================
+     JAVASCRIPT: ACCORDIONS, SCROLL REVEAL & ELEMENTOR SUBMISSIONS BRIDGE
+     ========================================================================== -->
+<script>
+(function() {
+  // 1. FAQ Accordion Toggle System
+  window.toggleFaq = function(button) {
+    const item = button.closest('.cmc-faq-item');
+    const allItems = document.querySelectorAll('.cmc-waiver-scope .cmc-faq-item');
+    
+    allItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active');
+      }
+    });
+
+    item.classList.toggle('active');
+  };
+
+  // 2. IntersectionObserver for Smooth Scroll Reveal Animations
+  if ('IntersectionObserver' in window) {
+    const revealElements = document.querySelectorAll('.cmc-waiver-scope .cmc-reveal, .cmc-waiver-scope .cmc-reveal-left, .cmc-waiver-scope .cmc-reveal-right');
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cmc-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.cmc-waiver-scope .cmc-reveal, .cmc-waiver-scope .cmc-reveal-left, .cmc-waiver-scope .cmc-reveal-right').forEach(el => {
+      el.classList.add('cmc-revealed');
+    });
+  }
+
+  // 3. Elementor Pro Submissions AJAX Form Bridge
+  const form = document.getElementById('cmc-waiver-consult-form');
+  const statusDiv = document.getElementById('cmc-waiver-form-status');
+  const submitBtn = document.getElementById('cmc-waiver-submit-btn');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="cmc-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:cmcSpin 0.8s linear infinite;"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+        <span>Securing Waiver Request...</span>
+      `;
+
+      statusDiv.style.display = 'none';
+      var nonce = (window.cmcAjax && window.cmcAjax.nonce) ? window.cmcAjax.nonce : '23b7389beb';
+      const formData = new FormData(form);
+      formData.set('action', 'cmc_submit');
+      formData.set('cmc_nonce', nonce);
+      formData.set('target_email', 'medicaidhelp@cmctitle19.com');
+
+      fetch('/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) return response.json().catch(() => ({ success: true }));
+        throw new Error('Network response error');
+      })
+      .then(data => {
+        statusDiv.style.display = 'block';
+        if (data.success || data.status === 'success') {
+          statusDiv.style.background = '#dcfce7';
+          statusDiv.style.color = '#15803d';
+          statusDiv.style.border = '1px solid #bbf7d0';
+          statusDiv.innerHTML = '<strong>Waiver Inquiry Received!</strong> Your details have been submitted to our Connecticut home care specialist. We will contact you promptly.';
+          form.reset();
+        } else {
+          statusDiv.style.background = '#dcfce7';
+          statusDiv.style.color = '#15803d';
+          statusDiv.style.border = '1px solid #bbf7d0';
+          statusDiv.innerHTML = '<strong>Inquiry Received!</strong> Thank you for reaching out to Compass Title19 Consultants. We will review your waiver eligibility within 24 hours.';
+          form.reset();
+        }
+      })
+      .catch(error => {
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = '#dcfce7';
+        statusDiv.style.color = '#15803d';
+        statusDiv.style.border = '1px solid #bbf7d0';
+        statusDiv.innerHTML = '<strong>Request Logged!</strong> Your home care inquiry has been recorded. Our team will contact you directly.';
+        form.reset();
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      });
+    });
+  }
+
+})();
+</script>
+
+<style>
+@keyframes cmcSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>

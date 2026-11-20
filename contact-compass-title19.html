@@ -1,0 +1,1331 @@
+<!-- =============================================================================
+     COMPASS TITLE 19 CONSULTANTS - CONTACT & CASE INTAKE HUB
+     File: contact-compass-title19.html
+     Scoped Wrapper: html body .cmc-contact-scope
+     Compatible with: Elementor Native HTML Widget / WordPress
+     Elementor Pro Submissions AJAX Bridge Included
+     Zero Emojis: 100% Inline SVG Icons
+     Zero CSS Leaks / 100% Resilient Isolation
+============================================================================= -->
+
+<style>
+/* =============================================================================
+   1. RESET & ISOLATION SCOPE
+============================================================================= */
+html body .cmc-contact-scope {
+  --cmc-navy: #0F243E;
+  --cmc-navy-light: #16365c;
+  --cmc-navy-dark: #071220;
+  --cmc-gold: #E87722;
+  --cmc-gold-hover: #C45811;
+  --cmc-gold-light: #fbbf24;
+  --cmc-gold-bg: #fffbeb;
+  --cmc-slate-900: #0f172a;
+  --cmc-slate-800: #1e293b;
+  --cmc-slate-700: #334155;
+  --cmc-slate-600: #475569;
+  --cmc-slate-500: #64748b;
+  --cmc-slate-300: #cbd5e1;
+  --cmc-slate-200: #e2e8f0;
+  --cmc-slate-100: #f1f5f9;
+  --cmc-slate-50: #f8fafc;
+  --cmc-white: #ffffff;
+  --cmc-emerald: #059669;
+  --cmc-emerald-light: #d1fae5;
+  --cmc-emerald-border: #6ee7b7;
+  --cmc-red: #dc2626;
+  --cmc-red-light: #fee2e2;
+  --cmc-red-border: #fca5a5;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: var(--cmc-slate-800) !important;
+  background-color: #f8fafc !important;
+  line-height: 1.6 !important;
+  font-size: 16px !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+html body .cmc-contact-scope *,
+html body .cmc-contact-scope *::before,
+html body .cmc-contact-scope *::after {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html body .cmc-contact-scope a {
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.25s ease !important;
+}
+
+html body .cmc-contact-scope button {
+  font-family: inherit !important;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+html body .cmc-contact-scope svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* =============================================================================
+   2. LAYOUT UTILITIES & ANIMATIONS
+============================================================================= */
+html body .cmc-contact-scope .cmc-container {
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+html body .cmc-contact-scope .cmc-section {
+  padding: 96px 0 !important;
+  position: relative !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-contact-scope .cmc-section {
+    padding: 64px 0 !important;
+  }
+}
+
+html body .cmc-contact-scope .cmc-section-header {
+  text-align: center !important;
+  max-width: 820px !important;
+  margin: 0 auto 56px auto !important;
+}
+
+html body .cmc-contact-scope .cmc-eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  background: var(--cmc-gold-bg) !important;
+  color: var(--cmc-gold-hover) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  border-radius: 9999px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 16px !important;
+}
+
+html body .cmc-contact-scope .cmc-eyebrow-dark {
+  background: rgba(217, 119, 6, 0.15) !important;
+  color: var(--cmc-gold-light) !important;
+  border-color: rgba(251, 191, 36, 0.3) !important;
+}
+
+html body .cmc-contact-scope .cmc-section-title {
+  font-size: 38px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 20px !important;
+  letter-spacing: -0.02em !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-contact-scope .cmc-section-title {
+    font-size: 28px !important;
+  }
+}
+
+html body .cmc-contact-scope .cmc-section-title.cmc-text-white {
+  color: var(--cmc-white) !important;
+}
+
+html body .cmc-contact-scope .cmc-section-subtitle {
+  font-size: 18px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.65 !important;
+}
+
+/* Animations */
+html body .cmc-contact-scope .cmc-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html body .cmc-contact-scope .cmc-reveal.cmc-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html body .cmc-contact-scope .cmc-reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html body .cmc-contact-scope .cmc-reveal-left.cmc-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+html body .cmc-contact-scope .cmc-reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html body .cmc-contact-scope .cmc-reveal-right.cmc-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+html body .cmc-contact-scope .cmc-delay-1 { transition-delay: 0.1s !important; }
+html body .cmc-contact-scope .cmc-delay-2 { transition-delay: 0.2s !important; }
+html body .cmc-contact-scope .cmc-delay-3 { transition-delay: 0.3s !important; }
+
+/* =============================================================================
+   STANDARDIZED BREADCRUMBS (Matches About Compass Page)
+============================================================================= */
+.cmc-breadcrumbs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  margin-bottom: 22px !important;
+  flex-wrap: wrap !important;
+}
+
+.cmc-breadcrumbs a {
+  color: #cbd5e1 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.cmc-breadcrumbs a:hover {
+  color: #fbbf24 !important;
+}
+
+.cmc-breadcrumbs svg {
+  flex-shrink: 0 !important;
+  stroke: #94a3b8 !important;
+}
+
+.cmc-breadcrumbs span.current {
+  color: #fbbf24 !important;
+  font-weight: 600 !important;
+}
+
+/* =============================================================================
+   4. HERO HEADER & DIRECT DIRECTORY
+============================================================================= */
+html body .cmc-contact-scope .cmc-hero {
+  background: linear-gradient(135deg, var(--cmc-navy-dark) 0%, var(--cmc-navy) 65%, #183354 100%) !important;
+  color: var(--cmc-white) !important;
+  padding: 84px 0 96px 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+html body .cmc-contact-scope .cmc-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1px, transparent 1px) !important;
+  background-size: 32px 32px !important;
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+}
+
+html body .cmc-contact-scope .cmc-hero-content {
+  text-align: center !important;
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+html body .cmc-contact-scope .cmc-hero-title {
+  font-size: 46px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+  line-height: 1.2 !important;
+  margin-bottom: 22px !important;
+  letter-spacing: -0.025em !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-contact-scope .cmc-hero-title {
+    font-size: 32px !important;
+  }
+}
+
+html body .cmc-contact-scope .cmc-hero-title span {
+  color: var(--cmc-gold-light) !important;
+}
+
+html body .cmc-contact-scope .cmc-hero-desc {
+  font-size: 19px !important;
+  line-height: 1.65 !important;
+  color: #cbd5e1 !important;
+  margin-bottom: 40px !important;
+}
+
+/* Quick Directory Strip */
+html body .cmc-contact-scope .cmc-dir-strip {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  margin-top: 20px !important;
+}
+
+@media (max-width: 900px) {
+  html body .cmc-contact-scope .cmc-dir-strip {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-contact-scope .cmc-dir-pill {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 12px !important;
+  padding: 20px 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  backdrop-filter: blur(8px) !important;
+  text-align: left !important;
+  transition: all 0.25s ease !important;
+}
+
+html body .cmc-contact-scope .cmc-dir-pill:hover {
+  background: rgba(255, 255, 255, 0.14) !important;
+  border-color: var(--cmc-gold-light) !important;
+  transform: translateY(-2px) !important;
+}
+
+html body .cmc-contact-scope .cmc-dir-icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 10px !important;
+  background: var(--cmc-gold) !important;
+  color: var(--cmc-white) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+html body .cmc-contact-scope .cmc-dir-label {
+  font-size: 12.5px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: #94a3b8 !important;
+  font-weight: 700 !important;
+}
+
+html body .cmc-contact-scope .cmc-dir-value {
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+  margin-top: 2px !important;
+}
+
+/* =============================================================================
+   5. TWO-COLUMN INTAKE SECTION: FORM & OFFICE DETAILS
+============================================================================= */
+html body .cmc-contact-scope .cmc-intake-section {
+  padding: 88px 0 !important;
+  background-color: #ffffff !important;
+}
+
+html body .cmc-contact-scope .cmc-intake-grid {
+  display: grid !important;
+  grid-template-columns: 1.25fr 0.85fr !important;
+  gap: 52px !important;
+  align-items: flex-start !important;
+}
+
+@media (max-width: 1024px) {
+  html body .cmc-contact-scope .cmc-intake-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+}
+
+/* Master Intake Form Card */
+html body .cmc-contact-scope .cmc-master-card {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  border: 1.5px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06) !important;
+  padding: 44px 38px !important;
+}
+
+@media (max-width: 640px) {
+  html body .cmc-contact-scope .cmc-master-card {
+    padding: 28px 20px !important;
+  }
+}
+
+html body .cmc-contact-scope .cmc-card-title {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  margin-bottom: 8px !important;
+}
+
+html body .cmc-contact-scope .cmc-card-desc {
+  font-size: 15px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 28px !important;
+}
+
+html body .cmc-contact-scope .cmc-form-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+}
+
+@media (max-width: 640px) {
+  html body .cmc-contact-scope .cmc-form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-contact-scope .cmc-form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+html body .cmc-contact-scope .cmc-form-group.cmc-full {
+  grid-column: 1 / -1 !important;
+}
+
+html body .cmc-contact-scope .cmc-label {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-slate-800) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+html body .cmc-contact-scope .cmc-input,
+html body .cmc-contact-scope .cmc-select,
+html body .cmc-contact-scope .cmc-textarea {
+  width: 100% !important;
+  padding: 13px 16px !important;
+  border: 1.5px solid var(--cmc-slate-300) !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  color: var(--cmc-slate-800) !important;
+  background-color: #ffffff !important;
+  transition: all 0.2s ease !important;
+}
+
+html body .cmc-contact-scope .cmc-input:focus,
+html body .cmc-contact-scope .cmc-select:focus,
+html body .cmc-contact-scope .cmc-textarea:focus {
+  outline: none !important;
+  border-color: var(--cmc-gold) !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body .cmc-contact-scope .cmc-textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+}
+
+html body .cmc-contact-scope .cmc-submit-btn {
+  width: 100% !important;
+  padding: 16px 28px !important;
+  background: linear-gradient(135deg, var(--cmc-gold) 0%, var(--cmc-gold-hover) 100%) !important;
+  color: var(--cmc-white) !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  margin-top: 10px !important;
+}
+
+html body .cmc-contact-scope .cmc-submit-btn:hover {
+  background: linear-gradient(135deg, #f59e0b 0%, var(--cmc-gold) 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.5) !important;
+}
+
+html body .cmc-contact-scope .cmc-form-disclaimer {
+  font-size: 12px !important;
+  color: var(--cmc-slate-500) !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+}
+
+html body .cmc-contact-scope .cmc-form-msg {
+  padding: 14px 18px !important;
+  border-radius: 8px !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  display: none;
+  margin-top: 18px !important;
+  text-align: center !important;
+}
+
+html body .cmc-contact-scope .cmc-form-msg.cmc-msg-success {
+  background: var(--cmc-emerald-light) !important;
+  color: var(--cmc-emerald) !important;
+  border: 1px solid var(--cmc-emerald-border) !important;
+  display: block;
+}
+
+html body .cmc-contact-scope .cmc-form-msg.cmc-msg-error {
+  background: var(--cmc-red-light) !important;
+  color: var(--cmc-red) !important;
+  border: 1px solid var(--cmc-red-border) !important;
+  display: block;
+}
+
+/* Sidebar Office Cards */
+html body .cmc-contact-scope .cmc-side-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 28px !important;
+}
+
+html body .cmc-contact-scope .cmc-office-card {
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05) !important;
+  padding: 30px 26px !important;
+  position: relative !important;
+}
+
+html body .cmc-contact-scope .cmc-office-badge {
+  display: inline-block !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  margin-bottom: 12px !important;
+}
+
+html body .cmc-contact-scope .cmc-badge-primary {
+  background: var(--cmc-navy) !important;
+  color: var(--cmc-gold-light) !important;
+}
+
+html body .cmc-contact-scope .cmc-badge-regional {
+  background: #f1f5f9 !important;
+  color: var(--cmc-slate-700) !important;
+}
+
+html body .cmc-contact-scope .cmc-office-name {
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  margin-bottom: 14px !important;
+}
+
+html body .cmc-contact-scope .cmc-office-line {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  font-size: 14.5px !important;
+  color: var(--cmc-slate-700) !important;
+  margin-bottom: 12px !important;
+  line-height: 1.5 !important;
+}
+
+html body .cmc-contact-scope .cmc-office-line svg {
+  color: var(--cmc-gold) !important;
+  margin-top: 3px !important;
+}
+
+html body .cmc-contact-scope .cmc-office-notes {
+  background: #f8fafc !important;
+  border-left: 3px solid var(--cmc-navy) !important;
+  padding: 12px 14px !important;
+  border-radius: 0 6px 6px 0 !important;
+  font-size: 13px !important;
+  color: var(--cmc-slate-600) !important;
+  margin-top: 16px !important;
+  line-height: 1.5 !important;
+}
+
+/* Remote / Statewide Assistance Box */
+html body .cmc-contact-scope .cmc-remote-card {
+  background: linear-gradient(135deg, var(--cmc-navy-dark) 0%, var(--cmc-navy) 100%) !important;
+  color: var(--cmc-white) !important;
+  border-radius: 14px !important;
+  padding: 30px 26px !important;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15) !important;
+}
+
+html body .cmc-contact-scope .cmc-remote-title {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+  margin-bottom: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+
+html body .cmc-contact-scope .cmc-remote-desc {
+  font-size: 14px !important;
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 16px !important;
+}
+
+html body .cmc-contact-scope .cmc-remote-list {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+html body .cmc-contact-scope .cmc-remote-list li {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  font-size: 13px !important;
+  color: #e2e8f0 !important;
+  margin-bottom: 8px !important;
+}
+
+html body .cmc-contact-scope .cmc-remote-list svg {
+  color: var(--cmc-gold-light) !important;
+}
+
+/* =============================================================================
+   6. EMERGENCY TRIAGE BANNER (FORM W-1348 DEADLINES)
+============================================================================= */
+html body .cmc-contact-scope .cmc-triage-strip {
+  background: var(--cmc-red-light) !important;
+  border-top: 2px solid var(--cmc-red-border) !important;
+  border-bottom: 2px solid var(--cmc-red-border) !important;
+  padding: 32px 0 !important;
+}
+
+html body .cmc-contact-scope .cmc-triage-flex {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  flex-wrap: wrap !important;
+}
+
+html body .cmc-contact-scope .cmc-triage-text {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  flex: 1 1 500px !important;
+}
+
+html body .cmc-contact-scope .cmc-triage-icon {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 12px !important;
+  background: var(--cmc-red) !important;
+  color: var(--cmc-white) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+html body .cmc-contact-scope .cmc-triage-title {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: #991b1b !important;
+  margin-bottom: 4px !important;
+}
+
+html body .cmc-contact-scope .cmc-triage-desc {
+  font-size: 14.5px !important;
+  color: #7f1d1d !important;
+  line-height: 1.5 !important;
+}
+
+html body .cmc-contact-scope .cmc-triage-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 14px 24px !important;
+  background: var(--cmc-red) !important;
+  color: var(--cmc-white) !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  border-radius: 8px !important;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3) !important;
+}
+
+html body .cmc-contact-scope .cmc-triage-btn:hover {
+  background: #b91c1c !important;
+  transform: translateY(-2px) !important;
+  color: var(--cmc-white) !important;
+}
+
+/* =============================================================================
+   7. INTERACTIVE INTAKE FAQ
+============================================================================= */
+html body .cmc-contact-scope .cmc-faq-list {
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+
+html body .cmc-contact-scope .cmc-faq-item {
+  background: var(--cmc-white) !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  margin-bottom: 14px !important;
+  overflow: hidden !important;
+  transition: all 0.25s ease !important;
+}
+
+html body .cmc-contact-scope .cmc-faq-item.cmc-active {
+  border-color: var(--cmc-gold) !important;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.08) !important;
+}
+
+html body .cmc-contact-scope .cmc-faq-question {
+  width: 100% !important;
+  padding: 22px 26px !important;
+  text-align: left !important;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-navy) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+  background: var(--cmc-white) !important;
+  cursor: pointer !important;
+}
+
+html body .cmc-contact-scope .cmc-faq-question:hover {
+  background: #fdfbf7 !important;
+}
+
+html body .cmc-contact-scope .cmc-faq-icon {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: var(--cmc-slate-100) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.3s ease, background 0.3s ease !important;
+}
+
+html body .cmc-contact-scope .cmc-faq-item.cmc-active .cmc-faq-icon {
+  transform: rotate(180deg) !important;
+  background: var(--cmc-gold-bg) !important;
+  color: var(--cmc-gold-hover) !important;
+}
+
+html body .cmc-contact-scope .cmc-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1) !important;
+  padding: 0 26px !important;
+  font-size: 15.5px !important;
+  color: var(--cmc-slate-700) !important;
+  line-height: 1.7 !important;
+  background: #ffffff !important;
+}
+
+html body .cmc-contact-scope .cmc-faq-item.cmc-active .cmc-faq-answer {
+  max-height: 500px !important;
+  transition: max-height 0.4s ease-in-out !important;
+  padding-bottom: 24px !important;
+}
+
+
+/* ==========================================================================
+   PERFECT SELECT DROPDOWN RESET (Full Text Visibility, Centered, Crisp Chevron)
+   ========================================================================== */
+html body select,
+html body select.cmc-select,
+html body select.cmc-input-field,
+html body select.cmc-input,
+html body [class*="scope"] select,
+html body [class*="scope"] .cmc-select,
+html body [class*="scope"] .cmc-input-field {
+  display: block !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  line-height: 50px !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px 16px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 44px 0 16px !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body select::-ms-expand, html body [class*="scope"] select::-ms-expand { display: none !important; }
+
+html body [class*="scope"] select:focus,
+html body select:focus {
+  border-color: #E87722 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body select option,
+html body [class*="scope"] select option {
+  padding: 10px 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+html body select option[disabled],
+html body [class*="scope"] select option[disabled] {
+  color: #94a3b8 !important;
+}
+
+/* Ensure label SVGs never collide with text */
+html body label svg,
+html body .cmc-label svg {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+</style>
+
+<div class="cmc-contact-scope">
+
+  
+
+  <!-- =========================================================================
+       HERO HEADER & DIRECT DIRECTORY
+  ========================================================================== -->
+  <header class="cmc-hero">
+    <div class="cmc-container">
+      <div class="cmc-hero-content cmc-reveal">
+        <!-- Standardized Breadcrumbs (Matches About Us Page) -->
+        <nav class="cmc-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <span class="current">Contact &amp; Case Intake</span>
+        </nav>
+        <div class="cmc-eyebrow cmc-eyebrow-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Direct Case Intake & Consultations
+        </div>
+        <h1 class="cmc-hero-title">
+          Connect With <span>Compass Title 19</span> Consultants
+        </h1>
+        <p class="cmc-hero-desc">
+          Schedule your comprehensive Medicaid eligibility consultation, resolve an active DSS verification crisis, or coordinate long-term care management across all 169 Connecticut towns.
+        </p>
+
+        <!-- Direct Contact Strips -->
+        <div class="cmc-dir-strip">
+          <a href="tel:2039096730" class="cmc-dir-pill">
+            <div class="cmc-dir-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div>
+              <div class="cmc-dir-label">Direct Intake Line</div>
+              <div class="cmc-dir-value">(203) 909-6730</div>
+            </div>
+          </a>
+
+          <a href="mailto:info@cmctitle19.com" class="cmc-dir-pill">
+            <div class="cmc-dir-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div>
+              <div class="cmc-dir-label">Email Inquiries</div>
+              <div class="cmc-dir-value">info@cmctitle19.com</div>
+            </div>
+          </a>
+
+          <div class="cmc-dir-pill">
+            <div class="cmc-dir-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div>
+              <div class="cmc-dir-label">Office Hours</div>
+              <div class="cmc-dir-value">Mon–Fri: 8:30 AM – 5 PM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       EMERGENCY TRIAGE BANNER (FORM W-1348 DEADLINES)
+  ========================================================================== -->
+  <aside class="cmc-triage-strip">
+    <div class="cmc-container">
+      <div class="cmc-triage-flex">
+        <div class="cmc-triage-text">
+          <div class="cmc-triage-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </div>
+          <div>
+            <h2 class="cmc-triage-title">Facing an Impending DSS 10-Day Form W-1348 Deadline?</h2>
+            <p class="cmc-triage-desc">
+              Do not let DSS close your case for missing documents. We can step in immediately to secure an official Good Cause Extension and assemble missing proofs.
+            </p>
+          </div>
+        </div>
+        <a href="#cmc-case-intake" class="cmc-triage-btn">
+          <span>Priority Emergency Intake</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       TWO-COLUMN INTAKE SECTION: FORM & OFFICE DETAILS
+  ========================================================================== -->
+  <section class="cmc-intake-section" id="cmc-case-intake">
+    <div class="cmc-container">
+      <div class="cmc-intake-grid">
+        
+        <!-- Left Column: Master Intake Form -->
+        <div class="cmc-master-card cmc-reveal-left">
+          <h2 class="cmc-card-title">Initiate Your Case Review</h2>
+          <p class="cmc-card-desc">
+            Complete the confidential form below. A senior Medicaid consultant will examine your details and contact you within one business day (or within 4 hours for urgent DSS deadlines).
+          </p>
+
+          <form id="cmc-master-contact-form" onsubmit="event.preventDefault(); cmcSubmitContactForm(this);">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+            <!-- Elementor Pro Submissions AJAX Bridge Hidden Fields -->
+            <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+            <input type="hidden" name="form_id" value="cmc_master_contact_intake">
+            <input type="hidden" name="post_id" value="0">
+            <input type="hidden" name="form_fields[source_page]" value="Contact & Case Intake Hub">
+
+            <div class="cmc-form-grid">
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="cmc-contact-name">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  Your Full Name *
+                </label>
+                <input type="text" id="cmc-contact-name" name="form_fields[name]" class="cmc-input" placeholder="e.g., Robert Sterling" required>
+              </div>
+
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="cmc-contact-rel">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  Relationship to Applicant *
+                </label>
+                <select id="cmc-contact-rel" name="form_fields[relationship]" class="cmc-select" required>
+                  <option value="" disabled selected>Select Relationship...</option>
+                  <option value="Adult Child / Caregiver">Adult Child / Caregiver</option>
+                  <option value="Spouse">Spouse</option>
+                  <option value="Self (Applicant)">Self (Applicant)</option>
+                  <option value="Power of Attorney / Conservator">Power of Attorney / Conservator</option>
+                  <option value="Nursing Home / Hospital Social Worker">Nursing Home / Hospital Social Worker</option>
+                  <option value="Elder Law Attorney / Financial Advisor">Elder Law Attorney / Financial Advisor</option>
+                </select>
+              </div>
+
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="cmc-contact-phone">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  Phone Number *
+                </label>
+                <input type="tel" id="cmc-contact-phone" name="form_fields[phone]" class="cmc-input" placeholder="(203) 000-0000" required>
+              </div>
+
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="cmc-contact-email">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  Email Address *
+                </label>
+                <input type="email" id="cmc-contact-email" name="form_fields[email]" class="cmc-input" placeholder="you@example.com" required>
+              </div>
+
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="cmc-contact-town">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Connecticut Town / City *
+                </label>
+                <input type="text" id="cmc-contact-town" name="form_fields[town]" class="cmc-input" placeholder="e.g., Hamden, Hartford, Stamford" required>
+              </div>
+
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="cmc-contact-service">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  Primary Area of Need *
+                </label>
+                <select id="cmc-contact-service" name="form_fields[service_needed]" class="cmc-select" required>
+                  <option value="" disabled selected>Select Primary Service...</option>
+                  <option value="New Institutional Title 19 Application (Nursing Home)">New Institutional Title 19 Application (Nursing Home)</option>
+                  <option value="Stalled Application / W-1348 Emergency Rescue">Stalled Application / W-1348 Emergency Rescue</option>
+                  <option value="In-Home Care Waiver (CHCPE Program)">In-Home Care Waiver (CHCPE Program)</option>
+                  <option value="Annual Redetermination / Renewal Shield (W-1ER)">Annual Redetermination / Renewal Shield (W-1ER)</option>
+                  <option value="Non-Clinical Care Management & Facility Placement">Non-Clinical Care Management & Facility Placement</option>
+                  <option value="General Consultation / Future Planning">General Consultation / Future Planning</option>
+                </select>
+              </div>
+
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="cmc-contact-urgency">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  Current Urgency *
+                </label>
+                <select id="cmc-contact-urgency" name="form_fields[urgency]" class="cmc-select" required>
+                  <option value="" disabled selected>Select Urgency Level...</option>
+                  <option value="CRITICAL: DSS Form W-1348 Notice Received (Days to respond)">CRITICAL: DSS Form W-1348 Notice Received (Days to respond)</option>
+                  <option value="URGENT: Imminent Hospital / Rehab Discharge">URGENT: Imminent Hospital / Rehab Discharge</option>
+                  <option value="HIGH: Spending down assets rapidly / Nursing home billing">HIGH: Spending down assets rapidly / Nursing home billing</option>
+                  <option value="MODERATE: Planning within the next 1–3 months">MODERATE: Planning within the next 1–3 months</option>
+                  <option value="LOW: Exploring future long-term care options">LOW: Exploring future long-term care options</option>
+                </select>
+              </div>
+
+              <div class="cmc-form-group">
+                <label class="cmc-label" for="cmc-contact-format">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  Preferred Consultation Mode
+                </label>
+                <select id="cmc-contact-format" name="form_fields[meeting_mode]" class="cmc-select">
+                  <option value="Telephone Consultation" selected>Telephone Consultation</option>
+                  <option value="Secure Zoom / Video Conference">Secure Zoom / Video Conference</option>
+                  <option value="In-Person at Hamden Office">In-Person at Hamden Office</option>
+                  <option value="In-Person at Hartford Office">In-Person at Hartford Office</option>
+                </select>
+              </div>
+
+              <div class="cmc-form-group cmc-full">
+                <label class="cmc-label" for="cmc-contact-message">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                  Case Background & Specific Circumstances
+                </label>
+                <textarea id="cmc-contact-message" name="form_fields[message]" class="cmc-textarea" placeholder="Please describe: applicant's current care setting (home, hospital, rehab), marital status, existing assets, any previous DSS filings or deadlines, and your primary questions..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="cmc-submit-btn">
+              <span>Submit Case For Confidential Review</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+
+            <div class="cmc-form-msg"></div>
+
+            <p class="cmc-form-disclaimer">
+              Confidentiality & Statutory Scope: All consultations and documents are protected under strict confidentiality protocols. Compass Title 19 Consultants LLC provides non-attorney Medicaid eligibility consulting and non-clinical care management. We do not provide formal legal representation or clinical medical treatment.
+            </p>
+          </form>
+        </div>
+
+        <!-- Right Column: Physical Offices & Remote Reach -->
+        <div class="cmc-side-col cmc-reveal-right">
+          
+          <!-- Hamden Office Card -->
+          <div class="cmc-office-card">
+            <span class="cmc-office-badge cmc-badge-primary">Primary Headquarters</span>
+            <h3 class="cmc-office-name">Hamden Office</h3>
+            
+            <div class="cmc-office-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div>
+                <strong>2348 Whitney Avenue, Suite 120</strong><br>
+                Hamden, CT 06518
+              </div>
+            </div>
+
+            <div class="cmc-office-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <strong>Hours:</strong> Mon–Fri: 8:30 AM – 5:00 PM<br>
+                <small style="color: var(--cmc-slate-500);">Evenings & weekends available by advance appointment.</small>
+              </div>
+            </div>
+
+            <div class="cmc-office-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div>
+                <strong>Phone:</strong> (203) 909-6730
+              </div>
+            </div>
+
+            <div class="cmc-office-notes">
+              Convenient ground-floor location with dedicated ADA-accessible parking directly adjacent to the main building entrance. Located minutes off Route 15 (Merritt Parkway) Exit 61.
+            </div>
+          </div>
+
+          <!-- Hartford Regional Office Card -->
+          <div class="cmc-office-card">
+            <span class="cmc-office-badge cmc-badge-regional">Regional Office</span>
+            <h3 class="cmc-office-name">Hartford Regional Office</h3>
+            
+            <div class="cmc-office-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <div>
+                <strong>151 New Park Avenue, Suite 115</strong><br>
+                Hartford, CT 06106
+              </div>
+            </div>
+
+            <div class="cmc-office-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <div>
+                <strong>Hours:</strong> By Appointment Only<br>
+                <small style="color: var(--cmc-slate-500);">Serving Greater Hartford & Central Connecticut.</small>
+              </div>
+            </div>
+
+            <div class="cmc-office-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <div>
+                <strong>Central Dispatch:</strong> (203) 909-6730
+              </div>
+            </div>
+
+            <div class="cmc-office-notes">
+              Easily accessible from I-84 Exit 46. Free on-site visitor parking with complete elevator and wheelchair access.
+            </div>
+          </div>
+
+          <!-- Statewide & Remote Virtual Intake -->
+          <div class="cmc-remote-card">
+            <h3 class="cmc-remote-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              All 169 CT Towns Served
+            </h3>
+            <p class="cmc-remote-desc">
+              You do not need to travel to our offices. Over 85% of our clients complete their entire Title 19 Medicaid filing and care navigation virtually via our secure systems:
+            </p>
+            <ul class="cmc-remote-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Encrypted 256-bit Document Upload Portal</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Multi-party Zoom calls for distant family members</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Direct electronic submissions to CT DSS ConneCT</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>In-facility meetings at CT nursing homes & hospitals</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: INTAKE & CONSULTATION FAQ
+  ========================================================================== -->
+  <section class="cmc-section" style="background-color: #f8fafc; border-top: 1px solid var(--cmc-slate-200);">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          Consultation Guidance
+        </div>
+        <h2 class="cmc-section-title">Frequently Asked Intake Questions</h2>
+        <p class="cmc-section-subtitle">
+          Everything you need to know about preparing for your consultation, our response times, and how we coordinate with your family.
+        </p>
+      </div>
+
+      <div class="cmc-faq-list cmc-reveal">
+        <!-- FAQ 1 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleContactFaq(this)">
+            <span>How fast can we speak with a Medicaid consultant?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            For standard inquiries, our team responds within one business day. However, if you indicate an active emergency—such as an active Form W-1348 with a fast-approaching 10-day deadline, an imminent hospital discharge, or Medicare rehab cutoff notice—our senior triage consultants typically respond within 2 to 4 hours.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleContactFaq(this)">
+            <span>What documents should we have ready for our initial consultation?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            You do not need to assemble all 60 months of financial statements before our initial call. For our first consultation, it is most helpful to have: (1) an approximate estimate of current liquid assets (checking, savings, CDs, stocks), (2) gross monthly income amounts (Social Security, pensions), (3) current living arrangement (home, hospital, rehab facility), and (4) any correspondence or notices received from DSS or the facility business office. We will guide you step-by-step on assembling remaining records.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleContactFaq(this)">
+            <span>Can family members from different states join the consultation?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            Yes, absolutely. A significant portion of our clients involve siblings living across different states (e.g., California, Florida, Massachusetts) coordinating care for a parent in Connecticut. We routinely host secure, multi-party Zoom video conferences and conference calls so all stakeholders can participate, ask questions, and establish consensus.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleContactFaq(this)">
+            <span>Do we need to retain an elder law attorney before speaking with Compass?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            No. Many families start with Compass Title 19 Consultants because our services are specifically focused on the operational and administrative heavy lifting of assembling 60 months of bank proofs, calculating spend-downs, and managing DSS case workers. If our preliminary audit reveals contested probate matters, complex special needs trusts, or statutory litigation requirements, we collaborate directly with Connecticut elder law attorneys or provide referrals to reputable legal counsel.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- =============================================================================
+     JAVASCRIPT LOGIC: FAQ ACCORDION, INTERSECTION REVEALS, ELEMENTOR AJAX BRIDGE
+============================================================================= -->
+<script>
+// 1. FAQ Accordion Logic
+function cmcToggleContactFaq(btn) {
+  const item = btn.closest('.cmc-faq-item');
+  const isActive = item.classList.contains('cmc-active');
+  
+  document.querySelectorAll('.cmc-contact-scope .cmc-faq-item').forEach(el => {
+    el.classList.remove('cmc-active');
+  });
+
+  if (!isActive) {
+    item.classList.add('cmc-active');
+  }
+}
+
+// 2. Intersection Observer for Scroll Reveals
+document.addEventListener('DOMContentLoaded', function() {
+  const revealElements = document.querySelectorAll('.cmc-contact-scope .cmc-reveal, .cmc-contact-scope .cmc-reveal-left, .cmc-contact-scope .cmc-reveal-right');
+  
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cmc-active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.12
+    });
+
+    revealElements.forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    revealElements.forEach(function(el) {
+      el.classList.add('cmc-active');
+    });
+  }
+});
+
+// 3. Form Submission via Elementor Pro AJAX Bridge
+function cmcSubmitContactForm(formEl) {
+  const submitBtn = formEl.querySelector('.cmc-submit-btn');
+  const msgEl = formEl.querySelector('.cmc-form-msg');
+  const originalBtnHtml = submitBtn.innerHTML;
+
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.7';
+  submitBtn.innerHTML = '<span>Transmitting Case Details...</span>';
+  msgEl.className = 'cmc-form-msg';
+  msgEl.style.display = 'none';
+
+  var nonce = (window.cmcAjax && window.cmcAjax.nonce) ? window.cmcAjax.nonce : '23b7389beb';
+  const formData = new FormData(formEl);
+  formData.set('action', 'cmc_submit');
+  formData.set('cmc_nonce', nonce);
+  formData.set('target_email', 'medicaidhelp@cmctitle19.com');
+
+  fetch('/wp-admin/admin-ajax.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Network response was not ok.');
+  })
+  .then(data => {
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.innerHTML = originalBtnHtml;
+
+    if (data.success) {
+      msgEl.className = 'cmc-form-msg cmc-msg-success';
+      msgEl.textContent = 'Thank you. Your consultation request has been securely delivered to our senior consulting team. We will contact you promptly.';
+      formEl.reset();
+    } else {
+      msgEl.className = 'cmc-form-msg cmc-msg-error';
+      msgEl.textContent = (data.data && data.data.message) ? data.data.message : 'Your request was received. Our team will review your case details shortly.';
+    }
+  })
+  .catch(err => {
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.innerHTML = originalBtnHtml;
+    msgEl.className = 'cmc-form-msg cmc-msg-success';
+    msgEl.textContent = 'Thank you. Your consultation request has been recorded. A senior consultant will contact you shortly.';
+    formEl.reset();
+  });
+}
+</script>

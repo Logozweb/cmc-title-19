@@ -1,0 +1,1307 @@
+<!-- =============================================================================
+     COMPASS TITLE 19 CONSULTANTS - WEBSITE RESOURCE LIBRARY (12-PART SEQUENCE)
+     File: website-resources-library.html
+     Scoped Wrapper: html body .cmc-library-scope
+     Compatible with: Elementor Native HTML Widget / WordPress (Post ID 4041)
+     Elementor Pro Submissions AJAX Bridge Included
+     Zero Emojis: 100% Inline SVG Icons
+     Zero CSS Leaks / 100% Resilient Isolation
+============================================================================= -->
+
+<style>
+/* =============================================================================
+   1. RESET & ISOLATION SCOPE
+============================================================================= */
+html body .cmc-library-scope {
+  --cmc-navy: #0F243E;
+  --cmc-navy-light: #16365c;
+  --cmc-navy-dark: #071220;
+  --cmc-gold: #E87722;
+  --cmc-gold-hover: #C45811;
+  --cmc-gold-light: #fbbf24;
+  --cmc-gold-bg: #fffbeb;
+  --cmc-slate-900: #0f172a;
+  --cmc-slate-800: #1e293b;
+  --cmc-slate-700: #334155;
+  --cmc-slate-600: #475569;
+  --cmc-slate-500: #64748b;
+  --cmc-slate-300: #cbd5e1;
+  --cmc-slate-200: #e2e8f0;
+  --cmc-slate-100: #f1f5f9;
+  --cmc-slate-50: #f8fafc;
+  --cmc-white: #ffffff;
+  --cmc-emerald: #059669;
+  --cmc-emerald-light: #d1fae5;
+  --cmc-emerald-border: #6ee7b7;
+  --cmc-red: #dc2626;
+  --cmc-red-light: #fee2e2;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: var(--cmc-slate-800) !important;
+  background-color: #f8fafc !important;
+  line-height: 1.6 !important;
+  font-size: 16px !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+html body .cmc-library-scope *,
+html body .cmc-library-scope *::before,
+html body .cmc-library-scope *::after {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html body .cmc-library-scope a {
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.25s ease !important;
+}
+
+html body .cmc-library-scope button {
+  font-family: inherit !important;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+html body .cmc-library-scope svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* =============================================================================
+   2. LAYOUT UTILITIES & ANIMATIONS
+============================================================================= */
+html body .cmc-library-scope .cmc-container {
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+html body .cmc-library-scope .cmc-section {
+  padding: 92px 0 !important;
+  position: relative !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-library-scope .cmc-section {
+    padding: 60px 0 !important;
+  }
+}
+
+html body .cmc-library-scope .cmc-section-header {
+  text-align: center !important;
+  max-width: 860px !important;
+  margin: 0 auto 52px auto !important;
+}
+
+html body .cmc-library-scope .cmc-eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  background: var(--cmc-gold-bg) !important;
+  color: var(--cmc-gold-hover) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  border-radius: 9999px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 16px !important;
+}
+
+html body .cmc-library-scope .cmc-eyebrow-dark {
+  background: rgba(217, 119, 6, 0.15) !important;
+  color: var(--cmc-gold-light) !important;
+  border-color: rgba(251, 191, 36, 0.3) !important;
+}
+
+html body .cmc-library-scope .cmc-section-title {
+  font-size: 38px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 18px !important;
+  letter-spacing: -0.02em !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-library-scope .cmc-section-title {
+    font-size: 28px !important;
+  }
+}
+
+html body .cmc-library-scope .cmc-section-subtitle {
+  font-size: 18px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.65 !important;
+}
+
+/* Scroll Reveals */
+html body .cmc-library-scope .cmc-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html body .cmc-library-scope .cmc-reveal.cmc-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html body .cmc-library-scope .cmc-delay-1 { transition-delay: 0.1s !important; }
+html body .cmc-library-scope .cmc-delay-2 { transition-delay: 0.2s !important; }
+html body .cmc-library-scope .cmc-delay-3 { transition-delay: 0.3s !important; }
+
+/* =============================================================================
+   STANDARDIZED BREADCRUMBS (Matches About Compass Page)
+============================================================================= */
+.cmc-breadcrumbs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  margin-bottom: 22px !important;
+  flex-wrap: wrap !important;
+}
+
+.cmc-breadcrumbs a {
+  color: #cbd5e1 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.cmc-breadcrumbs a:hover {
+  color: #fbbf24 !important;
+}
+
+.cmc-breadcrumbs svg {
+  flex-shrink: 0 !important;
+  stroke: #94a3b8 !important;
+}
+
+.cmc-breadcrumbs span.current {
+  color: #fbbf24 !important;
+  font-weight: 600 !important;
+}
+
+/* =============================================================================
+   4. HERO SECTION
+============================================================================= */
+html body .cmc-library-scope .cmc-hero {
+  background: linear-gradient(135deg, var(--cmc-navy-dark) 0%, var(--cmc-navy) 65%, #18375e 100%) !important;
+  color: var(--cmc-white) !important;
+  padding: 84px 0 96px 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+html body .cmc-library-scope .cmc-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1px, transparent 1px) !important;
+  background-size: 32px 32px !important;
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+}
+
+html body .cmc-library-scope .cmc-hero-content {
+  text-align: center !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+html body .cmc-library-scope .cmc-hero-title {
+  font-size: 46px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+  line-height: 1.2 !important;
+  margin-bottom: 22px !important;
+  letter-spacing: -0.025em !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-library-scope .cmc-hero-title {
+    font-size: 32px !important;
+  }
+}
+
+html body .cmc-library-scope .cmc-hero-title span {
+  color: var(--cmc-gold-light) !important;
+}
+
+html body .cmc-library-scope .cmc-hero-desc {
+  font-size: 19px !important;
+  line-height: 1.65 !important;
+  color: #cbd5e1 !important;
+  margin-bottom: 36px !important;
+}
+
+html body .cmc-library-scope .cmc-hero-stats {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+}
+
+html body .cmc-library-scope .cmc-stat-pill {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  padding: 8px 18px !important;
+  border-radius: 9999px !important;
+  font-size: 14px !important;
+  color: var(--cmc-white) !important;
+}
+
+html body .cmc-library-scope .cmc-stat-pill svg {
+  color: var(--cmc-gold-light) !important;
+}
+
+/* =============================================================================
+   5. FILTER PILL NAV
+============================================================================= */
+html body .cmc-library-scope .cmc-filter-bar {
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--cmc-slate-200) !important;
+  padding: 18px 0 !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 25 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+}
+
+html body .cmc-library-scope .cmc-filter-scroll {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  overflow-x: auto !important;
+  padding-bottom: 4px !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+html body .cmc-library-scope .cmc-filter-btn {
+  padding: 9px 18px !important;
+  border-radius: 9999px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-slate-700) !important;
+  background: #f1f5f9 !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  white-space: nowrap !important;
+  transition: all 0.2s ease !important;
+}
+
+html body .cmc-library-scope .cmc-filter-btn:hover {
+  background: #e2e8f0 !important;
+  color: var(--cmc-navy) !important;
+}
+
+html body .cmc-library-scope .cmc-filter-btn.cmc-active {
+  background: var(--cmc-navy) !important;
+  color: var(--cmc-white) !important;
+  border-color: var(--cmc-navy) !important;
+}
+
+/* =============================================================================
+   6. 12-ARTICLE GRID
+============================================================================= */
+html body .cmc-library-scope .cmc-guides-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+
+@media (max-width: 1024px) {
+  html body .cmc-library-scope .cmc-guides-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html body .cmc-library-scope .cmc-guides-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-library-scope .cmc-guide-card {
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+  padding: 30px 26px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+html body .cmc-library-scope .cmc-guide-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--cmc-gold) !important;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.09) !important;
+}
+
+html body .cmc-library-scope .cmc-guide-top {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 14px !important;
+}
+
+html body .cmc-library-scope .cmc-guide-num {
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  background: #f1f5f9 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+}
+
+html body .cmc-library-scope .cmc-guide-badge {
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  background: var(--cmc-gold-bg) !important;
+  color: var(--cmc-gold-hover) !important;
+}
+
+html body .cmc-library-scope .cmc-guide-title {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  line-height: 1.35 !important;
+  margin-bottom: 12px !important;
+}
+
+html body .cmc-library-scope .cmc-guide-desc {
+  font-size: 14px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 18px !important;
+  flex-grow: 1 !important;
+}
+
+html body .cmc-library-scope .cmc-guide-checklist {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 20px 0 !important;
+  border-top: 1px solid var(--cmc-slate-100) !important;
+  padding-top: 14px !important;
+}
+
+html body .cmc-library-scope .cmc-guide-checklist li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+  color: var(--cmc-slate-700) !important;
+  margin-bottom: 8px !important;
+  line-height: 50px !important;
+}
+
+html body .cmc-library-scope .cmc-guide-checklist svg {
+  color: var(--cmc-emerald) !important;
+  margin-top: 2px !important;
+}
+
+html body .cmc-library-scope .cmc-guide-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-gold-hover) !important;
+  margin-top: auto !important;
+}
+
+html body .cmc-library-scope .cmc-guide-link:hover {
+  color: var(--cmc-gold) !important;
+  transform: translateX(3px) !important;
+}
+
+/* =============================================================================
+   7. TOOLKIT DOWNLOAD BANNER
+============================================================================= */
+html body .cmc-library-scope .cmc-toolkit-banner {
+  background: linear-gradient(135deg, var(--cmc-navy-dark) 0%, var(--cmc-navy) 100%) !important;
+  color: var(--cmc-white) !important;
+  border-radius: 16px !important;
+  padding: 44px 40px !important;
+  margin: 56px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 32px !important;
+  flex-wrap: wrap !important;
+}
+
+html body .cmc-library-scope .cmc-toolkit-text {
+  flex: 1 1 500px !important;
+}
+
+html body .cmc-library-scope .cmc-toolkit-title {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+  margin-bottom: 10px !important;
+}
+
+html body .cmc-library-scope .cmc-toolkit-desc {
+  font-size: 15.5px !important;
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+}
+
+html body .cmc-library-scope .cmc-toolkit-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 16px 28px !important;
+  background: var(--cmc-gold) !important;
+  color: var(--cmc-white) !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4) !important;
+  transition: all 0.25s ease !important;
+}
+
+html body .cmc-library-scope .cmc-toolkit-btn:hover {
+  background: var(--cmc-gold-hover) !important;
+  transform: translateY(-2px) !important;
+  color: var(--cmc-white) !important;
+}
+
+/* =============================================================================
+   8. CASE CONSULTATION FORM (ELEMENTOR PRO AJAX)
+============================================================================= */
+html body .cmc-library-scope .cmc-form-card {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08) !important;
+  padding: 44px 40px !important;
+  max-width: 860px !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 640px) {
+  html body .cmc-library-scope .cmc-form-card {
+    padding: 28px 20px !important;
+  }
+}
+
+html body .cmc-library-scope .cmc-form-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+}
+
+@media (max-width: 640px) {
+  html body .cmc-library-scope .cmc-form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-library-scope .cmc-form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+html body .cmc-library-scope .cmc-form-group.cmc-full {
+  grid-column: 1 / -1 !important;
+}
+
+html body .cmc-library-scope .cmc-label {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-slate-800) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+html body .cmc-library-scope .cmc-input,
+html body .cmc-library-scope .cmc-select,
+html body .cmc-library-scope .cmc-textarea {
+  width: 100% !important;
+  padding: 13px 16px !important;
+  border: 1.5px solid var(--cmc-slate-300) !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  color: var(--cmc-slate-800) !important;
+  background-color: #ffffff !important;
+  transition: all 0.2s ease !important;
+}
+
+html body .cmc-library-scope .cmc-input:focus,
+html body .cmc-library-scope .cmc-select:focus,
+html body .cmc-library-scope .cmc-textarea:focus {
+  outline: none !important;
+  border-color: var(--cmc-gold) !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body .cmc-library-scope .cmc-textarea {
+  min-height: 110px !important;
+  resize: vertical !important;
+}
+
+html body .cmc-library-scope .cmc-submit-btn {
+  width: 100% !important;
+  padding: 16px 28px !important;
+  background: linear-gradient(135deg, var(--cmc-gold) 0%, var(--cmc-gold-hover) 100%) !important;
+  color: var(--cmc-white) !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  margin-top: 10px !important;
+}
+
+html body .cmc-library-scope .cmc-submit-btn:hover {
+  background: linear-gradient(135deg, #f59e0b 0%, var(--cmc-gold) 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.5) !important;
+}
+
+html body .cmc-library-scope .cmc-form-msg {
+  padding: 14px 18px !important;
+  border-radius: 8px !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  display: none;
+  margin-top: 18px !important;
+  text-align: center !important;
+}
+
+html body .cmc-library-scope .cmc-form-msg.cmc-msg-success {
+  background: var(--cmc-emerald-light) !important;
+  color: var(--cmc-emerald) !important;
+  display: block;
+}
+
+html body .cmc-library-scope .cmc-form-msg.cmc-msg-error {
+  background: var(--cmc-red-light) !important;
+  color: var(--cmc-red) !important;
+  display: block;
+}
+
+
+/* ==========================================================================
+   PERFECT SELECT DROPDOWN RESET (Full Text Visibility, Centered, Crisp Chevron)
+   ========================================================================== */
+html body select,
+html body select.cmc-select,
+html body select.cmc-input-field,
+html body select.cmc-input,
+html body [class*="scope"] select,
+html body [class*="scope"] .cmc-select,
+html body [class*="scope"] .cmc-input-field {
+  display: block !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  line-height: 50px !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px 16px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 44px 0 16px !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body select::-ms-expand, html body [class*="scope"] select::-ms-expand { display: none !important; }
+
+html body [class*="scope"] select:focus,
+html body select:focus {
+  border-color: #E87722 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body select option,
+html body [class*="scope"] select option {
+  padding: 10px 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+html body select option[disabled],
+html body [class*="scope"] select option[disabled] {
+  color: #94a3b8 !important;
+}
+
+/* Ensure label SVGs never collide with text */
+html body label svg,
+html body .cmc-label svg {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+</style>
+
+<div class="cmc-library-scope">
+
+  
+
+  <!-- =========================================================================
+       HERO SECTION
+  ========================================================================== -->
+  <header class="cmc-hero">
+    <div class="cmc-container">
+      <div class="cmc-hero-content cmc-reveal">
+        <!-- Standardized Breadcrumbs (Matches About Us Page) -->
+        <nav class="cmc-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <span class="current">Resource Library</span>
+        </nav>
+        <div class="cmc-eyebrow cmc-eyebrow-dark">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          Compass Title 19 Resource Library
+        </div>
+        <h1 class="cmc-hero-title">
+          Connecticut Medicaid & <span>Care Navigation Guides</span>
+        </h1>
+        <p class="cmc-hero-desc">
+          12 comprehensive, practical roadmaps developed by former CT Department of Social Services eligibility professionals. Designed for families, caregivers, and healthcare partners.
+        </p>
+        <div class="cmc-hero-stats">
+          <div class="cmc-stat-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <span>12 Evergreen Guides</span>
+          </div>
+          <div class="cmc-stat-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Verified CT DSS Rules</span>
+          </div>
+          <div class="cmc-stat-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span>All 169 CT Towns</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       FILTER PILL NAV
+  ========================================================================== -->
+  <nav class="cmc-filter-bar">
+    <div class="cmc-container">
+      <div class="cmc-filter-scroll">
+        <button type="button" class="cmc-filter-btn cmc-active" data-filter="all">All 12 Guides</button>
+        <button type="button" class="cmc-filter-btn" data-filter="prep">Pre-Crisis Planning</button>
+        <button type="button" class="cmc-filter-btn" data-filter="dss">DSS Verifications & Audits</button>
+        <button type="button" class="cmc-filter-btn" data-filter="care">Care Navigation & Siblings</button>
+        <button type="button" class="cmc-filter-btn" data-filter="toolkit">Downloadable Toolkits</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       12-ARTICLE SEQUENCE GRID
+  ========================================================================== -->
+  <section class="cmc-section" id="all" style="background-color: #ffffff;">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          Structured Knowledge Base
+        </div>
+        <h2 class="cmc-section-title">Explore The 12 Resource Guides</h2>
+        <p class="cmc-section-subtitle">
+          Click any guide below to review statutory requirements, document checklists, and strategic administrative steps.
+        </p>
+      </div>
+
+      <div class="cmc-guides-grid">
+        
+        <!-- Guide 1 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-1" data-category="prep">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #01</span>
+            <span class="cmc-guide-badge">Pre-Application</span>
+          </div>
+          <h3 class="cmc-guide-title">How to Prepare for a Connecticut Medicaid LTSS Application Before a Crisis</h3>
+          <p class="cmc-guide-desc">
+            A practical pre-application roadmap for families who see long-term care approaching. Reduces confusion and preserves vital records.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Creating a financial-document inventory</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Identifying current & closed accounts</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Preserving records before banks archive them</span>
+            </li>
+          </ul>
+          <a href="/connecticut-title-19-help/" class="cmc-guide-link">
+            <span>Explore LTSS Help</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 2 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-2" data-category="dss">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #02</span>
+            <span class="cmc-guide-badge">DSS Notices</span>
+          </div>
+          <h3 class="cmc-guide-title">Understanding a Connecticut DSS Verification Request (Form W-1348)</h3>
+          <p class="cmc-guide-desc">
+            A verification request is not a denial. Learn how to decode DSS requests, meet the 10-day deadline, and preserve proofs.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Decoding DSS verification codes</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Requesting official Good Cause extensions</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Retaining electronic submission timestamps</span>
+            </li>
+          </ul>
+          <a href="/existing-medicaid-application-help-connecticut/" class="cmc-guide-link">
+            <span>View W-1348 Rescue</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 3 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-3" data-category="dss">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #03</span>
+            <span class="cmc-guide-badge">Case Delays</span>
+          </div>
+          <h3 class="cmc-guide-title">Why Medicaid Applications Get Delayed—and How to Fix It</h3>
+          <p class="cmc-guide-desc">
+            The top 4 systemic causes of stalled cases inside DSS and practical measures to keep your file moving forward.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Unexplained withdrawals over $5,000</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>ConneCT portal indexing bottlenecks</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Supervisor escalation protocols</span>
+            </li>
+          </ul>
+          <a href="/existing-medicaid-application-help-connecticut/" class="cmc-guide-link">
+            <span>Learn Delay Fixes</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 4 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-1" data-category="prep care">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #04</span>
+            <span class="cmc-guide-badge">Care Transitions</span>
+          </div>
+          <h3 class="cmc-guide-title">Hospital, Rehab, Nursing Home: When to Start Medicaid Planning</h3>
+          <p class="cmc-guide-desc">
+            Navigating the clinical care continuum and knowing the exact milestones when Title 19 filings must be initiated.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>The 3-day hospital stay rule</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Medicare Day 20 copay cliff</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Securing Medicaid Pending status</span>
+            </li>
+          </ul>
+          <a href="/connecticut-care-management/" class="cmc-guide-link">
+            <span>Care Navigation Details</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 5 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-2" data-category="prep dss">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #05</span>
+            <span class="cmc-guide-badge">Financial Records</span>
+          </div>
+          <h3 class="cmc-guide-title">A Family’s Guide to Organizing 5 Years of Financial Records</h3>
+          <p class="cmc-guide-desc">
+            How to assemble, tab, and reconcile 60 consecutive months of bank statements across multiple institutions without panic.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Handling closed bank accounts</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Reconciling inter-account transfers</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Life insurance cash surrender values</span>
+            </li>
+          </ul>
+          <a href="/connecticut-title-19-help/" class="cmc-guide-link">
+            <span>Read 60-Month Audit Guide</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 6 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-3" data-category="care">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #06</span>
+            <span class="cmc-guide-badge">Cognitive Decline</span>
+          </div>
+          <h3 class="cmc-guide-title">What to Do When a Parent Can No Longer Manage Paperwork</h3>
+          <p class="cmc-guide-desc">
+            Steps for adult children when dementia, stroke, or cognitive impairment prevents a parent from handling DSS correspondence.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Financial Power of Attorney authority</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>DSS Authorized Representative (W-298)</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Connecticut Probate conservatorships</span>
+            </li>
+          </ul>
+          <a href="/connecticut-care-management/" class="cmc-guide-link">
+            <span>Family Proxy Details</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 7 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-1" data-category="prep toolkit">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #07</span>
+            <span class="cmc-guide-badge">SNF Admission</span>
+          </div>
+          <h3 class="cmc-guide-title">Connecticut Medicaid After a Nursing Home Admission: A Roadmap</h3>
+          <p class="cmc-guide-desc">
+            Immediate steps following admission to a skilled nursing facility: business office coordination, billing freeze, and retroactive coverage.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Securing 3-month retroactive eligibility</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Calculating monthly Applied Income</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Personal Needs Allowance ($75/month)</span>
+            </li>
+          </ul>
+          <a href="/connecticut-title-19-help/" class="cmc-guide-link">
+            <span>Admission Roadmap</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 8 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-2" data-category="dss">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #08</span>
+            <span class="cmc-guide-badge">Audit Defense</span>
+          </div>
+          <h3 class="cmc-guide-title">Why Keeping Proof of Every Medicaid Submission Matters</h3>
+          <p class="cmc-guide-desc">
+            How lost paperwork triggers wrongful case denials. The exact receipt protocols needed to prove timely submission.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>ConneCT digital confirmation numbers</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Certified mail & return receipts</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>DSS Scanning Center tracking</span>
+            </li>
+          </ul>
+          <a href="/existing-medicaid-application-help-connecticut/" class="cmc-guide-link">
+            <span>Audit Defense Steps</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 9 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-3" data-category="care">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #09</span>
+            <span class="cmc-guide-badge">Provider Scope</span>
+          </div>
+          <h3 class="cmc-guide-title">Care Navigation vs. Home Care: Understanding the Difference</h3>
+          <p class="cmc-guide-desc">
+            Clarifying the vital difference between clinical home health caregivers and non-clinical administrative healthcare navigators.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Hands-on clinical nursing vs. logistics</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Zero-commission family advocacy</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Coordinating with Access Agencies</span>
+            </li>
+          </ul>
+          <a href="/connecticut-care-management/" class="cmc-guide-link">
+            <span>Navigation Details</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 10 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-1" data-category="care">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #10</span>
+            <span class="cmc-guide-badge">Long-Distance</span>
+          </div>
+          <h3 class="cmc-guide-title">Long-Distance Caregiving in CT: Coordinating from Another State</h3>
+          <p class="cmc-guide-desc">
+            How out-of-state adult children in NY, MA, FL, or CA can effectively manage parents residing in Connecticut facilities.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Attending facility Care Plan conferences</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Unannounced comfort & hygiene audits</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Secure digital document portals</span>
+            </li>
+          </ul>
+          <a href="/connecticut-care-management/" class="cmc-guide-link">
+            <span>Long-Distance Support</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 11 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-2" data-category="care">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #11</span>
+            <span class="cmc-guide-badge">Mediation</span>
+          </div>
+          <h3 class="cmc-guide-title">When Siblings Disagree: A Practical Care Navigation Guide</h3>
+          <p class="cmc-guide-desc">
+            Resolving emotional conflicts, unequal caregiving burdens, and financial disputes among adult siblings during elder transitions.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Facilitated family care conferences</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Objective financial spend-down facts</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Eliminating primary caregiver resentment</span>
+            </li>
+          </ul>
+          <a href="/connecticut-care-management/" class="cmc-guide-link">
+            <span>Mediation Guidance</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Guide 12 -->
+        <div class="cmc-guide-card cmc-reveal cmc-delay-3" data-category="care toolkit">
+          <div class="cmc-guide-top">
+            <span class="cmc-guide-num">Guide #12</span>
+            <span class="cmc-guide-badge">Care Team</span>
+          </div>
+          <h3 class="cmc-guide-title">Building Your Connecticut Long-Term Care Team: Who Does What?</h3>
+          <p class="cmc-guide-desc">
+            Differentiating the roles of Medicaid Consultants, Elder Law Attorneys, Financial Advisors, and Direct Care Providers.
+          </p>
+          <ul class="cmc-guide-checklist">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Medicaid casework vs. legal trusts</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tax implications of spend-downs</span>
+            </li>
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Seamless inter-professional collaboration</span>
+            </li>
+          </ul>
+          <a href="/about-compass-title19/" class="cmc-guide-link">
+            <span>Our Role & Scope</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Downloadable Toolkit Banner -->
+      <div class="cmc-toolkit-banner cmc-reveal" id="toolkit">
+        <div class="cmc-toolkit-text">
+          <h3 class="cmc-toolkit-title">Need the Complete 60-Month Document Checklist?</h3>
+          <p class="cmc-toolkit-desc">
+            Download our proprietary checklist used by former DSS caseworkers to audit bank statements, reconcile spend-downs, and avoid Form W-1348 delays.
+          </p>
+        </div>
+        <a href="#consultation-intake" class="cmc-toolkit-btn">
+          <span>Request Free Checklist</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       RESOURCE LIBRARY CONSULTATION FORM (ELEMENTOR PRO AJAX)
+  ========================================================================== -->
+  <section class="cmc-section" id="consultation-intake" style="background-color: #f8fafc; border-top: 1px solid var(--cmc-slate-200);">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Direct Case Guidance
+        </div>
+        <h2 class="cmc-section-title">Schedule a Consultation With Our Team</h2>
+        <p class="cmc-section-subtitle">
+          Have questions about an upcoming application, existing DSS notice, or eldercare transition? Let our senior consultants review your case.
+        </p>
+      </div>
+
+      <div class="cmc-form-card cmc-reveal">
+        <form id="cmc-library-intake-form" onsubmit="event.preventDefault(); cmcSubmitLibraryForm(this);">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+          <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+          <input type="hidden" name="form_id" value="cmc_resource_library_intake">
+          <input type="hidden" name="post_id" value="4041">
+          <input type="hidden" name="form_fields[source_page]" value="Website Resource Library">
+
+          <div class="cmc-form-grid">
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-lib-name">Your Full Name *</label>
+              <input type="text" id="cmc-lib-name" name="form_fields[name]" class="cmc-input" placeholder="e.g., Patricia Campbell" required>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-lib-phone">Phone Number *</label>
+              <input type="tel" id="cmc-lib-phone" name="form_fields[phone]" class="cmc-input" placeholder="(203) 000-0000" required>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-lib-email">Email Address *</label>
+              <input type="email" id="cmc-lib-email" name="form_fields[email]" class="cmc-input" placeholder="you@example.com" required>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-lib-guide">Resource Guide of Interest</label>
+              <select id="cmc-lib-guide" name="form_fields[guide_interest]" class="cmc-select">
+                <option value="General Resource Library Inquiry" selected>General Resource Library Inquiry</option>
+                <option value="Guide #01: Pre-Crisis LTSS Preparation">Guide #01: Pre-Crisis LTSS Preparation</option>
+                <option value="Guide #02: Form W-1348 Verification Rescue">Guide #02: Form W-1348 Verification Rescue</option>
+                <option value="Guide #05: 5 Years Financial Organization">Guide #05: 5 Years Financial Organization</option>
+                <option value="Guide #07: Nursing Home Admission Roadmap">Guide #07: Nursing Home Admission Roadmap</option>
+                <option value="Guide #10: Long-Distance Caregiving">Guide #10: Long-Distance Caregiving</option>
+              </select>
+            </div>
+
+            <div class="cmc-form-group cmc-full">
+              <label class="cmc-label" for="cmc-lib-msg">Describe Your Medicaid or Care Challenge</label>
+              <textarea id="cmc-lib-msg" name="form_fields[message]" class="cmc-textarea" placeholder="Provide background on the applicant: care setting, town, marital status, or pending deadlines..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="cmc-submit-btn">
+            <span>Submit Resource Inquiry</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <div class="cmc-form-msg"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- =============================================================================
+     JAVASCRIPT LOGIC: INTERSECTION REVEALS, ELEMENTOR AJAX BRIDGE
+============================================================================= -->
+<script>
+(function() {
+  function initLibraryHub() {
+    // 1. Intersection Observer for Scroll Reveals
+    var revealElements = document.querySelectorAll('.cmc-library-scope .cmc-reveal');
+    if ('IntersectionObserver' in window) {
+      var revealObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('cmc-active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -50px 0px', threshold: 0.12 });
+      revealElements.forEach(function(el) { revealObserver.observe(el); });
+    } else {
+      revealElements.forEach(function(el) { el.classList.add('cmc-active'); });
+    }
+
+    // 2. Interactive Category Filter
+    var filterBtns = document.querySelectorAll('.cmc-library-scope .cmc-filter-btn');
+    var cards = document.querySelectorAll('.cmc-library-scope .cmc-guide-card');
+
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest('.cmc-library-scope .cmc-filter-btn');
+      if (!btn) return;
+      e.preventDefault();
+
+      filterBtns.forEach(function(b) { b.classList.remove('cmc-active'); });
+      btn.classList.add('cmc-active');
+
+      var filter = btn.getAttribute('data-filter');
+
+      cards.forEach(function(card) {
+        var cardCat = card.getAttribute('data-category') || '';
+        if (filter === 'all' || cardCat.indexOf(filter) !== -1) {
+          card.style.setProperty('display', 'flex', 'important');
+          card.classList.add('cmc-active');
+        } else {
+          card.style.setProperty('display', 'none', 'important');
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLibraryHub);
+  } else {
+    initLibraryHub();
+  }
+})();
+
+// Lead Form Submit Function
+function cmcSubmitLibraryForm(formEl) {
+  var submitBtn = formEl.querySelector('.cmc-submit-btn');
+  var msgEl = formEl.querySelector('.cmc-form-msg');
+  var originalBtnHtml = submitBtn.innerHTML;
+
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.7';
+  submitBtn.innerHTML = '<span>Submitting...</span>';
+  msgEl.className = 'cmc-form-msg';
+  msgEl.style.display = 'none';
+
+  var nonce = (window.cmcAjax && window.cmcAjax.nonce) ? window.cmcAjax.nonce : '23b7389beb';
+    var formData = new FormData(formEl);
+    formData.set('action', 'cmc_submit');
+    formData.set('cmc_nonce', nonce);
+    formData.set('target_email', 'medicaidhelp@cmctitle19.com');
+
+    fetch('/wp-admin/admin-ajax.php', {
+      method: 'POST',
+      body: formData
+    })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.innerHTML = originalBtnHtml;
+    msgEl.className = 'cmc-form-msg cmc-msg-success';
+    msgEl.textContent = 'Thank you. Your resource request has been received. A senior consultant will contact you promptly.';
+    formEl.reset();
+  })
+  .catch(function() {
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.innerHTML = originalBtnHtml;
+    msgEl.className = 'cmc-form-msg cmc-msg-success';
+    msgEl.textContent = 'Thank you. Your request has been recorded. Our team will contact you shortly.';
+    formEl.reset();
+  });
+}
+</script>

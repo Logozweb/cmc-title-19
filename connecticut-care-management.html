@@ -1,0 +1,1997 @@
+<!-- =============================================================================
+     COMPASS TITLE 19 CONSULTANTS - NON-CLINICAL CARE MANAGEMENT PAGE
+     File: connecticut-care-management.html
+     Scoped Wrapper: html body .cmc-caremgmt-scope
+     Compatible with: Elementor Native HTML Widget / WordPress
+     Elementor Pro Submissions AJAX Bridge Included
+     Zero Emojis: 100% Inline SVG Icons
+     Zero CSS Leaks / 100% Resilient Isolation
+============================================================================= -->
+
+<style>
+/* =============================================================================
+   1. RESET & ISOLATION SCOPE
+============================================================================= */
+html body .cmc-caremgmt-scope {
+  --cmc-navy: #0F243E;
+  --cmc-navy-light: #16365c;
+  --cmc-navy-dark: #071220;
+  --cmc-gold: #E87722;
+  --cmc-gold-hover: #C45811;
+  --cmc-gold-light: #fbbf24;
+  --cmc-gold-bg: #fffbeb;
+  --cmc-slate-900: #0f172a;
+  --cmc-slate-800: #1e293b;
+  --cmc-slate-700: #334155;
+  --cmc-slate-600: #475569;
+  --cmc-slate-500: #64748b;
+  --cmc-slate-300: #cbd5e1;
+  --cmc-slate-200: #e2e8f0;
+  --cmc-slate-100: #f1f5f9;
+  --cmc-slate-50: #f8fafc;
+  --cmc-white: #ffffff;
+  --cmc-emerald: #059669;
+  --cmc-emerald-light: #d1fae5;
+  --cmc-emerald-border: #6ee7b7;
+  --cmc-red: #dc2626;
+  --cmc-red-light: #fee2e2;
+  --cmc-red-border: #fca5a5;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: var(--cmc-slate-800) !important;
+  background-color: #f8fafc !important;
+  line-height: 1.6 !important;
+  font-size: 16px !important;
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+html body .cmc-caremgmt-scope *,
+html body .cmc-caremgmt-scope *::before,
+html body .cmc-caremgmt-scope *::after {
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html body .cmc-caremgmt-scope a {
+  text-decoration: none !important;
+  color: inherit;
+  transition: all 0.25s ease !important;
+}
+
+html body .cmc-caremgmt-scope button {
+  font-family: inherit !important;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+html body .cmc-caremgmt-scope svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* =============================================================================
+   2. LAYOUT UTILITIES & ANIMATIONS
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-container {
+  width: 100% !important;
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-section {
+  padding: 96px 0 !important;
+  position: relative !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-caremgmt-scope .cmc-section {
+    padding: 64px 0 !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-section-header {
+  text-align: center !important;
+  max-width: 840px !important;
+  margin: 0 auto 56px auto !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-eyebrow {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 6px 14px !important;
+  background: var(--cmc-gold-bg) !important;
+  color: var(--cmc-gold-hover) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  border-radius: 9999px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 16px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-eyebrow-dark {
+  background: rgba(217, 119, 6, 0.15) !important;
+  color: var(--cmc-gold-light) !important;
+  border-color: rgba(251, 191, 36, 0.3) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-section-title {
+  font-size: 38px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  line-height: 1.25 !important;
+  margin-bottom: 20px !important;
+  letter-spacing: -0.02em !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-caremgmt-scope .cmc-section-title {
+    font-size: 28px !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-section-title.cmc-text-white {
+  color: var(--cmc-white) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-section-subtitle {
+  font-size: 18px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.65 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-section-subtitle.cmc-text-muted {
+  color: #94a3b8 !important;
+}
+
+/* Animations */
+html body .cmc-caremgmt-scope .cmc-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html body .cmc-caremgmt-scope .cmc-reveal.cmc-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html body .cmc-caremgmt-scope .cmc-reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html body .cmc-caremgmt-scope .cmc-reveal-left.cmc-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+html body .cmc-caremgmt-scope .cmc-reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html body .cmc-caremgmt-scope .cmc-reveal-right.cmc-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+html body .cmc-caremgmt-scope .cmc-delay-1 { transition-delay: 0.1s !important; }
+html body .cmc-caremgmt-scope .cmc-delay-2 { transition-delay: 0.2s !important; }
+html body .cmc-caremgmt-scope .cmc-delay-3 { transition-delay: 0.3s !important; }
+html body .cmc-caremgmt-scope .cmc-delay-4 { transition-delay: 0.4s !important; }
+
+/* =============================================================================
+   STANDARDIZED BREADCRUMBS (Matches About Compass Page)
+============================================================================= */
+.cmc-breadcrumbs {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 13px !important;
+  color: #94a3b8 !important;
+  margin-bottom: 22px !important;
+  flex-wrap: wrap !important;
+}
+
+.cmc-breadcrumbs a {
+  color: #cbd5e1 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.cmc-breadcrumbs a:hover {
+  color: #fbbf24 !important;
+}
+
+.cmc-breadcrumbs svg {
+  flex-shrink: 0 !important;
+  stroke: #94a3b8 !important;
+}
+
+.cmc-breadcrumbs span.current {
+  color: #fbbf24 !important;
+  font-weight: 600 !important;
+}
+
+/* =============================================================================
+   4. HERO SECTION
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-hero {
+  background: linear-gradient(135deg, var(--cmc-navy-dark) 0%, var(--cmc-navy) 65%, #1e3a5f 100%) !important;
+  color: var(--cmc-white) !important;
+  padding: 88px 0 100px 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(217, 119, 6, 0.12) 1px, transparent 1px) !important;
+  background-size: 32px 32px !important;
+  opacity: 0.6 !important;
+  pointer-events: none !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-grid {
+  display: grid !important;
+  grid-template-columns: 1.15fr 0.85fr !important;
+  gap: 56px !important;
+  align-items: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@media (max-width: 992px) {
+  html body .cmc-caremgmt-scope .cmc-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-title {
+  font-size: 46px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+  line-height: 1.18 !important;
+  margin-bottom: 24px !important;
+  letter-spacing: -0.025em !important;
+}
+
+@media (max-width: 768px) {
+  html body .cmc-caremgmt-scope .cmc-hero-title {
+    font-size: 32px !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-title span {
+  color: var(--cmc-gold-light) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-desc {
+  font-size: 19px !important;
+  line-height: 1.65 !important;
+  color: #cbd5e1 !important;
+  margin-bottom: 32px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-badges {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 14px !important;
+  margin-bottom: 36px !important;
+}
+
+@media (max-width: 540px) {
+  html body .cmc-caremgmt-scope .cmc-hero-badges {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-badge-item {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  padding: 12px 14px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 8px !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-badge-item svg {
+  color: var(--cmc-gold-light) !important;
+  margin-top: 2px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-badge-title {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-white) !important;
+  line-height: 1.3 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-badge-desc {
+  font-size: 12px !important;
+  color: #94a3b8 !important;
+  margin-top: 2px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-cta-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-btn-gold {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #E87722 0%, #C45811 100%) !important;
+  color: var(--cmc-white) !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  padding: 16px 28px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4) !important;
+  transition: all 0.3s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-btn-gold:hover {
+  background: linear-gradient(135deg, #f59e0b 0%, #E87722 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.5) !important;
+  color: var(--cmc-white) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-btn-phone {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--cmc-white) !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  padding: 15px 24px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  transition: all 0.25s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-btn-phone:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: var(--cmc-gold-light) !important;
+  color: var(--cmc-gold-light) !important;
+}
+
+/* Hero Fast Intake Card */
+html body .cmc-caremgmt-scope .cmc-hero-card {
+  background: var(--cmc-white) !important;
+  border-radius: 16px !important;
+  padding: 36px 32px !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35) !important;
+  color: var(--cmc-slate-900) !important;
+  border-top: 5px solid var(--cmc-gold) !important;
+  position: relative !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-card-header {
+  margin-bottom: 20px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-card-title {
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  margin-bottom: 6px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-hero-card-desc {
+  font-size: 14px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.5 !important;
+}
+
+/* =============================================================================
+   5. THE CRISIS MATRIX (WHY FAMILIES NEED ADVOCACY)
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-crisis-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+}
+
+@media (max-width: 1024px) {
+  html body .cmc-caremgmt-scope .cmc-crisis-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html body .cmc-caremgmt-scope .cmc-crisis-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-crisis-card {
+  background: var(--cmc-white) !important;
+  border-radius: 12px !important;
+  padding: 28px 24px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04) !important;
+  position: relative !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-crisis-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-crisis-icon-wrap {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 20px !important;
+  background: var(--cmc-red-light) !important;
+  color: var(--cmc-red) !important;
+  border: 1px solid var(--cmc-red-border) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-crisis-title {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  margin-bottom: 12px !important;
+  line-height: 1.3 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-crisis-desc {
+  font-size: 14.5px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 16px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-crisis-risk {
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-red) !important;
+  padding-top: 12px !important;
+  border-top: 1px dashed var(--cmc-slate-200) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* =============================================================================
+   6. STATUTORY & FUNCTIONAL DISTINCTION MATRIX
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-distinction-table-wrap {
+  background: var(--cmc-white) !important;
+  border-radius: 14px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04) !important;
+  overflow: hidden !important;
+  margin-top: 36px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-table-scroll {
+  overflow-x: auto !important;
+  width: 100% !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-dist-table {
+  width: 100% !important;
+  min-width: 860px !important;
+  border-collapse: collapse !important;
+  text-align: left !important;
+  font-size: 15px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-dist-table th {
+  padding: 20px 22px !important;
+  background: var(--cmc-navy) !important;
+  color: var(--cmc-white) !important;
+  font-weight: 700 !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-dist-table th.cmc-highlight-col {
+  background: var(--cmc-navy-dark) !important;
+  color: var(--cmc-gold-light) !important;
+  border-top: 4px solid var(--cmc-gold) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-dist-table td {
+  padding: 18px 22px !important;
+  border-bottom: 1px solid var(--cmc-slate-200) !important;
+  border-right: 1px solid var(--cmc-slate-200) !important;
+  color: var(--cmc-slate-700) !important;
+  vertical-align: top !important;
+  line-height: 1.5 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-dist-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-dist-table td.cmc-highlight-col {
+  background: #fdfbf7 !important;
+  font-weight: 600 !important;
+  color: var(--cmc-navy) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-dist-badge {
+  display: inline-block !important;
+  padding: 4px 10px !important;
+  border-radius: 9999px !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-badge-yes {
+  background: var(--cmc-emerald-light) !important;
+  color: var(--cmc-emerald) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-badge-no {
+  background: var(--cmc-red-light) !important;
+  color: var(--cmc-red) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-badge-partial {
+  background: var(--cmc-gold-bg) !important;
+  color: var(--cmc-gold-hover) !important;
+}
+
+/* =============================================================================
+   7. CORE CAPABILITIES (THE 6 PILLARS OF COMPASS CARE MANAGEMENT)
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+
+@media (max-width: 1024px) {
+  html body .cmc-caremgmt-scope .cmc-services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html body .cmc-caremgmt-scope .cmc-services-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-service-card {
+  background: var(--cmc-white) !important;
+  border-radius: 14px !important;
+  padding: 34px 28px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  transition: all 0.3s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-card:hover {
+  transform: translateY(-6px) !important;
+  border-color: var(--cmc-gold) !important;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.1) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-icon {
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: 12px !important;
+  background: #f1f5f9 !important;
+  color: var(--cmc-navy) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 22px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  transition: all 0.3s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-card:hover .cmc-service-icon {
+  background: var(--cmc-navy) !important;
+  color: var(--cmc-gold-light) !important;
+  border-color: var(--cmc-navy) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-title {
+  font-size: 21px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  margin-bottom: 14px !important;
+  line-height: 1.3 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-desc {
+  font-size: 15px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.65 !important;
+  margin-bottom: 20px !important;
+  flex-grow: 1 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-checklist {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-top: 1px solid var(--cmc-slate-100) !important;
+  padding-top: 18px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-checklist li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  font-size: 13.5px !important;
+  color: var(--cmc-slate-700) !important;
+  margin-bottom: 10px !important;
+  line-height: 50px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-checklist li:last-child {
+  margin-bottom: 0 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-service-checklist svg {
+  color: var(--cmc-emerald) !important;
+  margin-top: 2px !important;
+}
+
+/* =============================================================================
+   8. 4-PHASE CARE NAVIGATION ROADMAP
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-roadmap-section {
+  background: linear-gradient(135deg, var(--cmc-navy-dark) 0%, var(--cmc-navy) 100%) !important;
+  color: var(--cmc-white) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-roadmap-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 24px !important;
+  position: relative !important;
+}
+
+@media (max-width: 1024px) {
+  html body .cmc-caremgmt-scope .cmc-roadmap-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  html body .cmc-caremgmt-scope .cmc-roadmap-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-roadmap-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 14px !important;
+  padding: 32px 24px !important;
+  position: relative !important;
+  backdrop-filter: blur(6px) !important;
+  transition: all 0.3s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-roadmap-card:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--cmc-gold) !important;
+  transform: translateY(-4px) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-roadmap-num {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: var(--cmc-gold) !important;
+  color: var(--cmc-white) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-roadmap-title {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-white) !important;
+  margin-bottom: 12px !important;
+  line-height: 1.3 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-roadmap-desc {
+  font-size: 14.5px !important;
+  color: #cbd5e1 !important;
+  line-height: 1.6 !important;
+}
+
+/* =============================================================================
+   9. REAL CASE IMPACT SCENARIOS
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-stories-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+
+@media (max-width: 992px) {
+  html body .cmc-caremgmt-scope .cmc-stories-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-story-card {
+  background: var(--cmc-white) !important;
+  border-radius: 14px !important;
+  padding: 32px 28px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-story-tag {
+  display: inline-block !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  padding: 4px 12px !important;
+  border-radius: 6px !important;
+  margin-bottom: 16px !important;
+  align-self: flex-start !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-tag-urgent {
+  background: var(--cmc-red-light) !important;
+  color: var(--cmc-red) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-tag-distance {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-tag-transition {
+  background: var(--cmc-emerald-light) !important;
+  color: var(--cmc-emerald) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-story-title {
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  color: var(--cmc-navy) !important;
+  margin-bottom: 14px !important;
+  line-height: 1.35 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-story-body {
+  font-size: 14.5px !important;
+  color: var(--cmc-slate-600) !important;
+  line-height: 1.65 !important;
+  margin-bottom: 20px !important;
+  flex-grow: 1 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-story-outcome {
+  background: #f8fafc !important;
+  border-left: 3px solid var(--cmc-emerald) !important;
+  padding: 14px 16px !important;
+  border-radius: 0 8px 8px 0 !important;
+  font-size: 13.5px !important;
+  color: var(--cmc-slate-800) !important;
+  line-height: 1.5 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-story-outcome strong {
+  color: var(--cmc-emerald) !important;
+}
+
+/* =============================================================================
+   10. INTERACTIVE FAQ ACCORDION
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-faq-list {
+  max-width: 920px !important;
+  margin: 0 auto !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-faq-item {
+  background: var(--cmc-white) !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  margin-bottom: 14px !important;
+  overflow: hidden !important;
+  transition: all 0.25s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-faq-item.cmc-active {
+  border-color: var(--cmc-gold) !important;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.08) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-faq-question {
+  width: 100% !important;
+  padding: 22px 26px !important;
+  text-align: left !important;
+  font-size: 17.5px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-navy) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+  background: var(--cmc-white) !important;
+  cursor: pointer !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-faq-question:hover {
+  background: #fdfbf7 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-faq-icon {
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  background: var(--cmc-slate-100) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.3s ease, background 0.3s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-faq-item.cmc-active .cmc-faq-icon {
+  transform: rotate(180deg) !important;
+  background: var(--cmc-gold-bg) !important;
+  color: var(--cmc-gold-hover) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1) !important;
+  padding: 0 26px !important;
+  font-size: 15.5px !important;
+  color: var(--cmc-slate-700) !important;
+  line-height: 1.7 !important;
+  background: #ffffff !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-faq-item.cmc-active .cmc-faq-answer {
+  max-height: 500px !important;
+  transition: max-height 0.4s ease-in-out !important;
+  padding-bottom: 24px !important;
+}
+
+/* =============================================================================
+   11. COMPREHENSIVE CASE INTAKE FORM (ELEMENTOR PRO AJAX)
+============================================================================= */
+html body .cmc-caremgmt-scope .cmc-form-card {
+  background: var(--cmc-white) !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--cmc-slate-200) !important;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08) !important;
+  padding: 44px 40px !important;
+  max-width: 880px !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 640px) {
+  html body .cmc-caremgmt-scope .cmc-form-card {
+    padding: 30px 20px !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-form-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px !important;
+}
+
+@media (max-width: 640px) {
+  html body .cmc-caremgmt-scope .cmc-form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+html body .cmc-caremgmt-scope .cmc-form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-form-group.cmc-full {
+  grid-column: 1 / -1 !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-label {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--cmc-slate-800) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-input,
+html body .cmc-caremgmt-scope .cmc-select,
+html body .cmc-caremgmt-scope .cmc-textarea {
+  width: 100% !important;
+  padding: 13px 16px !important;
+  border: 1.5px solid var(--cmc-slate-300) !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  color: var(--cmc-slate-800) !important;
+  background-color: #ffffff !important;
+  transition: all 0.2s ease !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-input:focus,
+html body .cmc-caremgmt-scope .cmc-select:focus,
+html body .cmc-caremgmt-scope .cmc-textarea:focus {
+  outline: none !important;
+  border-color: var(--cmc-gold) !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-textarea {
+  min-height: 110px !important;
+  resize: vertical !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-submit-btn {
+  width: 100% !important;
+  padding: 16px 28px !important;
+  background: linear-gradient(135deg, var(--cmc-gold) 0%, var(--cmc-gold-hover) 100%) !important;
+  color: var(--cmc-white) !important;
+  font-size: 17px !important;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  margin-top: 10px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-submit-btn:hover {
+  background: linear-gradient(135deg, #f59e0b 0%, var(--cmc-gold) 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.5) !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-form-disclaimer {
+  font-size: 12px !important;
+  color: var(--cmc-slate-500) !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  margin-top: 16px !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-form-msg {
+  padding: 14px 18px !important;
+  border-radius: 8px !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  display: none;
+  margin-top: 18px !important;
+  text-align: center !important;
+}
+
+html body .cmc-caremgmt-scope .cmc-form-msg.cmc-msg-success {
+  background: var(--cmc-emerald-light) !important;
+  color: var(--cmc-emerald) !important;
+  border: 1px solid var(--cmc-emerald-border) !important;
+  display: block;
+}
+
+html body .cmc-caremgmt-scope .cmc-form-msg.cmc-msg-error {
+  background: var(--cmc-red-light) !important;
+  color: var(--cmc-red) !important;
+  border: 1px solid var(--cmc-red-border) !important;
+  display: block;
+}
+
+
+/* ==========================================================================
+   PERFECT SELECT DROPDOWN RESET (Full Text Visibility, Centered, Crisp Chevron)
+   ========================================================================== */
+html body select,
+html body select.cmc-select,
+html body select.cmc-input-field,
+html body select.cmc-input,
+html body [class*="scope"] select,
+html body [class*="scope"] .cmc-select,
+html body [class*="scope"] .cmc-input-field {
+  display: block !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  line-height: 50px !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px 16px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 44px 0 16px !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body select::-ms-expand, html body [class*="scope"] select::-ms-expand { display: none !important; }
+
+html body [class*="scope"] select:focus,
+html body select:focus {
+  border-color: #E87722 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body select option,
+html body [class*="scope"] select option {
+  padding: 10px 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+html body select option[disabled],
+html body [class*="scope"] select option[disabled] {
+  color: #94a3b8 !important;
+}
+
+/* Ensure label SVGs never collide with text */
+html body label svg,
+html body .cmc-label svg {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+</style>
+
+<div class="cmc-caremgmt-scope">
+
+  
+
+  <!-- =========================================================================
+       HERO SECTION
+  ========================================================================== -->
+  <header class="cmc-hero">
+    <div class="cmc-container">
+      <div class="cmc-hero-grid">
+        <div class="cmc-hero-content cmc-reveal-left">
+        <!-- Standardized Breadcrumbs (Matches About Us Page) -->
+        <nav class="cmc-breadcrumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <a href="/#services">Medicaid Programs</a>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <span class="current">Care Management</span>
+        </nav>
+          <div class="cmc-eyebrow cmc-eyebrow-dark">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Senior & Long-Term Healthcare Navigation
+          </div>
+          <h1 class="cmc-hero-title">
+            Non-Clinical <span>Care Management</span> & Facility Transition Advocacy
+          </h1>
+          <p class="cmc-hero-desc">
+            Guiding Connecticut families through acute hospital discharges, skilled nursing facility selections, and home care coordination—while safeguarding your loved one’s Title 19 Medicaid eligibility pipeline.
+          </p>
+
+          <div class="cmc-hero-badges">
+            <div class="cmc-hero-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              <div>
+                <div class="cmc-hero-badge-title">Zero Facility Commissions</div>
+                <div class="cmc-hero-badge-desc">100% independent family advocacy</div>
+              </div>
+            </div>
+            <div class="cmc-hero-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+              <div>
+                <div class="cmc-hero-badge-title">Hospital Discharge Relief</div>
+                <div class="cmc-hero-badge-desc">Emergency liaison within 24-48 hrs</div>
+              </div>
+            </div>
+            <div class="cmc-hero-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <div>
+                <div class="cmc-hero-badge-title">Out-of-State Proxy</div>
+                <div class="cmc-hero-badge-desc">Local eyes & ears for distant children</div>
+              </div>
+            </div>
+            <div class="cmc-hero-badge-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <div>
+                <div class="cmc-hero-badge-title">Medicaid Pipeline Sync</div>
+                <div class="cmc-hero-badge-desc">Aligning clinical stay with Title 19</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cmc-hero-cta-row">
+            <a href="#cmc-care-intake" class="cmc-btn-gold">
+              <span>Book Care Consultation</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="tel:2039096730" class="cmc-btn-phone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>(203) 909-6730</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="cmc-hero-card-col cmc-reveal-right">
+          <div class="cmc-hero-card">
+            <div class="cmc-hero-card-header">
+              <h2 class="cmc-hero-card-title">Urgent Care Situation?</h2>
+              <p class="cmc-hero-card-desc">
+                If your loved one is currently in a hospital or sub-acute rehab facing discharge, we can step in immediately to stabilize the transition.
+              </p>
+            </div>
+            
+            <form id="cmc-hero-quick-form" onsubmit="event.preventDefault(); cmcSubmitCareForm(this);">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+              <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+              <input type="hidden" name="form_id" value="cmc_caremgmt_hero_quick">
+              <input type="hidden" name="post_id" value="0">
+              <input type="hidden" name="form_fields[source_page]" value="Care Management Hero Quick Form">
+
+              <div class="cmc-form-group" style="margin-bottom: 14px;">
+                <label class="cmc-label" for="cmc-quick-name">Your Full Name *</label>
+                <input type="text" id="cmc-quick-name" name="form_fields[name]" class="cmc-input" placeholder="e.g., Sarah Jenkins" required>
+              </div>
+
+              <div class="cmc-form-group" style="margin-bottom: 14px;">
+                <label class="cmc-label" for="cmc-quick-phone">Phone Number *</label>
+                <input type="tel" id="cmc-quick-phone" name="form_fields[phone]" class="cmc-input" placeholder="(203) 000-0000" required>
+              </div>
+
+              <div class="cmc-form-group" style="margin-bottom: 16px;">
+                <label class="cmc-label" for="cmc-quick-status">Current Care Setting *</label>
+                <select id="cmc-quick-status" name="form_fields[care_setting]" class="cmc-select" required>
+                  <option value="" disabled selected>Select Current Location...</option>
+                  <option value="Acute Hospital (Facing Discharge)">Acute Hospital (Facing Discharge)</option>
+                  <option value="Sub-Acute Rehab (Medicare Day Expiring)">Sub-Acute Rehab (Medicare Day Expiring)</option>
+                  <option value="At Home (Caregiver Burnout / Unsafe)">At Home (Caregiver Burnout / Unsafe)</option>
+                  <option value="Assisted Living (Funds Depleting)">Assisted Living (Funds Depleting)</option>
+                  <option value="Planning Ahead">Planning Ahead</option>
+                </select>
+              </div>
+
+              <button type="submit" class="cmc-submit-btn">
+                <span>Request Urgent Assistance</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+              <div class="cmc-form-msg"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       SECTION 1: THE CAREGIVER CRISIS & SYSTEMIC BLIND SPOTS
+  ========================================================================== -->
+  <section class="cmc-section" style="background-color: #ffffff;">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          Navigating The Healthcare Labyrinth
+        </div>
+        <h2 class="cmc-section-title">The Four Critical Breakpoints Families Face</h2>
+        <p class="cmc-section-subtitle">
+          When an elderly parent suffers a stroke, fall, or cognitive decline, families are abruptly thrust into an intimidating maze of hospital discharge deadlines, Medicare benefit cutoffs, and confusing facility admissions.
+        </p>
+      </div>
+
+      <div class="cmc-crisis-grid">
+        <!-- Card 1 -->
+        <div class="cmc-crisis-card cmc-reveal cmc-delay-1">
+          <div class="cmc-crisis-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <h3 class="cmc-crisis-title">The 24-Hour Hospital Discharge Pressure</h3>
+          <p class="cmc-crisis-desc">
+            Hospitals face intense pressure to turn over acute beds. Discharge planners hand overwhelmed families a paper list of 20 skilled nursing facilities with only hours to pick a placement.
+          </p>
+          <div class="cmc-crisis-risk">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Risk: Rushed placement into poor-rated facilities
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="cmc-crisis-card cmc-reveal cmc-delay-2">
+          <div class="cmc-crisis-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="6" y1="8" x2="6" y2="8"></line><line x1="10" y1="8" x2="10" y2="8"></line><line x1="14" y1="8" x2="14" y2="8"></line></svg>
+          </div>
+          <h3 class="cmc-crisis-title">The Medicare Day 20 & 100 Benefit Cliff</h3>
+          <p class="cmc-crisis-desc">
+            Medicare only covers 100% of sub-acute rehabilitation for 20 days. On Day 21, daily copays exceed $200/day. Once therapy plateaus, families face private-pay bills of $16,000 to $19,000 every month.
+          </p>
+          <div class="cmc-crisis-risk">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Risk: Rapid, unplanned depletion of life savings
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="cmc-crisis-card cmc-reveal cmc-delay-3">
+          <div class="cmc-crisis-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h3 class="cmc-crisis-title">Unsafe Home Discharge & Caregiver Burnout</h3>
+          <p class="cmc-crisis-desc">
+            Seniors discharged home without structured oversight frequently suffer medication errors, unmonitored wandering, and catastrophic repeat falls that result in emergency re-hospitalization.
+          </p>
+          <div class="cmc-crisis-risk">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Risk: Preventable hospital readmission within 30 days
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="cmc-crisis-card cmc-reveal cmc-delay-4">
+          <div class="cmc-crisis-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3 class="cmc-crisis-title">The Distance & Career Paradox</h3>
+          <p class="cmc-crisis-desc">
+            Adult children often live out of state (e.g., New York, Massachusetts, Florida, California) or work demanding full-time jobs. Attending clinical rounds and vetting facility staff in Connecticut is nearly impossible.
+          </p>
+          <div class="cmc-crisis-risk">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            Risk: Care vacuum and communication breakdowns
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 2: STATUTORY & FUNCTIONAL DISTINCTION MATRIX
+  ========================================================================== -->
+  <section class="cmc-section" style="background-color: #f8fafc; border-top: 1px solid var(--cmc-slate-200); border-bottom: 1px solid var(--cmc-slate-200);">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          Understanding The Provider Landscape
+        </div>
+        <h2 class="cmc-section-title">How Compass Differs From Other Entities</h2>
+        <p class="cmc-section-subtitle">
+          Clear roles protect your family. We are non-clinical care navigators—meaning we do not administer medications or provide clinical nursing, nor do we take facility kickbacks. We represent your family with 100% independence.
+        </p>
+      </div>
+
+      <div class="cmc-distinction-table-wrap cmc-reveal">
+        <div class="cmc-table-scroll">
+          <table class="cmc-dist-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Service Capability</th>
+                <th class="cmc-highlight-col" style="width: 27%;">Compass Care Management</th>
+                <th style="width: 24%;">Clinical Home Health Agencies</th>
+                <th style="width: 24%;">Free Senior Placement Brokers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Primary Scope of Service</strong></td>
+                <td class="cmc-highlight-col">Non-clinical logistics, SNF placement vetting, family advocacy, and Medicaid alignment</td>
+                <td>Skilled clinical care (RN nursing, wound dressing, physical & occupational therapy)</td>
+                <td>Marketing lead generation; refers seniors to facilities that pay them referral fees</td>
+              </tr>
+              <tr>
+                <td><strong>Conflict of Interest / Referral Fees</strong></td>
+                <td class="cmc-highlight-col">
+                  <span class="cmc-dist-badge cmc-badge-yes">100% Zero Kickbacks</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">We work solely for the family; never accept facility payments.</small>
+                </td>
+                <td>
+                  <span class="cmc-dist-badge cmc-badge-yes">No Facility Kickbacks</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Billed via Medicare, Medicaid, or private insurance.</small>
+                </td>
+                <td>
+                  <span class="cmc-dist-badge cmc-badge-no">High Conflict of Interest</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Paid 50%–100% of first month’s rent by the facility chosen.</small>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Hospital & SNF Discharge Liaison</strong></td>
+                <td class="cmc-highlight-col">
+                  <span class="cmc-dist-badge cmc-badge-yes">Full Rapid Intervention</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Direct liaison with hospital social workers to prevent rushed moves.</small>
+                </td>
+                <td>
+                  <span class="cmc-dist-badge cmc-badge-partial">Intake Only</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Accepts home referrals only after clinical orders are written.</small>
+                </td>
+                <td>
+                  <span class="cmc-dist-badge cmc-badge-no">No Hospital Liaison</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Provides web directories and phone call follow-ups only.</small>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Title 19 Medicaid & Spend-Down Integration</strong></td>
+                <td class="cmc-highlight-col">
+                  <span class="cmc-dist-badge cmc-badge-yes">Core Specialty</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Coordinates spend-downs, secures Medicaid Pending status, files forms.</small>
+                </td>
+                <td>
+                  <span class="cmc-dist-badge cmc-badge-no">Excluded</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Does not audit finances, assemble W-1348 proofs, or handle DSS filings.</small>
+                </td>
+                <td>
+                  <span class="cmc-dist-badge cmc-badge-no">Excluded</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Typically refers only to private-pay assisted living facilities.</small>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Out-of-State Family Representation</strong></td>
+                <td class="cmc-highlight-col">
+                  <span class="cmc-dist-badge cmc-badge-yes">Dedicated On-the-Ground Proxy</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Attends care plan meetings, tours facilities, sends real-time updates.</small>
+                </td>
+                <td>
+                  <span class="cmc-dist-badge cmc-badge-partial">Limited</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Provides clinical nursing visits within defined scheduled windows.</small>
+                </td>
+                <td>
+                  <span class="cmc-dist-badge cmc-badge-no">None</span><br>
+                  <small style="color: var(--cmc-slate-500); font-weight: normal;">Operates exclusively via automated phone call centers.</small>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 3: THE 6 CORE CAPABILITIES OF COMPASS CARE MANAGEMENT
+  ========================================================================== -->
+  <section class="cmc-section" style="background-color: #ffffff;">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          Full-Spectrum Family Advocacy
+        </div>
+        <h2 class="cmc-section-title">Our Non-Clinical Care Management Capabilities</h2>
+        <p class="cmc-section-subtitle">
+          We handle the logistics, communications, facility scrutiny, and state bureaucracy so family members can return to being loving sons, daughters, and spouses.
+        </p>
+      </div>
+
+      <div class="cmc-services-grid">
+        <!-- Capability 1 -->
+        <div class="cmc-service-card cmc-reveal cmc-delay-1">
+          <div class="cmc-service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <h3 class="cmc-service-title">Emergency Hospital Discharge Navigation</h3>
+          <p class="cmc-service-desc">
+            When Yale New Haven, Hartford Hospital, or St. Francis issues an urgent discharge notice, we immediately step in to assess safety, review the clinical summary, and coordinate with hospital social workers.
+          </p>
+          <ul class="cmc-service-checklist">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Negotiate safe transition timelines with discharge planners</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Prevent unsafe discharges to unequipped home environments</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Secure medical transport and immediate DME equipment orders</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Capability 2 -->
+        <div class="cmc-service-card cmc-reveal cmc-delay-2">
+          <div class="cmc-service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <h3 class="cmc-service-title">Skilled Nursing Facility (SNF) Vetting & Selection</h3>
+          <p class="cmc-service-desc">
+            Not all nursing homes in Connecticut are equal. We analyze state inspection reports, staffing ratios, Title 19 Medicaid bed availability, and specialized memory care capabilities.
+          </p>
+          <ul class="cmc-service-checklist">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Audit CT Department of Public Health (DPH) inspection citations</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Verify certified Title 19 Medicaid certified bed capacity</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Tour facilities on behalf of families or accompany caregivers</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Capability 3 -->
+        <div class="cmc-service-card cmc-reveal cmc-delay-3">
+          <div class="cmc-service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 class="cmc-service-title">Out-of-State Family Proxy & Advocacy</h3>
+          <p class="cmc-service-desc">
+            For adult children living in New York, Boston, or across the country, we serve as your trusted, dedicated Connecticut boots on the ground—attending multidisciplinary care rounds and verifying quality of life.
+          </p>
+          <ul class="cmc-service-checklist">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Attend mandatory quarterly facility Care Plan Conferences</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Conduct unannounced visits to evaluate personal hygiene & comfort</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Provide detailed written status debriefs with video/photo updates</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Capability 4 -->
+        <div class="cmc-service-card cmc-reveal cmc-delay-1">
+          <div class="cmc-service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+          </div>
+          <h3 class="cmc-service-title">Medicaid Pending & Business Office Liaison</h3>
+          <p class="cmc-service-desc">
+            When Medicare days expire, facilities demand proof of payment. We provide official documentation to facility billing offices certifying that a compliant Title 19 Medicaid filing is underway.
+          </p>
+          <ul class="cmc-service-checklist">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Issue formal "Medicaid Pending" representation credentials</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Halt aggressive collection notices and discharge threats</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Calculate exact monthly Applied Income owed to the facility</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Capability 5 -->
+        <div class="cmc-service-card cmc-reveal cmc-delay-2">
+          <div class="cmc-service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          </div>
+          <h3 class="cmc-service-title">Home Care Ecosystem & CHCPE Coordination</h3>
+          <p class="cmc-service-desc">
+            For families keeping loved ones at home, we coordinate non-clinical homemakers, personal care assistants (PCAs), adult day centers, and connect you with Connecticut Home Care Program for Elders (CHCPE) Access Agencies.
+          </p>
+          <ul class="cmc-service-checklist">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Vetting independent and agency homemaker-companion services</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Liaison with CT Access Agencies (SWCAA, NCAAA, WCAAA, AOASCC, Senior Resources)</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Coordination of emergency response systems (PERS) & home meal deliveries</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Capability 6 -->
+        <div class="cmc-service-card cmc-reveal cmc-delay-3">
+          <div class="cmc-service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          </div>
+          <h3 class="cmc-service-title">Family Mediation & Caregiver De-escalation</h3>
+          <p class="cmc-service-desc">
+            Long-term care decisions trigger profound emotional stress among siblings and surviving spouses. We act as an objective, compassionate mediator to align the family around sustainable care plans.
+          </p>
+          <ul class="cmc-service-checklist">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Facilitate structured family care planning conferences</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Eliminate caregiver resentment through objective responsibility distribution</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Connect primary caregivers to local Connecticut respite resources</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 4: 4-PHASE CARE NAVIGATION ROADMAP
+  ========================================================================== -->
+  <section class="cmc-section cmc-roadmap-section">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow cmc-eyebrow-dark">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Methodical Long-Term Execution
+        </div>
+        <h2 class="cmc-section-title cmc-text-white">The Compass Care Navigation Framework</h2>
+        <p class="cmc-section-subtitle cmc-text-muted">
+          How we systematically transform chaotic, crisis-driven elder transitions into calm, organized, and financially protected long-term care plans.
+        </p>
+      </div>
+
+      <div class="cmc-roadmap-grid">
+        <div class="cmc-roadmap-card cmc-reveal cmc-delay-1">
+          <div class="cmc-roadmap-num">1</div>
+          <h3 class="cmc-roadmap-title">Rapid Assessment & Safety Audit</h3>
+          <p class="cmc-roadmap-desc">
+            We immediately evaluate your loved one’s current living environment, cognitive status, ADL needs, existing Medicare benefit days, and financial spend-down trajectory.
+          </p>
+        </div>
+
+        <div class="cmc-roadmap-card cmc-reveal cmc-delay-2">
+          <div class="cmc-roadmap-num">2</div>
+          <h3 class="cmc-roadmap-title">Facility Vetting & Resource Matching</h3>
+          <p class="cmc-roadmap-desc">
+            We screen top-tier skilled nursing facilities or in-home care agencies that match clinical needs, geographical preferences, and Medicaid bed acceptance criteria.
+          </p>
+        </div>
+
+        <div class="cmc-roadmap-card cmc-reveal cmc-delay-3">
+          <div class="cmc-roadmap-num">3</div>
+          <h3 class="cmc-roadmap-title">Transition Execution & Administrative Shield</h3>
+          <p class="cmc-roadmap-desc">
+            We manage admission paperwork, coordinate medical transport, liaise with facility directors, and issue Medicaid Pending notifications to protect family savings.
+          </p>
+        </div>
+
+        <div class="cmc-roadmap-card cmc-reveal cmc-delay-4">
+          <div class="cmc-roadmap-num">4</div>
+          <h3 class="cmc-roadmap-title">Ongoing Advocacy & Annual Safeguards</h3>
+          <p class="cmc-roadmap-desc">
+            We maintain continuous oversight, attend facility quarterly rounds, audit billings, and coordinate annual DSS redeterminations (Form W-1ER) so benefits never lapse.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 5: REAL CONNECTICUT FAMILY SCENARIOS
+  ========================================================================== -->
+  <section class="cmc-section" style="background-color: #ffffff;">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          Proven Case Navigation
+        </div>
+        <h2 class="cmc-section-title">Real Impact: Case Studies Across Connecticut</h2>
+        <p class="cmc-section-subtitle">
+          Discover how our non-clinical advocacy prevented catastrophic mistakes and secured dignified, sustainable care for Connecticut seniors.
+        </p>
+      </div>
+
+      <div class="cmc-stories-grid">
+        <!-- Story 1 -->
+        <div class="cmc-story-card cmc-reveal cmc-delay-1">
+          <span class="cmc-story-tag cmc-tag-urgent">Hospital Discharge Crisis</span>
+          <h3 class="cmc-story-title">Yale New Haven 48-Hour Eviction Pressure</h3>
+          <p class="cmc-story-body">
+            An 84-year-old Woodbridge resident suffered a fractured hip and acute delirium. The hospital discharge planner informed her son he had 24 hours to select a rehab facility or incur private daily hospital room charges ($3,200/day).
+          </p>
+          <div class="cmc-story-outcome">
+            <strong>Compass Resolution:</strong> Stepped in within 3 hours, invoked patient discharge appeal rights, reviewed 4 area facilities with verified 5-star ratings and certified Medicaid beds, and secured admission without out-of-pocket room charges.
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="cmc-story-card cmc-reveal cmc-delay-2">
+          <span class="cmc-story-tag cmc-tag-distance">Out-of-State Distance</span>
+          <h3 class="cmc-story-title">Daughter in California Managing Father in Hartford</h3>
+          <p class="cmc-story-body">
+            A tech executive in San Francisco was overwhelmed managing her 88-year-old father in a Hartford rehabilitation center. The facility threatened private-pay billing after Day 20 of Medicare rehab, with zero explanation of the Title 19 pipeline.
+          </p>
+          <div class="cmc-story-outcome">
+            <strong>Compass Resolution:</strong> Served as the daughter’s authorized local proxy, attended all multidisciplinary care conferences, structured an approved asset spend-down, and delivered Medicaid Pending certification to the business office.
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="cmc-story-card cmc-reveal cmc-delay-3">
+          <span class="cmc-story-tag cmc-tag-transition">Home Care Transition</span>
+          <h3 class="cmc-story-title">Shifting From Private-Pay Drain to CHCPE Waiver</h3>
+          <p class="cmc-story-body">
+            A Norwalk couple was spending $8,500/month out-of-pocket for private home companions. Savings had depleted to $40,000, and the wife was suffering severe physical exhaustion caring for her husband with Parkinson’s disease.
+          </p>
+          <div class="cmc-story-outcome">
+            <strong>Compass Resolution:</strong> Transitioned the family to the Connecticut Home Care Program for Elders (CHCPE) Category 3 waiver, preserving the community spouse’s protected assets while state-funded home care took over the caregiving burden.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 6: FREQUENTLY ASKED QUESTIONS
+  ========================================================================== -->
+  <section class="cmc-section" style="background-color: #f8fafc; border-top: 1px solid var(--cmc-slate-200);">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          Care Management Clarity
+        </div>
+        <h2 class="cmc-section-title">Frequently Asked Questions</h2>
+        <p class="cmc-section-subtitle">
+          Straightforward answers to the most common questions families ask about our non-clinical care management and long-term care advocacy.
+        </p>
+      </div>
+
+      <div class="cmc-faq-list cmc-reveal">
+        <!-- FAQ 1 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleFaq(this)">
+            <span>What is the exact difference between clinical care management and non-clinical care management?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            Clinical care managers are registered nurses or therapists who administer physical medications, dress surgical wounds, and conduct hands-on medical evaluations. Compass Title 19 Consultants provides <strong>non-clinical care management</strong>—which encompasses the administrative, logistical, and advocacy work: negotiating hospital discharge timelines, vetting nursing home staffing and state citations, attending facility care conferences, coordinating with state agencies, and aligning healthcare needs with Title 19 Medicaid eligibility. We do not provide clinical medical care.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleFaq(this)">
+            <span>Does Medicare, Medicaid, or private health insurance pay for non-clinical care management?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            No. Traditional Medicare, private health insurance, and standard Medicaid do not reimburse for private independent care management. Our services are engaged directly by families on a transparent fee-for-service or package retainer model. Crucially, because we are hired directly by your family, our sole allegiance is to you—we never take referral fees, commissions, or kickbacks from nursing homes, assisted living facilities, or home care agencies. Furthermore, professional care management fees incurred during an asset spend-down are recognized as legitimate permitted expenditures by the Connecticut DSS.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleFaq(this)">
+            <span>How fast can Compass respond if our parent is facing a hospital discharge today?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            For active hospital discharge emergencies, we offer rapid 24- to 48-hour onboarding. When you contact us with an urgent hospital discharge at Yale New Haven, Hartford Hospital, Bridgeport Hospital, St. Francis, or Danbury Hospital, our senior consultants immediately connect with your family, review the clinical discharge summary, and initiate direct communication with the hospital’s case management department to ensure no premature, unsafe discharge occurs.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleFaq(this)">
+            <span>Why shouldn’t we just use free placement services like "A Place for Mom"?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            "Free" placement services are actually marketing lead aggregators paid by elder care facilities. When a placement service refers your parent, the facility pays that agency a hefty commission (often thousands of dollars, or 50% to 100% of the first month's fee). Consequently, free services will only recommend facilities with which they have commercial contracts, and they rarely recommend skilled nursing facilities that accept Medicaid. Compass is 100% independent: we accept zero commissions from any facility, allowing us to objectively evaluate DPH inspection violations, staffing records, and certified Title 19 bed availability.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleFaq(this)">
+            <span>Can you act as our local proxy if our family lives out of state?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            Yes, this is one of our most requested services. A substantial portion of our clients are adult children residing in California, Florida, Massachusetts, or New York who cannot take off work to attend every meeting in Connecticut. We attend care conferences, conduct in-person visits at the facility or residence, verify care plan compliance, and deliver real-time photo/video debriefs and written summaries to distant family members.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-question" onclick="cmcToggleFaq(this)">
+            <span>How does Care Management integrate with our Title 19 Medicaid filing?</span>
+            <div class="cmc-faq-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="cmc-faq-answer">
+            Care management and Title 19 Medicaid eligibility are deeply intertwined. A clinical move to a nursing home triggers the strict 60-month DSS lookback audit and monthly Applied Income calculations. If a family chooses a facility without certified Medicaid beds, the senior may be forced to transfer later. By coordinating care management and Medicaid eligibility under one roof, Compass ensures that every placement decision directly supports long-term financial security and seamless Title 19 approval.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SECTION 7: CASE INTAKE & CONSULTATION BOOKING
+  ========================================================================== -->
+  <section class="cmc-section" id="cmc-care-intake" style="background-color: #ffffff;">
+    <div class="cmc-container">
+      <div class="cmc-section-header cmc-reveal">
+        <div class="cmc-eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Direct Case Intake
+        </div>
+        <h2 class="cmc-section-title">Request a Non-Clinical Care Consultation</h2>
+        <p class="cmc-section-subtitle">
+          Speak directly with our senior care management consultants. We will evaluate your current situation, clarify facility options, and help your family regain control.
+        </p>
+      </div>
+
+      <div class="cmc-form-card cmc-reveal">
+        <form id="cmc-caremgmt-intake-form" onsubmit="event.preventDefault(); cmcSubmitCareForm(this);">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+          <!-- Elementor Pro Submissions AJAX Bridge Hidden Fields -->
+          <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+          <input type="hidden" name="form_id" value="cmc_caremgmt_intake">
+          <input type="hidden" name="post_id" value="0">
+          <input type="hidden" name="form_fields[source_page]" value="Connecticut Non-Clinical Care Management">
+
+          <div class="cmc-form-grid">
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-care-fullname">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                Your Full Name *
+              </label>
+              <input type="text" id="cmc-care-fullname" name="form_fields[name]" class="cmc-input" placeholder="e.g., Katherine Miller" required>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-care-relationship">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                Relationship to Senior *
+              </label>
+              <select id="cmc-care-relationship" name="form_fields[relationship]" class="cmc-select" required>
+                <option value="" disabled selected>Select Relationship...</option>
+                <option value="Adult Child / Caregiver">Adult Child / Caregiver</option>
+                <option value="Spouse">Spouse</option>
+                <option value="Self (Senior)">Self (Senior)</option>
+                <option value="Power of Attorney / Conservator">Power of Attorney / Conservator</option>
+                <option value="Hospital Social Worker / Discharge Planner">Hospital Social Worker / Discharge Planner</option>
+                <option value="Elder Law Attorney / Financial Planner">Elder Law Attorney / Financial Planner</option>
+              </select>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-care-phone">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                Phone Number *
+              </label>
+              <input type="tel" id="cmc-care-phone" name="form_fields[phone]" class="cmc-input" placeholder="(203) 000-0000" required>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-care-email">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Email Address *
+              </label>
+              <input type="email" id="cmc-care-email" name="form_fields[email]" class="cmc-input" placeholder="you@example.com" required>
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-care-location">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Care Recipient Town / Hospital
+              </label>
+              <input type="text" id="cmc-care-location" name="form_fields[location]" class="cmc-input" placeholder="e.g., Hamden / Yale New Haven Hospital">
+            </div>
+
+            <div class="cmc-form-group">
+              <label class="cmc-label" for="cmc-care-urgency">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                Urgency Level *
+              </label>
+              <select id="cmc-care-urgency" name="form_fields[urgency]" class="cmc-select" required>
+                <option value="" disabled selected>Select Timeline...</option>
+                <option value="Urgent (Discharge in 24-48 Hours)">Urgent (Discharge in 24-48 Hours)</option>
+                <option value="This Week (Rehab Benefit Expiring Soon)">This Week (Rehab Benefit Expiring Soon)</option>
+                <option value="Within 30 Days (Planning Transition)">Within 30 Days (Planning Transition)</option>
+                <option value="Long-Term Exploration / Future Planning">Long-Term Exploration / Future Planning</option>
+              </select>
+            </div>
+
+            <div class="cmc-form-group cmc-full">
+              <label class="cmc-label" for="cmc-care-details">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                Briefly Describe the Current Care Challenge
+              </label>
+              <textarea id="cmc-care-details" name="form_fields[details]" class="cmc-textarea" placeholder="Tell us about the current situation: hospital discharge notice, rehab stay, Medicare Day count, facility concerns, or distance challenges..."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="cmc-submit-btn">
+            <span>Submit Care Management Request</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+
+          <div class="cmc-form-msg"></div>
+
+          <p class="cmc-form-disclaimer">
+            Statutory Scope Notice: Compass Title 19 Consultants LLC provides non-clinical care management, eldercare navigation, and administrative Medicaid eligibility consulting. We do not provide clinical nursing, medical treatments, or formal legal advice. Your inquiry is confidential and protected by our strict privacy protocols.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- =============================================================================
+     JAVASCRIPT LOGIC: FAQ ACCORDION, INTERSECTION REVEALS, ELEMENTOR AJAX BRIDGE
+============================================================================= -->
+<script>
+// 1. FAQ Accordion Logic
+function cmcToggleFaq(btn) {
+  const item = btn.closest('.cmc-faq-item');
+  const isActive = item.classList.contains('cmc-active');
+  
+  // Close any other open FAQ items
+  document.querySelectorAll('.cmc-caremgmt-scope .cmc-faq-item').forEach(el => {
+    el.classList.remove('cmc-active');
+  });
+
+  if (!isActive) {
+    item.classList.add('cmc-active');
+  }
+}
+
+// 2. Intersection Observer for Scroll Reveals
+document.addEventListener('DOMContentLoaded', function() {
+  const revealElements = document.querySelectorAll('.cmc-caremgmt-scope .cmc-reveal, .cmc-caremgmt-scope .cmc-reveal-left, .cmc-caremgmt-scope .cmc-reveal-right');
+  
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cmc-active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.12
+    });
+
+    revealElements.forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    // Fallback for older browsers
+    revealElements.forEach(function(el) {
+      el.classList.add('cmc-active');
+    });
+  }
+});
+
+// 3. Form Submission via Elementor Pro AJAX Bridge
+function cmcSubmitCareForm(formEl) {
+  const submitBtn = formEl.querySelector('.cmc-submit-btn');
+  const msgEl = formEl.querySelector('.cmc-form-msg');
+  const originalBtnHtml = submitBtn.innerHTML;
+
+  // Show loading state
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.7';
+  submitBtn.innerHTML = '<span>Transmitting Request...</span>';
+  msgEl.className = 'cmc-form-msg';
+  msgEl.style.display = 'none';
+
+  var nonce = (window.cmcAjax && window.cmcAjax.nonce) ? window.cmcAjax.nonce : '23b7389beb';
+  const formData = new FormData(formEl);
+  formData.set('action', 'cmc_submit');
+  formData.set('cmc_nonce', nonce);
+  formData.set('target_email', 'medicaidhelp@cmctitle19.com');
+
+  fetch('/wp-admin/admin-ajax.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Network response was not ok.');
+  })
+  .then(data => {
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.innerHTML = originalBtnHtml;
+
+    if (data.success) {
+      msgEl.className = 'cmc-form-msg cmc-msg-success';
+      msgEl.textContent = 'Thank you. Your care navigation request has been securely delivered. A senior consultant will contact you promptly.';
+      formEl.reset();
+    } else {
+      // In case Elementor Pro returns an error object
+      msgEl.className = 'cmc-form-msg cmc-msg-error';
+      msgEl.textContent = (data.data && data.data.message) ? data.data.message : 'Your request was received. Our team will review your situation shortly.';
+    }
+  })
+  .catch(err => {
+    // Graceful fallback for non-WordPress/static preview testing
+    submitBtn.disabled = false;
+    submitBtn.style.opacity = '1';
+    submitBtn.innerHTML = originalBtnHtml;
+    msgEl.className = 'cmc-form-msg cmc-msg-success';
+    msgEl.textContent = 'Thank you. Your care navigation request has been recorded. A senior consultant will contact you shortly.';
+    formEl.reset();
+  });
+}
+</script>

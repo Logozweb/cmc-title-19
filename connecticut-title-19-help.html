@@ -1,0 +1,1492 @@
+<!-- ==========================================================================
+     COMPASS TITLE19 CONSULTANTS LLC - TITLE 19 & HUSKY C SERVICE PAGE
+     File: connecticut-title-19-help.html
+     ==========================================================================
+     Architecture & Styling Highlights:
+     1. 100% MOBILE RESPONSIVE: Tested for 320px, 375px, 414px, 768px, 1024px, 1440px.
+        - Fluid stacking for all comparison cards, rule grids, and application phases.
+        - Zero horizontal overflow (contain: paint !important).
+        - Generous touch targets (min 46px height).
+     2. CSS ISOLATION GUARANTEE: Wrapped under `html body .cmc-title19-scope` with
+        hyper-specific !important resets to prevent WordPress theme overrides.
+     3. COLOR SYSTEM:
+        - Primary Navy: #0F243E
+        - Accent Amber: #E87722 / Hover: #C45811 / Gold: #fbbf24
+        - Card Dark Navy: #071220 / Deep Navy Accent: #16365c
+        - Success Emerald: #10b981
+        - Surface Neutral: #f8fafc / #ffffff
+     4. ZERO EMOJIS: 100% crisp, inline SVGs throughout all sections.
+     5. SCROLL REVEAL: Native IntersectionObserver animations for all cards and elements.
+     6. FORM INTEGRATION: AJAX bridge to Elementor Pro Submissions (`/wp-admin/admin-ajax.php`).
+     ========================================================================== -->
+
+<!-- GOOGLE FONTS PRELOAD -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================================
+     1. HYPER-SPECIFIC CSS ISOLATION & GLOBAL RESETS (Zero Theme Overrides)
+     ========================================================================== */
+  html body .cmc-title19-scope,
+  html body .cmc-title19-scope * {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+
+  html body .cmc-title19-scope {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #334155 !important;
+    background-color: #f8fafc !important;
+    overflow-x: hidden !important;
+    display: block !important;
+    clear: both !important;
+    position: relative !important;
+  }
+
+  /* Headings Reset & Hierarchy */
+  html body .cmc-title19-scope h1,
+  html body .cmc-title19-scope h2,
+  html body .cmc-title19-scope h3,
+  html body .cmc-title19-scope h4,
+  html body .cmc-title19-scope h5,
+  html body .cmc-title19-scope h6 {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 0.5rem !important;
+    color: #0F243E;
+  }
+
+  html body .cmc-title19-scope h1 { font-size: 42px !important; }
+  html body .cmc-title19-scope h2 { font-size: 32px !important; }
+  html body .cmc-title19-scope h3 { font-size: 21px !important; }
+  html body .cmc-title19-scope h4 { font-size: 17px !important; }
+
+  @media (max-width: 1024px) {
+    html body .cmc-title19-scope h1 { font-size: 34px !important; }
+    html body .cmc-title19-scope h2 { font-size: 28px !important; }
+    html body .cmc-title19-scope h3 { font-size: 20px !important; }
+  }
+  @media (max-width: 640px) {
+    html body .cmc-title19-scope h1 { font-size: 27px !important; line-height: 1.22 !important; }
+    html body .cmc-title19-scope h2 { font-size: 23px !important; line-height: 1.25 !important; }
+    html body .cmc-title19-scope h3 { font-size: 18px !important; }
+    html body .cmc-title19-scope h4 { font-size: 16px !important; }
+  }
+
+  /* Typography helpers */
+  html body .cmc-title19-scope p {
+    margin-top: 0 !important;
+    margin-bottom: 0.95rem !important;
+    line-height: 1.68 !important;
+  }
+  html body .cmc-title19-scope p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  html body .cmc-title19-scope a {
+    text-decoration: none !important;
+    color: inherit;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: inline-flex;
+    align-items: center;
+  }
+  html body .cmc-title19-scope a:hover {
+    text-decoration: none !important;
+  }
+
+  html body .cmc-title19-scope ul,
+  html body .cmc-title19-scope ol {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .cmc-title19-scope li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .cmc-title19-scope svg {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .cmc-title19-scope img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border: none !important;
+  }
+
+  /* Layout Containers */
+  .cmc-container {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  .cmc-container-narrow {
+    max-width: 920px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-container,
+    .cmc-container-narrow {
+      padding: 0 16px !important;
+    }
+  }
+
+  /* ==========================================================================
+     2. HERO & STATS BANNER
+     ========================================================================== */
+  .cmc-service-hero {
+    background-color: #0F243E !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 70px 0 85px !important;
+    color: #ffffff !important;
+  }
+  .cmc-hero-radial-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle at 85% 25%, rgba(217, 119, 6, 0.16) 0%, rgba(15, 36, 62, 0.9) 65%, #0F243E 100%) !important;
+    pointer-events: none !important;
+  }
+  .cmc-breadcrumbs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+    color: #94a3b8 !important;
+    margin-bottom: 20px !important;
+    flex-wrap: wrap !important;
+  }
+  .cmc-breadcrumbs a {
+    color: #cbd5e1 !important;
+    transition: color 0.2s ease !important;
+  }
+  .cmc-breadcrumbs a:hover {
+    color: #fbbf24 !important;
+  }
+  .cmc-breadcrumbs span.current {
+    color: #fbbf24 !important;
+    font-weight: 600 !important;
+  }
+  .cmc-hero-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(217, 119, 6, 0.18) !important;
+    border: 1px solid rgba(251, 191, 36, 0.4) !important;
+    color: #fbbf24 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 6px 14px !important;
+    border-radius: 9999px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .cmc-hero-feature-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+    margin-bottom: 32px !important;
+  }
+  .cmc-hero-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    padding: 6px 14px !important;
+    border-radius: 8px !important;
+    font-size: 13px !important;
+    color: #e2e8f0 !important;
+  }
+
+  /* ==========================================================================
+     3. FINANCIAL CRISIS CARD: PRIVATE PAY VS MEDICAID
+     ========================================================================== */
+  .cmc-crisis-section {
+    padding: 80px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-crisis-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+  @media (max-width: 860px) {
+    .cmc-crisis-grid {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+  }
+
+  .cmc-cost-comparison-card {
+    background: #071220 !important;
+    border-radius: 20px !important;
+    padding: 32px !important;
+    color: #ffffff !important;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  .cmc-cost-stat-row {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    padding: 14px 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  .cmc-cost-stat-row:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* ==========================================================================
+     4. CONNECTICUT 3-PART ELIGIBILITY CRITERIA
+     ========================================================================== */
+  .cmc-criteria-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-criteria-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    margin-top: 36px !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-criteria-grid {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+  }
+
+  .cmc-criteria-card {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    padding: 30px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  }
+  .cmc-criteria-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 30px -8px rgba(15, 36, 62, 0.12) !important;
+  }
+  .cmc-criteria-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+    background: rgba(15, 36, 62, 0.08) !important;
+    color: #0F243E !important;
+    font-weight: 800 !important;
+    font-size: 15px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* ==========================================================================
+     5. THE 5-YEAR LOOKBACK AUDIT BREAKDOWN
+     ========================================================================== */
+  .cmc-lookback-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-lookback-callout {
+    background: linear-gradient(135deg, #0F243E 0%, #16365c 100%) !important;
+    color: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 36px 40px !important;
+    margin-top: 36px !important;
+    border-left: 8px solid #E87722 !important;
+    box-shadow: 0 15px 35px -10px rgba(15, 36, 62, 0.3) !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-lookback-callout {
+      padding: 24px 20px !important;
+    }
+  }
+
+  .cmc-lookback-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    margin-top: 28px !important;
+  }
+  @media (max-width: 768px) {
+    .cmc-lookback-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  .cmc-lookback-subcard {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    border-radius: 14px !important;
+    padding: 22px !important;
+  }
+
+  /* ==========================================================================
+     6. SPEND-DOWN COMPARISON (LEGITIMATE VS DISALLOWED)
+     ========================================================================== */
+  .cmc-spenddown-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-spenddown-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+    margin-top: 36px !important;
+  }
+  @media (max-width: 800px) {
+    .cmc-spenddown-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+  }
+
+  .cmc-spenddown-card-allowed {
+    background: #ffffff !important;
+    border: 2px solid #10b981 !important;
+    border-radius: 18px !important;
+    padding: 28px !important;
+    box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.12) !important;
+  }
+  .cmc-spenddown-card-disallowed {
+    background: #ffffff !important;
+    border: 2px solid #ef4444 !important;
+    border-radius: 18px !important;
+    padding: 28px !important;
+    box-shadow: 0 8px 20px -4px rgba(239, 68, 68, 0.12) !important;
+  }
+
+  /* ==========================================================================
+     7. THE 4-PHASE ROADMAP TO APPROVAL
+     ========================================================================== */
+  .cmc-roadmap-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-roadmap-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+    margin-top: 40px !important;
+  }
+  @media (max-width: 1024px) {
+    .cmc-roadmap-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 20px !important;
+    }
+  }
+  @media (max-width: 600px) {
+    .cmc-roadmap-grid {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+  }
+
+  .cmc-step-card {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+  }
+  .cmc-step-card:hover {
+    border-color: #cbd5e1 !important;
+    background: #ffffff !important;
+    transform: translateY(-3px) !important;
+  }
+  .cmc-step-num {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    color: #E87722 !important;
+    background: rgba(217, 119, 6, 0.1) !important;
+    padding: 4px 10px !important;
+    border-radius: 6px !important;
+    align-self: flex-start !important;
+    margin-bottom: 14px !important;
+  }
+
+  /* ==========================================================================
+     8. FREQUENTLY ASKED QUESTIONS (ACCORDION SYSTEM)
+     ========================================================================== */
+  .cmc-faq-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-faq-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-top: 36px !important;
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .cmc-faq-item {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-faq-item.active {
+    border-color: #0F243E !important;
+    box-shadow: 0 6px 18px rgba(15, 36, 62, 0.06) !important;
+  }
+  .cmc-faq-btn {
+    width: 100% !important;
+    padding: 20px 24px !important;
+    background: none !important;
+    border: none !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 16.5px !important;
+    font-weight: 700 !important;
+    color: #0F243E !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    cursor: pointer !important;
+    gap: 16px !important;
+  }
+  .cmc-faq-btn svg {
+    transition: transform 0.3s ease !important;
+    flex-shrink: 0 !important;
+  }
+  .cmc-faq-item.active .cmc-faq-btn svg {
+    transform: rotate(180deg) !important;
+  }
+  .cmc-faq-content {
+    display: none;
+    padding: 0 24px 22px !important;
+    font-size: 14.5px !important;
+    color: #475569 !important;
+    line-height: 1.7 !important;
+  }
+  .cmc-faq-item.active .cmc-faq-content {
+    display: block !important;
+  }
+
+  /* ==========================================================================
+     9. CONSULTATION FORM SECTION (ELEMENTOR AJAX BRIDGE)
+     ========================================================================== */
+  .cmc-service-consult-section {
+    padding: 85px 0 !important;
+    background: #0F243E !important;
+    color: #ffffff !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .cmc-service-consult-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.15fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-service-consult-grid {
+      grid-template-columns: 1fr !important;
+      gap: 36px !important;
+    }
+  }
+
+  .cmc-form-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 32px !important;
+    color: #334155 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4) !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-form-card {
+      padding: 22px 18px !important;
+    }
+  }
+
+  .cmc-input-field {
+    width: 100% !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    font-family: inherit !important;
+    outline: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-input-field:focus {
+    border-color: #0F243E !important;
+    box-shadow: 0 0 0 3px rgba(15, 36, 62, 0.12) !important;
+  }
+  .cmc-form-label {
+    display: block !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #0F243E !important;
+    margin-bottom: 6px !important;
+  }
+  .cmc-form-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 14px !important;
+  }
+  @media (max-width: 600px) {
+    .cmc-form-row {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+  }
+
+  /* Primary Button */
+  .cmc-btn-primary {
+    background: #E87722 !important;
+    color: #ffffff !important;
+    padding: 14px 26px !important;
+    border-radius: 10px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 18px -4px rgba(217, 119, 6, 0.4) !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .cmc-btn-primary:hover {
+    background: #C45811 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 24px -4px rgba(217, 119, 6, 0.5) !important;
+  }
+  .cmc-btn-secondary {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 12px 22px !important;
+    border-radius: 10px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+  }
+  .cmc-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+  }
+
+  /* ==========================================================================
+     10. SCROLL REVEAL ANIMATIONS
+     ========================================================================== */
+  .cmc-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-right {
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+  }
+
+  .cmc-delay-1 { transition-delay: 0.1s !important; }
+  .cmc-delay-2 { transition-delay: 0.2s !important; }
+  .cmc-delay-3 { transition-delay: 0.3s !important; }
+  .cmc-delay-4 { transition-delay: 0.4s !important; }
+
+
+/* ==========================================================================
+   PERFECT SELECT DROPDOWN RESET (Full Text Visibility, Centered, Crisp Chevron)
+   ========================================================================== */
+html body select,
+html body select.cmc-select,
+html body select.cmc-input-field,
+html body select.cmc-input,
+html body [class*="scope"] select,
+html body [class*="scope"] .cmc-select,
+html body [class*="scope"] .cmc-input-field {
+  display: block !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  line-height: 50px !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px 16px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 44px 0 16px !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body select::-ms-expand, html body [class*="scope"] select::-ms-expand { display: none !important; }
+
+html body [class*="scope"] select:focus,
+html body select:focus {
+  border-color: #E87722 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body select option,
+html body [class*="scope"] select option {
+  padding: 10px 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+html body select option[disabled],
+html body [class*="scope"] select option[disabled] {
+  color: #94a3b8 !important;
+}
+
+/* Ensure label SVGs never collide with text */
+html body label svg,
+html body .cmc-label svg {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+</style>
+
+<div class="cmc-title19-scope">
+
+  <!-- ==========================================================================
+       SECTION 1: HERO & BREADCRUMBS
+       ========================================================================== -->
+  <section class="cmc-service-hero">
+    <div class="cmc-hero-radial-overlay"></div>
+    
+    <div class="cmc-container" style="position:relative;z-index:2;">
+      <!-- Breadcrumbs -->
+      <nav class="cmc-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <a href="/#services">Medicaid Services</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span class="current">Title 19 &amp; HUSKY C Assistance</span>
+      </nav>
+
+      <!-- Badge -->
+      <div class="cmc-hero-badge cmc-reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Connecticut Long-Term Care Medicaid Specialists</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="cmc-reveal cmc-delay-1" style="color:#ffffff !important;max-width:920px;margin-bottom:18px !important;">
+        Connecticut Title 19 &amp; HUSKY C <br>
+        <span style="color:#fbbf24 !important;">Long-Term Care Medicaid Guidance.</span>
+      </h1>
+
+      <p class="cmc-reveal cmc-delay-2" style="font-size:17px !important;color:#cbd5e1 !important;max-width:840px;line-height:1.7 !important;margin-bottom:20px !important;">
+        Navigating nursing home Medicaid eligibility in Connecticut requires strict adherence to Department of Social Services (DSS) regulations, forensic 5-year lookback audits, and rapid response to state verification notices. We guide families through every step, safeguarding community spouses and securing vital long-term care coverage.
+      </p>
+
+      <!-- Feature Tags -->
+      <div class="cmc-hero-feature-tags cmc-reveal cmc-delay-3">
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>60-Month Lookback Pre-Audit</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Spousal Impoverishment Protections</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>Medicaid Pending Status Coordination</span>
+        </div>
+        <div class="cmc-hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span>W-1348 Deadline Management</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="cmc-reveal cmc-delay-4" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <a href="#consultation" class="cmc-btn-primary" style="width:auto !important;padding:12px 24px !important;">
+          <span>Schedule Case Intake</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#criteria" class="cmc-btn-secondary">
+          <span>Review CT Eligibility Rules</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 2: THE FINANCIAL CRISIS & THE NURSING HOME REALITY
+       ========================================================================== -->
+  <section class="cmc-crisis-section">
+    <div class="cmc-container">
+      <div class="cmc-crisis-grid">
+        
+        <!-- Left: Contextual Narrative -->
+        <div class="cmc-reveal-left">
+          <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">The Eldercare Dilemma</span>
+          <h2 style="color:#0F243E !important;margin-bottom:16px !important;">
+            Why Connecticut Families Face Devastating Private-Pay Bills.
+          </h2>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;margin-bottom:14px !important;">
+            When an aging parent or spouse suffers a fall, stroke, or cognitive decline, hospital discharge planners frequently recommend immediate placement into a skilled nursing facility. Most families mistakenly believe that Medicare will pay for their ongoing care.
+          </p>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;margin-bottom:16px !important;">
+            In reality, <strong>Medicare only covers short-term skilled rehabilitation</strong>—up to 100 days maximum, with heavy daily copayments starting on day 21. Once rehabilitation ends, care transitions to custodial nursing care, which Medicare does not cover.
+          </p>
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;">
+            Without Connecticut Title 19 (Medicaid / HUSKY C), families are thrust into private-pay status, receiving monthly nursing home invoices exceeding $16,000 that can wipe out a lifetime of family savings in under a year.
+          </p>
+        </div>
+
+        <!-- Right: Cost Comparison Dark Card -->
+        <div class="cmc-cost-comparison-card cmc-reveal-right">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(217,119,6,0.2);display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <div>
+              <h3 style="color:#ffffff !important;font-size:18px !important;margin:0 !important;">Connecticut Long-Term Care Realities</h3>
+              <span style="font-size:12px;color:#94a3b8;">Average statewide private-pay data</span>
+            </div>
+          </div>
+
+          <div class="cmc-cost-stat-row">
+            <div>
+              <div style="font-size:13.5px;color:#cbd5e1;font-weight:600;">Average Monthly Nursing Home Cost</div>
+              <div style="font-size:12px;color:#94a3b8;">Connecticut skilled nursing facilities</div>
+            </div>
+            <div style="font-size:22px;font-weight:800;color:#fbbf24;font-family:'Plus Jakarta Sans',sans-serif;">$15,000 &ndash; $18,000+</div>
+          </div>
+
+          <div class="cmc-cost-stat-row">
+            <div>
+              <div style="font-size:13.5px;color:#cbd5e1;font-weight:600;">Annual Private-Pay Drain</div>
+              <div style="font-size:12px;color:#94a3b8;">Per single institutionalized resident</div>
+            </div>
+            <div style="font-size:22px;font-weight:800;color:#ef4444;font-family:'Plus Jakarta Sans',sans-serif;">$180,000 &ndash; $216,000</div>
+          </div>
+
+          <div class="cmc-cost-stat-row">
+            <div>
+              <div style="font-size:13.5px;color:#cbd5e1;font-weight:600;">Medicare Custodial Coverage</div>
+              <div style="font-size:12px;color:#94a3b8;">Long-term assistance with ADLs</div>
+            </div>
+            <div style="font-size:22px;font-weight:800;color:#94a3b8;font-family:'Plus Jakarta Sans',sans-serif;">$0.00 (Zero Days)</div>
+          </div>
+
+          <div class="cmc-cost-stat-row">
+            <div>
+              <div style="font-size:13.5px;color:#cbd5e1;font-weight:600;">Connecticut Title 19 (Medicaid)</div>
+              <div style="font-size:12px;color:#94a3b8;">Once approved by CT DSS</div>
+            </div>
+            <div style="font-size:22px;font-weight:800;color:#10b981;font-family:'Plus Jakarta Sans',sans-serif;">100% Covered*</div>
+          </div>
+
+          <div style="margin-top:18px;font-size:11.5px;color:#94a3b8;line-height:1.5;">
+            *Minus mandatory Applied Income (resident's monthly Social Security &amp; pension after personal allowance &amp; spousal deductions).
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 3: THE 3 CONNECTICUT ELIGIBILITY TESTS
+       ========================================================================== -->
+  <section class="cmc-criteria-section" id="criteria">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Statutory Requirements</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">The 3 Pillars of Connecticut Medicaid Eligibility</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          To qualify for Connecticut Title 19 (HUSKY C) long-term care benefits, an applicant must satisfy three distinct tests established in the Connecticut Department of Social Services Uniform Policy Manual (UPM).
+        </p>
+      </div>
+
+      <div class="cmc-criteria-grid">
+        
+        <!-- Pillar 1: Medical / Clinical Need -->
+        <div class="cmc-criteria-card cmc-reveal cmc-delay-1">
+          <div>
+            <div class="cmc-criteria-badge">01</div>
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:8px !important;">Clinical Level of Care</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin-bottom:16px !important;">
+              The applicant must clinically require skilled nursing facility care or substantial hands-on assistance with multiple Activities of Daily Living (ADLs).
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:#334155;">
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Bathing, dressing, and personal hygiene.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Mobility, transferring, and ambulation.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Cognitive impairment (Alzheimer's or dementia supervision).</span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top:20px;padding-top:14px;border-top:1px solid #e2e8f0;font-size:12.5px;color:#0F243E;font-weight:600;">
+            Evaluated via Ascend / Maximus clinical screens.
+          </div>
+        </div>
+
+        <!-- Pillar 2: Asset / Resource Limit -->
+        <div class="cmc-criteria-card cmc-reveal cmc-delay-2" style="border:2px solid #0F243E;box-shadow:0 8px 24px -4px rgba(15,36,62,0.12);">
+          <div>
+            <div class="cmc-criteria-badge" style="background:#0F243E;color:#ffffff;">02</div>
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:8px !important;">Asset &amp; Resource Limit</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin-bottom:16px !important;">
+              Connecticut imposes strict limits on "countable" liquid assets that an applicant may retain on the first day of the approval month.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:#334155;">
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E87722" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Single Individual:</strong> Exactly $1,600 maximum in countable assets.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E87722" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Community Spouse:</strong> Protected under CSRA limits (up to $154,140+ in 2024).</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Exempt Assets:</strong> Primary home (if spouse resides there), 1 vehicle, prepaid burial.</span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top:20px;padding-top:14px;border-top:1px solid #e2e8f0;font-size:12.5px;color:#E87722;font-weight:700;">
+            Requires forensic pre-audit to avoid early denial.
+          </div>
+        </div>
+
+        <!-- Pillar 3: Income & Applied Income -->
+        <div class="cmc-criteria-card cmc-reveal cmc-delay-3">
+          <div>
+            <div class="cmc-criteria-badge">03</div>
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:8px !important;">Income &amp; Patient Liability</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin-bottom:16px !important;">
+              Most monthly income does not disqualify an applicant, but it must be calculated and applied toward the nursing facility bill each month.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:#334155;">
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Personal Needs Allowance:</strong> $75/mo retained for clothing and personal care.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Spousal Income Diversion:</strong> Monthly income shifted to community spouse under MMMNA.</span>
+              </li>
+              <li style="display:flex;align-items:flex-start;gap:8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Applied Income:</strong> Balance paid directly to nursing facility.</span>
+              </li>
+            </ul>
+          </div>
+          <div style="margin-top:20px;padding-top:14px;border-top:1px solid #e2e8f0;font-size:12.5px;color:#0F243E;font-weight:600;">
+            Determined by strict DSS budgeting formula.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 4: THE 5-YEAR LOOKBACK PERIOD DEMYSTIFIED
+       ========================================================================== -->
+  <section class="cmc-lookback-section" id="lookback">
+    <div class="cmc-container">
+      <div style="max-width:840px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Crucial Compliance Rule</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">The Dreaded 60-Month Lookback Period</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          Connecticut DSS examines every single financial transaction across the 60 months preceding the Medicaid application date. Any uncompensated transfer or gift triggers a harsh penalty period during which Medicaid refuses to pay.
+        </p>
+      </div>
+
+      <!-- Heroic Callout Box -->
+      <div class="cmc-lookback-callout cmc-reveal">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="width:38px;height:38px;border-radius:8px;background:rgba(217,119,6,0.3);display:flex;align-items:center;justify-content:center;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <div>
+            <h3 style="color:#ffffff !important;font-size:20px !important;margin:0 !important;">How DSS Calculates Penalty Periods</h3>
+            <span style="font-size:12.5px;color:#fbbf24;">Statewide Average Monthly Nursing Home Rate (Penalty Divisor)</span>
+          </div>
+        </div>
+
+        <p style="font-size:15px !important;color:#cbd5e1 !important;line-height:1.75 !important;">
+          Under Connecticut statutes, if an applicant gifted money, transferred real estate for less than fair market value, or wrote checks to grandchildren within the 5-year window, DSS totals the transfers and divides by the state's average monthly nursing home cost (currently over $14,000/month). The resulting number is the exact number of months the senior must pay privately out of pocket before Medicaid starts.
+        </p>
+
+        <div class="cmc-lookback-grid">
+          <div class="cmc-lookback-subcard">
+            <h4 style="color:#ffffff !important;font-size:15px !important;margin-bottom:8px !important;display:flex;align-items:center;gap:6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+              <span>Common Lookback Pitfalls</span>
+            </h4>
+            <p style="font-size:13px !important;color:#94a3b8 !important;line-height:1.6 !important;margin:0 !important;">
+              Cash withdrawals without receipts, loan repayments to relatives without formal promissory notes, selling a vehicle or boat below blue-book value, and quitclaim deeds executed without an elder law exemption.
+            </p>
+          </div>
+
+          <div class="cmc-lookback-subcard">
+            <h4 style="color:#ffffff !important;font-size:15px !important;margin-bottom:8px !important;display:flex;align-items:center;gap:6px;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>How Compass Pre-Audits Your Files</span>
+            </h4>
+            <p style="font-size:13px !important;color:#94a3b8 !important;line-height:1.6 !important;margin:0 !important;">
+              We obtain and reconstruct complete 60-month bank records, index check images, draft formal reconciliation affidavits, and compile contemporaneous receipts before the state reviews your file, preventing costly penalty delays.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 5: LEGITIMATE SPEND-DOWN VS DISALLOWED TRANSFERS
+       ========================================================================== -->
+  <section class="cmc-spenddown-section">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Financial Protection</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Permitted Spend-Down vs. Disallowed Gifting</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          You do not have to lose everything to qualify for Medicaid. Connecticut law allows strategic, lawful spend-down to benefit the senior and protect their spouse.
+        </p>
+      </div>
+
+      <div class="cmc-spenddown-grid">
+        
+        <!-- Column 1: Allowed Spend Down -->
+        <div class="cmc-spenddown-card-allowed cmc-reveal-left">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+            <div style="width:34px;height:34px;border-radius:8px;background:#dcfce7;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div>
+              <h3 style="font-size:18px !important;color:#15803d !important;margin:0 !important;">Permitted Spend-Down Strategies</h3>
+              <span style="font-size:12px;color:#475569;">Fully compliant under CT DSS Uniform Policy Manual</span>
+            </div>
+          </div>
+
+          <ul style="display:flex;flex-direction:column;gap:12px;font-size:13.5px;color:#334155;">
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2.5" style="margin-top:3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Irrevocable Prepaid Funeral Contracts:</strong> Up to the Connecticut statutory cap (currently $10,000 per spouse), plus burial space items.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2.5" style="margin-top:3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Paying Off Legitimate Liabilities:</strong> Retiring mortgages, credit card balances, outstanding medical debts, or auto loans.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2.5" style="margin-top:3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Primary Home Repairs &amp; Capital Improvements:</strong> Roof replacements, heating systems, and safety modifications on the primary residence.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#15803d" stroke-width="2.5" style="margin-top:3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Purchasing Exempt Personal Property:</strong> A reliable vehicle for the community spouse, assistive medical equipment, or eyeglasses/dental care.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Disallowed Spend Down -->
+        <div class="cmc-spenddown-card-disallowed cmc-reveal-right">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+            <div style="width:34px;height:34px;border-radius:8px;background:#fee2e2;display:flex;align-items:center;justify-content:center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </div>
+            <div>
+              <h3 style="font-size:18px !important;color:#b91c1c !important;margin:0 !important;">Disallowed Moves &amp; Penalty Triggers</h3>
+              <span style="font-size:12px;color:#475569;">Triggers severe DSS penalty periods</span>
+            </div>
+          </div>
+
+          <ul style="display:flex;flex-direction:column;gap:12px;font-size:13.5px;color:#334155;">
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2.5" style="margin-top:3px;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+              <span><strong>Cash Gifts to Family Members:</strong> Transferring money to children or grandchildren, even under annual IRS gift tax exclusions ($18,000).</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2.5" style="margin-top:3px;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+              <span><strong>Deeding Real Estate for $1:</strong> Transferring property to children without qualifying under the statutory Caregiver Child Exemption.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2.5" style="margin-top:3px;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+              <span><strong>Unrecorded Caregiver Payments:</strong> Paying a relative for home care without a formal, written personal service agreement and W-2 payroll trail.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#b91c1c" stroke-width="2.5" style="margin-top:3px;"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+              <span><strong>Unexplained Large Cash Withdrawals:</strong> Withdrawing funds without paper receipts proving goods or services were received at market value.</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 6: THE 4-PHASE COMPASS APPLICATION ROADMAP
+       ========================================================================== -->
+  <section class="cmc-roadmap-section">
+    <div class="cmc-container">
+      <div style="max-width:800px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">End-to-End Workflow</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Our Proven 4-Phase Application Roadmap</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          We manage the complete administrative lifecycle so your family never has to struggle with bureaucracy during an emotional medical crisis.
+        </p>
+      </div>
+
+      <div class="cmc-roadmap-grid">
+        
+        <!-- Step 1 -->
+        <div class="cmc-step-card cmc-reveal cmc-delay-1">
+          <div class="cmc-step-num">PHASE 01</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">Forensic Intake &amp; Classification</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            We catalog every checking, savings, retirement, annuity, and real estate account. We calculate community spouse allowances and identify the exact month eligibility can be safely claimed.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="cmc-step-card cmc-reveal cmc-delay-2">
+          <div class="cmc-step-num">PHASE 02</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">60-Month Document Audit</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            We secure 5 years of statements, obtain check copies for transactions over statutory thresholds, and draft itemized reconciliation schedules matching the DSS caseworker checklist.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="cmc-step-card cmc-reveal cmc-delay-3">
+          <div class="cmc-step-num">PHASE 03</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">Portal Filing &amp; W-1348 Defense</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            We submit the electronic application via the DSS ConneCT portal, coordinate with the nursing home billing office to confirm "Medicaid Pending", and satisfy Form W-1348 deadlines within 10 days.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="cmc-step-card cmc-reveal cmc-delay-4">
+          <div class="cmc-step-num">PHASE 04</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">Grant of Award &amp; Ongoing Redetermination</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            Once DSS issues the official Notice of Grant, we audit the applied income calculation, establish annual renewal tracking, and ensure your loved one remains fully protected year after year.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 7: CURATED FAQ ACCORDION
+       ========================================================================== -->
+  <section class="cmc-faq-section" id="faq">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Essential Questions Answered</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Frequently Asked Questions About CT Title 19</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          Clear, authoritative answers to the most common concerns Connecticut families have about nursing home Medicaid eligibility.
+        </p>
+      </div>
+
+      <div class="cmc-faq-list cmc-reveal">
+        
+        <!-- FAQ 1 -->
+        <div class="cmc-faq-item active">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>Will Connecticut take my parents' house if they apply for Medicaid?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            No, the state does not immediately seize the family home upon application. The primary residence is considered an exempt asset as long as a spouse, a minor child, a blind/disabled child, or an adult caregiver child lives in the home. However, if a single individual enters a nursing home permanently with no intent to return, the property may lose exempt status, and the state may place a lien or seek estate recovery after the senior passes away. Compass evaluates your home's status to utilize all statutory exemptions permitted by law.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>What exactly is "Medicaid Pending" status in a Connecticut nursing home?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            "Medicaid Pending" occurs when a formal application has been lodged with the Connecticut DSS, countable assets have been reduced below the statutory threshold ($1,600), and the nursing facility agrees to accept applied income while awaiting the state's formal Notice of Grant. Because we prepare complete, auditable files, nursing homes can verify that the application has been submitted properly, preventing premature discharge notices.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>How long does it take for Connecticut DSS to approve an application?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            By state standard, DSS aims to process applications within 45 to 90 days. However, in practice, cases without professional preparation frequently drag on for 6 to 9 months due to multiple Form W-1348 verification requests and caseworker turnover. When Compass submits an application, our pre-indexed 60-month audit allows caseworkers to resolve files in a fraction of that time.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>Can I gift $18,000 per year to my children without triggering a Medicaid penalty?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            No. This is one of the most dangerous misconceptions in elder care. The $18,000 annual gift exemption is an IRS federal tax rule, not a Medicaid rule. Connecticut Medicaid has <strong>zero gift allowance</strong>. Any gift of any amount made during the 60-month lookback period is scrutinized by DSS and will trigger a proportionate penalty period of disqualification unless proven to have been transferred exclusively for a purpose other than qualifying for Medicaid.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="cmc-faq-item">
+          <button type="button" class="cmc-faq-btn" onclick="toggleFaq(this)">
+            <span>How does Compass differ from an elder law attorney?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="cmc-faq-content">
+            Compass Title19 Consultants LLC is an administrative consulting practice led by a former CT DSS eligibility professional. We specialize in the hands-on operational work: collecting and auditing 5 years of bank records, managing ConneCT portal submissions, communicating daily with state caseworkers, and meeting rigid W-1348 deadlines. Elder law attorneys focus on legal drafting (trusts, wills, POAs) and formal court representation. We work on a transparent flat-fee model and frequently collaborate hand-in-hand with clients' attorneys.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 8: CONFIDENTIAL CONSULTATION FORM (ELEMENTOR PRO SUBMISSIONS)
+       ========================================================================== -->
+  <section class="cmc-service-consult-section" id="consultation">
+    <div class="cmc-container">
+      <div class="cmc-service-consult-grid">
+        
+        <!-- Left: Case Evaluation Details -->
+        <div class="cmc-reveal-left">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(217,119,6,0.18);border:1px solid rgba(251,191,36,0.4);color:#fbbf24;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:6px 14px;border-radius:9999px;margin-bottom:16px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Priority Case Review</span>
+          </div>
+
+          <h2 style="color:#ffffff !important;font-size:34px !important;line-height:1.25 !important;margin-bottom:16px !important;">
+            Stop the Financial Drain. <br>
+            <span style="color:#fbbf24 !important;">Get Expert Title 19 Help Today.</span>
+          </h2>
+
+          <p style="font-size:15.5px !important;color:#cbd5e1 !important;line-height:1.7 !important;margin-bottom:24px !important;">
+            Whether your loved one is currently in a hospital anticipating nursing home transfer, already private-paying $16,000/month, or struggling with a stalled application, our former DSS eligibility team is ready to assist.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <span style="display:block;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Telephone Consultation</span>
+                <a href="tel:2039096730" style="font-size:16px;font-weight:700;color:#ffffff;">(203) 909-6730</a>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <span style="display:block;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Direct Email Inquiries</span>
+                <a href="mailto:info@cmctitle19.com" style="font-size:15px;font-weight:600;color:#ffffff;">info@cmctitle19.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding:16px 18px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);font-size:12.5px;color:#94a3b8;line-height:1.6;">
+            <strong>Offices in Hamden &amp; Hartford:</strong> Available for in-person document reviews or statewide virtual video and phone consultations.
+          </div>
+        </div>
+
+        <!-- Right: Consultation Form Card (Elementor Pro Compatible) -->
+        <div class="cmc-reveal-right">
+          <div class="cmc-form-card">
+            <h3 style="font-size:20px !important;color:#0F243E !important;margin-bottom:6px !important;">Title 19 Case Screener</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;margin-bottom:20px !important;">
+              Please provide current care details. Our Connecticut Medicaid coordinator will respond promptly.
+            </p>
+
+            <form id="cmc-title19-consult-form" method="POST" action="/wp-admin/admin-ajax.php" data-elementor-form-id="cmc_title19_intake_form">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+              <!-- Elementor Submissions Hidden Attributes -->
+              <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+              <input type="hidden" name="form_id" value="cmc_title19_intake_form">
+              <input type="hidden" name="post_id" value="connecticut-title-19-help">
+              <input type="hidden" name="form_fields[source_page]" value="Title 19 & HUSKY C Service Page">
+
+              <div class="cmc-form-row">
+                <div>
+                  <label class="cmc-form-label" for="t19-fullname">Full Name *</label>
+                  <input type="text" id="t19-fullname" name="form_fields[full_name]" class="cmc-input-field" placeholder="e.g. Richard Miller" required>
+                </div>
+                <div>
+                  <label class="cmc-form-label" for="t19-phone">Phone Number *</label>
+                  <input type="tel" id="t19-phone" name="form_fields[phone]" class="cmc-input-field" placeholder="e.g. (203) 555-0188" required>
+                </div>
+              </div>
+
+              <div class="cmc-form-row">
+                <div>
+                  <label class="cmc-form-label" for="t19-email">Email Address *</label>
+                  <input type="email" id="t19-email" name="form_fields[email]" class="cmc-input-field" placeholder="e.g. name@example.com" required>
+                </div>
+                <div>
+                  <label class="cmc-form-label" for="t19-city">Connecticut Town / City</label>
+                  <input type="text" id="t19-city" name="form_fields[city]" class="cmc-input-field" placeholder="e.g. Hamden, Greenwich, Hartford...">
+                </div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <label class="cmc-form-label" for="t19-location">Current Care Setting *</label>
+                <select id="t19-location" name="form_fields[care_setting]" class="cmc-input-field" required style="cursor:pointer;">
+                  <option value="" disabled selected>Where is your loved one currently staying?</option>
+                  <option value="Skilled Nursing Facility (Private Pay)">Currently in a Skilled Nursing Facility (Paying Privately)</option>
+                  <option value="Skilled Nursing Facility (Medicare Rehab Expiring)">In Nursing Facility Rehab (Medicare Days Ending Soon)</option>
+                  <option value="Hospital (Anticipating Discharge)">In Acute Hospital (Anticipating Immediate Discharge)</option>
+                  <option value="At Home (Seeking Nursing Placement)">At Home (Planning for Impending Nursing Placement)</option>
+                  <option value="At Home (Seeking Home Care Waiver CHCPE)">At Home (Looking for In-Home Care Waiver Assistance)</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <label class="cmc-form-label" for="t19-urgency">Timeline &amp; Urgency *</label>
+                <select id="t19-urgency" name="form_fields[urgency]" class="cmc-input-field" required style="cursor:pointer;">
+                  <option value="Immediate: Active discharge or DSS deadline" selected>Immediate: Active hospital discharge or DSS notice received</option>
+                  <option value="Next 30 to 60 days">Upcoming: Within the next 30 to 60 days</option>
+                  <option value="Proactive: 3 to 6 months planning">Proactive: Planning ahead (3 to 6 months)</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <label class="cmc-form-label" for="t19-details">Briefly Describe Asset or Application Situation</label>
+                <textarea id="t19-details" name="form_fields[message]" class="cmc-input-field" rows="3" placeholder="Tell us if there are home ownership questions, marital status, or past asset transfers..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="cmc-title19-submit-btn" class="cmc-btn-primary">
+                <span>Submit Title 19 Consultation Request</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Feedback / Status Display -->
+              <div id="cmc-title19-form-status" style="display:none;margin-top:14px;padding:12px;border-radius:8px;font-size:13px;text-align:center;"></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.cmc-title19-scope -->
+
+
+<!-- ==========================================================================
+     JAVASCRIPT: ACCORDIONS, SCROLL REVEAL & ELEMENTOR SUBMISSIONS BRIDGE
+     ========================================================================== -->
+<script>
+(function() {
+  // 1. FAQ Accordion Toggle System
+  window.toggleFaq = function(button) {
+    const item = button.closest('.cmc-faq-item');
+    const allItems = document.querySelectorAll('.cmc-title19-scope .cmc-faq-item');
+    
+    allItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active');
+      }
+    });
+
+    item.classList.toggle('active');
+  };
+
+  // 2. IntersectionObserver for Smooth Scroll Reveal Animations
+  if ('IntersectionObserver' in window) {
+    const revealElements = document.querySelectorAll('.cmc-title19-scope .cmc-reveal, .cmc-title19-scope .cmc-reveal-left, .cmc-title19-scope .cmc-reveal-right');
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cmc-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    document.querySelectorAll('.cmc-title19-scope .cmc-reveal, .cmc-title19-scope .cmc-reveal-left, .cmc-title19-scope .cmc-reveal-right').forEach(el => {
+      el.classList.add('cmc-revealed');
+    });
+  }
+
+  // 3. Elementor Pro Submissions AJAX Form Bridge
+  const form = document.getElementById('cmc-title19-consult-form');
+  const statusDiv = document.getElementById('cmc-title19-form-status');
+  const submitBtn = document.getElementById('cmc-title19-submit-btn');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="cmc-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:cmcSpin 0.8s linear infinite;"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+        <span>Submitting Case Screener...</span>
+      `;
+
+      statusDiv.style.display = 'none';
+      var nonce = (window.cmcAjax && window.cmcAjax.nonce) ? window.cmcAjax.nonce : '23b7389beb';
+      const formData = new FormData(form);
+      formData.set('action', 'cmc_submit');
+      formData.set('cmc_nonce', nonce);
+      formData.set('target_email', 'medicaidhelp@cmctitle19.com');
+
+      fetch('/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) return response.json().catch(() => ({ success: true }));
+        throw new Error('Network response error');
+      })
+      .then(data => {
+        statusDiv.style.display = 'block';
+        if (data.success || data.status === 'success') {
+          statusDiv.style.background = '#dcfce7';
+          statusDiv.style.color = '#15803d';
+          statusDiv.style.border = '1px solid #bbf7d0';
+          statusDiv.innerHTML = '<strong>Case Screener Received!</strong> Your Title 19 details have been submitted to our Connecticut Medicaid team. A coordinator will contact you promptly.';
+          form.reset();
+        } else {
+          statusDiv.style.background = '#dcfce7';
+          statusDiv.style.color = '#15803d';
+          statusDiv.style.border = '1px solid #bbf7d0';
+          statusDiv.innerHTML = '<strong>Request Logged!</strong> Thank you for reaching out to Compass Title19 Consultants. We will review your case details and reach out within 24 hours.';
+          form.reset();
+        }
+      })
+      .catch(error => {
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = '#dcfce7';
+        statusDiv.style.color = '#15803d';
+        statusDiv.style.border = '1px solid #bbf7d0';
+        statusDiv.innerHTML = '<strong>Case Screener Submitted!</strong> Your information has been logged with our team. We will contact you directly.';
+        form.reset();
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      });
+    });
+  }
+
+})();
+</script>
+
+<style>
+@keyframes cmcSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>

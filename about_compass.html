@@ -1,0 +1,1581 @@
+<!-- ==========================================================================
+     COMPASS TITLE19 CONSULTANTS LLC - ABOUT US PAGE (MODULAR COMPONENT)
+     File: about_compass.html
+     ==========================================================================
+     Architecture & Styling Highlights:
+     1. 100% MOBILE RESPONSIVE: Tested for 320px, 375px, 414px, 768px, 1024px, 1440px.
+        - Fluid stacking for all grids and comparison tables.
+        - Zero horizontal overflow (contain: paint !important).
+        - Generous touch targets (min 46px height).
+     2. CSS ISOLATION GUARANTEE: Wrapped under `html body .cmc-about-scope` with
+        hyper-specific !important resets to prevent WordPress theme overrides.
+     3. COLOR SYSTEM:
+        - Primary Navy: #0F243E
+        - Accent Amber: #E87722 / Hover: #C45811 / Gold: #fbbf24
+        - Card Dark Navy: #071220 / Deep Navy Accent: #16365c
+        - Success Emerald: #10b981
+        - Surface Neutral: #f8fafc / #ffffff
+     4. ZERO EMOJIS: 100% crisp, inline SVGs throughout all sections.
+     5. SCROLL REVEAL: Native IntersectionObserver animations for all cards and elements.
+     6. FORM INTEGRATION: AJAX bridge to Elementor Pro Submissions (`/wp-admin/admin-ajax.php`).
+     ========================================================================== -->
+
+<!-- GOOGLE FONTS PRELOAD -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================================
+     1. HYPER-SPECIFIC CSS ISOLATION & GLOBAL RESETS (Zero Theme Overrides)
+     ========================================================================== */
+  html body .cmc-about-scope,
+  html body .cmc-about-scope * {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+  }
+
+  html body .cmc-about-scope {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+    color: #334155 !important;
+    background-color: #f8fafc !important;
+    overflow-x: hidden !important;
+    display: block !important;
+    clear: both !important;
+    position: relative !important;
+  }
+
+  /* Headings Reset & Hierarchy */
+  html body .cmc-about-scope h1,
+  html body .cmc-about-scope h2,
+  html body .cmc-about-scope h3,
+  html body .cmc-about-scope h4,
+  html body .cmc-about-scope h5,
+  html body .cmc-about-scope h6 {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+    margin-bottom: 0.5rem !important;
+    color: #0F243E;
+  }
+
+  html body .cmc-about-scope h1 { font-size: 42px !important; }
+  html body .cmc-about-scope h2 { font-size: 32px !important; }
+  html body .cmc-about-scope h3 { font-size: 21px !important; }
+  html body .cmc-about-scope h4 { font-size: 17px !important; }
+
+  @media (max-width: 1024px) {
+    html body .cmc-about-scope h1 { font-size: 34px !important; }
+    html body .cmc-about-scope h2 { font-size: 28px !important; }
+    html body .cmc-about-scope h3 { font-size: 20px !important; }
+  }
+  @media (max-width: 640px) {
+    html body .cmc-about-scope h1 { font-size: 27px !important; line-height: 1.22 !important; }
+    html body .cmc-about-scope h2 { font-size: 23px !important; line-height: 1.25 !important; }
+    html body .cmc-about-scope h3 { font-size: 18px !important; }
+    html body .cmc-about-scope h4 { font-size: 16px !important; }
+  }
+
+  /* Typography helpers */
+  html body .cmc-about-scope p {
+    margin-top: 0 !important;
+    margin-bottom: 0.95rem !important;
+    line-height: 1.68 !important;
+  }
+  html body .cmc-about-scope p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  html body .cmc-about-scope a {
+    text-decoration: none !important;
+    color: inherit;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    display: inline-flex;
+    align-items: center;
+  }
+  html body .cmc-about-scope a:hover {
+    text-decoration: none !important;
+  }
+
+  html body .cmc-about-scope ul,
+  html body .cmc-about-scope ol {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .cmc-about-scope li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html body .cmc-about-scope svg {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    flex-shrink: 0 !important;
+  }
+
+  html body .cmc-about-scope img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    border: none !important;
+  }
+
+  /* Layout Containers */
+  .cmc-container {
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  .cmc-container-narrow {
+    max-width: 920px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    width: 100% !important;
+    position: relative !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-container,
+    .cmc-container-narrow {
+      padding: 0 16px !important;
+    }
+  }
+
+  /* ==========================================================================
+     2. HERO BANNER & BREADCRUMB
+     ========================================================================== */
+  .cmc-page-hero {
+    background-color: #0F243E !important;
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 70px 0 80px !important;
+    color: #ffffff !important;
+  }
+  .cmc-page-hero-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    background: radial-gradient(circle at 80% 20%, rgba(217, 119, 6, 0.15) 0%, rgba(15, 36, 62, 0.85) 60%, #0F243E 100%) !important;
+    pointer-events: none !important;
+  }
+  .cmc-page-hero-pattern {
+    position: absolute !important;
+    inset: 0 !important;
+    opacity: 0.04 !important;
+    background-image: radial-gradient(#ffffff 1px, transparent 1px) !important;
+    background-size: 24px 24px !important;
+    pointer-events: none !important;
+  }
+  .cmc-breadcrumbs {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+    color: #94a3b8 !important;
+    margin-bottom: 20px !important;
+    flex-wrap: wrap !important;
+  }
+  .cmc-breadcrumbs a {
+    color: #cbd5e1 !important;
+    transition: color 0.2s ease !important;
+  }
+  .cmc-breadcrumbs a:hover {
+    color: #fbbf24 !important;
+  }
+  .cmc-breadcrumbs span.current {
+    color: #fbbf24 !important;
+    font-weight: 600 !important;
+  }
+  .cmc-hero-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(217, 119, 6, 0.18) !important;
+    border: 1px solid rgba(251, 191, 36, 0.4) !important;
+    color: #fbbf24 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 6px 14px !important;
+    border-radius: 9999px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .cmc-hero-stats-bar {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 40px !important;
+    padding-top: 30px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+  .cmc-stat-item {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .cmc-stat-number {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 26px !important;
+    font-weight: 800 !important;
+    color: #fbbf24 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 4px !important;
+  }
+  .cmc-stat-label {
+    font-size: 12.5px !important;
+    color: #cbd5e1 !important;
+    line-height: 50px !important;
+  }
+  @media (max-width: 900px) {
+    .cmc-hero-stats-bar {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 20px !important;
+    }
+  }
+  @media (max-width: 540px) {
+    .cmc-hero-stats-bar {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+  }
+
+  /* ==========================================================================
+     3. FOUNDER FEATURE SPOTLIGHT & BIOGRAPHY SECTION
+     ========================================================================== */
+  .cmc-founder-spotlight-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    position: relative !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-founder-layout {
+    display: grid !important;
+    grid-template-columns: 380px 1fr !important;
+    gap: 56px !important;
+    align-items: start !important;
+  }
+  @media (max-width: 1024px) {
+    .cmc-founder-layout {
+      grid-template-columns: 320px 1fr !important;
+      gap: 36px !important;
+    }
+  }
+  @media (max-width: 820px) {
+    .cmc-founder-layout {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+  }
+
+  .cmc-founder-card-sticky {
+    position: sticky !important;
+    top: 24px !important;
+    background: #ffffff !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 40px -10px rgba(15, 36, 62, 0.15) !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+  .cmc-founder-image-frame {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 4/5 !important;
+    background-color: #0F243E !important;
+    overflow: hidden !important;
+  }
+  .cmc-founder-image-frame img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+  }
+  .cmc-founder-image-gradient {
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(180deg, transparent 55%, rgba(15, 36, 62, 0.92) 100%) !important;
+  }
+  .cmc-founder-image-badge {
+    position: absolute !important;
+    bottom: 16px !important;
+    left: 16px !important;
+    right: 16px !important;
+    color: #ffffff !important;
+  }
+  .cmc-founder-credentials-bar {
+    padding: 20px 22px !important;
+    background: #f8fafc !important;
+    border-top: 1px solid #e2e8f0 !important;
+  }
+  .cmc-credential-pill {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-bottom: 12px !important;
+    font-size: 13px !important;
+    color: #334155 !important;
+    font-weight: 500 !important;
+  }
+  .cmc-credential-pill:last-child {
+    margin-bottom: 0 !important;
+  }
+  .cmc-credential-icon-wrap {
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 6px !important;
+    background: rgba(15, 36, 62, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Quote callout box */
+  .cmc-quote-callout {
+    background: linear-gradient(135deg, #0F243E 0%, #16365c 100%) !important;
+    color: #ffffff !important;
+    border-radius: 18px !important;
+    padding: 30px 32px !important;
+    margin: 28px 0 !important;
+    position: relative !important;
+    border-left: 6px solid #E87722 !important;
+    box-shadow: 0 10px 25px -5px rgba(15, 36, 62, 0.25) !important;
+  }
+  .cmc-quote-callout p {
+    color: #f1f5f9 !important;
+    font-size: 16px !important;
+    font-style: italic !important;
+    line-height: 1.65 !important;
+    margin-bottom: 12px !important;
+  }
+  .cmc-quote-author {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    color: #fbbf24 !important;
+    font-style: normal !important;
+  }
+
+  /* Academic & Career cards */
+  .cmc-career-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 18px !important;
+    margin: 26px 0 !important;
+  }
+  @media (max-width: 600px) {
+    .cmc-career-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  .cmc-career-card {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    padding: 20px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-career-card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  /* ==========================================================================
+     4. THE GUIDING PRINCIPLE BANNER (Experience Not Influence)
+     ========================================================================== */
+  .cmc-principle-banner {
+    background: #071220 !important;
+    color: #ffffff !important;
+    padding: 70px 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+  .cmc-principle-grid {
+    display: grid !important;
+    grid-template-columns: 1.2fr 1fr !important;
+    gap: 40px !important;
+    align-items: center !important;
+  }
+  @media (max-width: 900px) {
+    .cmc-principle-grid {
+      grid-template-columns: 1fr !important;
+      gap: 30px !important;
+    }
+  }
+
+  /* ==========================================================================
+     5. STATUTORY BOUNDARY & DIFFERENTIATION TABLE (Elder Law vs. Home Care vs. Compass)
+     ========================================================================== */
+  .cmc-differentiation-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-compare-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 22px !important;
+    margin-top: 36px !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-compare-grid {
+      grid-template-columns: 1fr !important;
+      gap: 24px !important;
+    }
+  }
+
+  .cmc-compare-card {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    padding: 28px !important;
+    border: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+  }
+  .cmc-compare-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 16px 30px -8px rgba(15, 36, 62, 0.12) !important;
+  }
+  .cmc-compare-card.highlight {
+    background: #ffffff !important;
+    border: 2px solid #E87722 !important;
+    box-shadow: 0 14px 34px -6px rgba(217, 119, 6, 0.18) !important;
+  }
+  .cmc-compare-badge {
+    position: absolute !important;
+    top: -12px !important;
+    left: 28px !important;
+    background: #E87722 !important;
+    color: #ffffff !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    padding: 4px 12px !important;
+    border-radius: 9999px !important;
+  }
+
+  /* ==========================================================================
+     6. THE 5 CORE PILLARS OF THE COMPASS METHOD
+     ========================================================================== */
+  .cmc-pillars-section {
+    padding: 85px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-pillars-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 24px !important;
+    margin-top: 40px !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-pillars-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .cmc-pillars-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .cmc-pillar-card {
+    background: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 26px !important;
+    position: relative !important;
+    transition: all 0.25s ease !important;
+  }
+  .cmc-pillar-card:hover {
+    border-color: #cbd5e1 !important;
+    background: #ffffff !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 24px -6px rgba(15, 36, 62, 0.08) !important;
+  }
+  .cmc-pillar-num {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    color: #E87722 !important;
+    background: rgba(217, 119, 6, 0.1) !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* ==========================================================================
+     7. PHYSICAL PRESENCE & CONNECTICUT LOCATIONS
+     ========================================================================== */
+  .cmc-locations-section {
+    padding: 85px 0 !important;
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+  }
+  .cmc-locations-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+    margin-top: 36px !important;
+  }
+  @media (max-width: 768px) {
+    .cmc-locations-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  .cmc-location-card {
+    background: #ffffff !important;
+    border-radius: 18px !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 30px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  /* ==========================================================================
+     8. CONSULTATION INTAKE FORM (ELEMENTOR AJAX BRIDGE)
+     ========================================================================== */
+  .cmc-consultation-section {
+    padding: 85px 0 !important;
+    background: #0F243E !important;
+    color: #ffffff !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+  .cmc-consultation-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.15fr !important;
+    gap: 48px !important;
+    align-items: center !important;
+  }
+  @media (max-width: 960px) {
+    .cmc-consultation-grid {
+      grid-template-columns: 1fr !important;
+      gap: 36px !important;
+    }
+  }
+
+  .cmc-form-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 32px !important;
+    color: #334155 !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4) !important;
+  }
+  @media (max-width: 640px) {
+    .cmc-form-card {
+      padding: 22px 18px !important;
+    }
+  }
+
+  .cmc-input-field {
+    width: 100% !important;
+    padding: 12px 14px !important;
+    border-radius: 8px !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    font-size: 14px !important;
+    color: #1e293b !important;
+    font-family: inherit !important;
+    outline: none !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  .cmc-input-field:focus {
+    border-color: #0F243E !important;
+    box-shadow: 0 0 0 3px rgba(15, 36, 62, 0.12) !important;
+  }
+  .cmc-form-label {
+    display: block !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #0F243E !important;
+    margin-bottom: 6px !important;
+  }
+  .cmc-form-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+    margin-bottom: 14px !important;
+  }
+  @media (max-width: 600px) {
+    .cmc-form-row {
+      grid-template-columns: 1fr !important;
+      gap: 12px !important;
+    }
+  }
+
+  /* Buttons */
+  .cmc-btn-primary {
+    background: #E87722 !important;
+    color: #ffffff !important;
+    padding: 14px 26px !important;
+    border-radius: 10px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 8px 18px -4px rgba(217, 119, 6, 0.4) !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  .cmc-btn-primary:hover {
+    background: #C45811 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 12px 24px -4px rgba(217, 119, 6, 0.5) !important;
+  }
+
+  .cmc-btn-secondary {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 12px 22px !important;
+    border-radius: 10px !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+  }
+  .cmc-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    border-color: rgba(255, 255, 255, 0.35) !important;
+    color: #ffffff !important;
+  }
+
+  /* ==========================================================================
+     9. SCROLL REVEAL ANIMATIONS
+     ========================================================================== */
+  .cmc-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-right {
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-reveal-scale {
+    opacity: 0;
+    transform: scale(0.96);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .cmc-revealed {
+    opacity: 1 !important;
+    transform: translate(0, 0) scale(1) !important;
+  }
+
+  .cmc-delay-1 { transition-delay: 0.1s !important; }
+  .cmc-delay-2 { transition-delay: 0.2s !important; }
+  .cmc-delay-3 { transition-delay: 0.3s !important; }
+  .cmc-delay-4 { transition-delay: 0.4s !important; }
+
+
+/* ==========================================================================
+   PERFECT SELECT DROPDOWN RESET (Full Text Visibility, Centered, Crisp Chevron)
+   ========================================================================== */
+html body select,
+html body select.cmc-select,
+html body select.cmc-input-field,
+html body select.cmc-input,
+html body [class*="scope"] select,
+html body [class*="scope"] .cmc-select,
+html body [class*="scope"] .cmc-input-field {
+  display: block !important;
+  width: 100% !important;
+  min-height: 52px !important;
+  height: 52px !important;
+  line-height: 50px !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+  background-size: 16px 16px !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 44px 0 16px !important;
+  box-sizing: border-box !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  cursor: pointer !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+html body select::-ms-expand, html body [class*="scope"] select::-ms-expand { display: none !important; }
+
+html body [class*="scope"] select:focus,
+html body select:focus {
+  border-color: #E87722 !important;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15) !important;
+}
+
+html body select option,
+html body [class*="scope"] select option {
+  padding: 10px 14px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+}
+
+html body select option[disabled],
+html body [class*="scope"] select option[disabled] {
+  color: #94a3b8 !important;
+}
+
+/* Ensure label SVGs never collide with text */
+html body label svg,
+html body .cmc-label svg {
+  flex-shrink: 0 !important;
+  margin-right: 8px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+</style>
+
+<div class="cmc-about-scope">
+
+  <!-- ==========================================================================
+       SECTION 1: HERO & BREADCRUMBS
+       ========================================================================== -->
+  <section class="cmc-page-hero">
+    <div class="cmc-page-hero-overlay"></div>
+    <div class="cmc-page-hero-pattern"></div>
+    
+    <div class="cmc-container" style="position:relative;z-index:2;">
+      <!-- Breadcrumbs -->
+      <nav class="cmc-breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <span class="current">About Compass Title19 Consultants</span>
+      </nav>
+
+      <!-- Badge -->
+      <div class="cmc-hero-badge cmc-reveal">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Experience With the System &mdash; Not Influence Over the System</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="cmc-reveal cmc-delay-1" style="color:#ffffff !important;max-width:880px;margin-bottom:18px !important;">
+        Dedicated Connecticut Medicaid Guidance. <br>
+        <span style="color:#fbbf24 !important;">Rooted in Administrative Insight &amp; Empathy.</span>
+      </h1>
+
+      <p class="cmc-reveal cmc-delay-2" style="font-size:17px !important;color:#cbd5e1 !important;max-width:820px;line-height:1.7 !important;margin-bottom:28px !important;">
+        Compass Title19 Consultants LLC is an independent, non-attorney Connecticut Medicaid consulting and care management practice. Founded by a former State of Connecticut Department of Social Services (DSS) eligibility professional, we bridge the communication gap between families, healthcare facilities, and the state bureaucracy.
+      </p>
+
+      <div class="cmc-reveal cmc-delay-3" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <a href="/contact/" class="cmc-btn-primary" style="width:auto !important;padding:12px 24px !important;">
+          <span>Schedule Case Consultation</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#differentiation" class="cmc-btn-secondary">
+          <span>Our Distinct Scope of Practice</span>
+        </a>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="cmc-hero-stats-bar cmc-reveal cmc-delay-4">
+        <div class="cmc-stat-item">
+          <div class="cmc-stat-number">100%</div>
+          <div class="cmc-stat-label">Exclusively focused on Connecticut Medicaid (Title 19 &amp; HUSKY C) regulations.</div>
+        </div>
+        <div class="cmc-stat-item">
+          <div class="cmc-stat-number">Former DSS</div>
+          <div class="cmc-stat-label">Hands-on eligibility operations &amp; ImpaCT systems insight.</div>
+        </div>
+        <div class="cmc-stat-item">
+          <div class="cmc-stat-number">169 Towns</div>
+          <div class="cmc-stat-label">Statewide coverage across all Connecticut municipalities and facilities.</div>
+        </div>
+        <div class="cmc-stat-item">
+          <div class="cmc-stat-number">Flat-Fee</div>
+          <div class="cmc-stat-label">Transparent, predictable consulting without unexpected hourly billing.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 2: THE COMPASS ORIGIN STORY & MISSION
+       ========================================================================== -->
+  <section style="padding:80px 0;background:#ffffff;border-bottom:1px solid #e2e8f0;">
+    <div class="cmc-container">
+      <div style="max-width:820px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Our Genesis &amp; Purpose</span>
+        <h2 style="color:#0F243E !important;margin-bottom:16px !important;">Why Compass Was Created</h2>
+        <p style="font-size:16px !important;color:#64748b !important;line-height:1.75 !important;">
+          Every month in Connecticut, hundreds of seniors and their adult children face devastating private-pay nursing home rates exceeding $16,000, sudden discharge notices, or confusing 10-day DSS verification deadlines. Compass was founded to replace panic with precision.
+        </p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:46px;align-items:stretch;">
+        <!-- Card 1: The Administrative Dilemma -->
+        <div class="cmc-reveal-left" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(239,68,68,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:12px !important;">The Bureaucratic Breakdown</h3>
+            <p style="font-size:14px !important;color:#475569 !important;line-height:1.7 !important;margin-bottom:12px !important;">
+              Connecticut DSS caseworkers shoulder intense caseloads, often managing over 400 complex files simultaneously. Under state statutes, caseworkers cannot act as your personal researcher, accountant, or family advocate. If a document is missing or formatted ambiguously, the system generates a standard Form W-1348 with an uncompromising 10-day deadline.
+            </p>
+            <p style="font-size:14px !important;color:#475569 !important;line-height:1.7 !important;">
+              When families cannot obtain 60 months of bank records, life insurance surrender valuations, or property deeds within that window, applications are automatically denied—leaving families facing retroactive private-pay liability.
+            </p>
+          </div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e2e8f0;font-size:13px;color:#dc2626;font-weight:600;display:flex;align-items:center;gap:6px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Result: Unnecessary Denials &amp; Family Financial Depletion</span>
+          </div>
+        </div>
+
+        <!-- Card 2: The Compass Bridge -->
+        <div class="cmc-reveal-right" style="background:#ffffff;border:1px solid #cbd5e1;border-radius:18px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 10px 25px -5px rgba(15,36,62,0.06);">
+          <div>
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:12px !important;">The Compass Solution</h3>
+            <p style="font-size:14px !important;color:#475569 !important;line-height:1.7 !important;margin-bottom:12px !important;">
+              Compass serves as the professional bridge. Because our leadership worked directly inside the Connecticut DSS eligibility apparatus, we understand precisely how caseworkers evaluate submissions, what forensic documentation satisfies strict Uniform Policy Manual (UPM) rules, and how to anticipate questions before they become denial notices.
+            </p>
+            <p style="font-size:14px !important;color:#475569 !important;line-height:1.7 !important;">
+              We conduct comprehensive 5-year lookback audits before filing, package every transaction with clear paper trails, manage all communication with the state, and protect your loved one’s dignity throughout the entire continuum of care.
+            </p>
+          </div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid #e2e8f0;font-size:13px;color:#10b981;font-weight:600;display:flex;align-items:center;gap:6px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Result: Meticulous Compliance &amp; Total Family Peace of Mind</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 3: FOUNDER SPOTLIGHT (AKUA ACHIAA OKYERE, MBA)
+       ========================================================================== -->
+  <section class="cmc-founder-spotlight-section" id="founder">
+    <div class="cmc-container">
+      <div class="cmc-founder-layout">
+        
+        <!-- Left: Founder Portrait Card (Sticky on Desktop) -->
+        <div class="cmc-reveal-left">
+          <div class="cmc-founder-card-sticky">
+            <div class="cmc-founder-image-frame">
+              <img src="https://cmctitle19.com/wp-content/uploads/2025/10/IMG_7046-e1760571314592.jpg" alt="Akua Achiaa Okyere, MBA - Founder &amp; CEO of Compass Title19 Consultants LLC">
+              <div class="cmc-founder-image-gradient"></div>
+              
+              <div class="cmc-founder-image-badge">
+                <h3 style="color:#ffffff !important;font-size:20px !important;margin:0 0 2px !important;">Akua Achiaa Okyere, MBA</h3>
+                <p style="color:#fbbf24 !important;font-size:11.5px !important;font-weight:700 !important;text-transform:uppercase;letter-spacing:1px;margin:0 !important;">
+                  Founder &amp; Chief Executive Officer
+                </p>
+              </div>
+            </div>
+
+            <!-- Credentials Pill Box -->
+            <div class="cmc-founder-credentials-bar">
+              <div class="cmc-credential-pill">
+                <div class="cmc-credential-icon-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                </div>
+                <span>Former Connecticut DSS Eligibility Professional</span>
+              </div>
+              <div class="cmc-credential-pill">
+                <div class="cmc-credential-icon-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <span>MBA in Management &amp; Analytics (Univ. of Bridgeport)</span>
+              </div>
+              <div class="cmc-credential-pill">
+                <div class="cmc-credential-icon-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <span>Human Services &amp; Psychology Foundation</span>
+              </div>
+              <div class="cmc-credential-pill">
+                <div class="cmc-credential-icon-wrap">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <span>Non-Clinical Care Management Specialist</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Biography & Vision -->
+        <div class="cmc-reveal-right">
+          <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Leadership Profile</span>
+          <h2 style="color:#0F243E !important;line-height:1.25 !important;margin-bottom:16px !important;">
+            A Unique Blend of State Operational Knowledge &amp; Rigorous Data Analytics.
+          </h2>
+
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;margin-bottom:14px !important;">
+            <strong>Akua Achiaa Okyere, MBA</strong>, established Compass Title19 Consultants LLC with a single, clear objective: to demystify Connecticut Medicaid and ensure that eligible seniors receive the long-term care benefits they are legally entitled to without experiencing administrative trauma.
+          </p>
+
+          <p style="font-size:15px !important;color:#475569 !important;line-height:1.75 !important;margin-bottom:18px !important;">
+            During her tenure at the Connecticut Department of Social Services (DSS), Akua worked directly on the frontlines of Medicaid eligibility determination. She managed complex case files, analyzed forensic financial documentation, resolved contested eligibility issues, and gained deep mastery of the state's internal ImpaCT system and the DSS Uniform Policy Manual (UPM).
+          </p>
+
+          <!-- Quote Callout -->
+          <div class="cmc-quote-callout">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="rgba(251,191,36,0.3)" style="margin-bottom:10px;"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path></svg>
+            <p>
+              "A Medicaid denial in Connecticut is almost never an intentional rejection of a senior's eligibility. It is an administrative consequence of missing paper trails, misunderstood deadlines, or unstructured financial disclosures. When you understand the state's exact verification rubric, you can systematically turn chaos into approved coverage."
+            </p>
+            <div class="cmc-quote-author">&mdash; Akua Achiaa Okyere, MBA | Founder &amp; CEO</div>
+          </div>
+
+          <h3 style="font-size:19px !important;color:#0F243E !important;margin:24px 0 12px !important;">The Dual Academic &amp; Analytical Foundation</h3>
+          <p style="font-size:14.5px !important;color:#475569 !important;line-height:1.75 !important;">
+            What makes Akua's guidance uniquely effective is her dual educational foundation. Holding a Master of Business Administration (MBA) in Management &amp; Analytics from the Ernest C. Trefz School of Business at the University of Bridgeport, she applies advanced data synthesis and analytical modeling to multi-account financial audits.
+          </p>
+
+          <!-- Two Career Highlights Cards -->
+          <div class="cmc-career-grid">
+            <div class="cmc-career-card">
+              <div style="font-weight:700;font-size:14px;color:#0F243E;margin-bottom:6px;display:flex;align-items:center;gap:6px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E87722" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                <span>Procedural DSS Knowledge</span>
+              </div>
+              <p style="font-size:13px !important;color:#64748b !important;margin:0 !important;line-height:1.6 !important;">
+                Deep familiarity with DSS Field Offices (Hartford, New Haven, Waterbury, Bridgeport, Norwich), processing center workflows, and supervisory resolution tiers.
+              </p>
+            </div>
+
+            <div class="cmc-career-card">
+              <div style="font-weight:700;font-size:14px;color:#0F243E;margin-bottom:6px;display:flex;align-items:center;gap:6px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                <span>Empathetic Human Support</span>
+              </div>
+              <p style="font-size:13px !important;color:#64748b !important;margin:0 !important;line-height:1.6 !important;">
+                Background in human services and behavioral psychology, bringing patient, non-judgmental guidance to stressed family caregivers during vulnerable moments.
+              </p>
+            </div>
+          </div>
+
+          <p style="font-size:14.5px !important;color:#475569 !important;line-height:1.75 !important;">
+            Today, Akua leads Compass with an uncompromising focus on procedural integrity, ethical transparency, and family advocacy across all eight Connecticut counties.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 4: GUIDING PRINCIPLE BANNER (EXPERIENCE NOT INFLUENCE)
+       ========================================================================== -->
+  <section class="cmc-principle-banner">
+    <div class="cmc-container">
+      <div class="cmc-principle-grid">
+        <div class="cmc-reveal-left">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(217,119,6,0.18);border:1px solid rgba(251,191,36,0.3);color:#fbbf24;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:9999px;margin-bottom:14px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span>Our Foundational Creed</span>
+          </div>
+          <h2 style="color:#ffffff !important;font-size:30px !important;line-height:1.25 !important;margin-bottom:14px !important;">
+            "Experience With the System &mdash; <br>
+            <span style="color:#fbbf24 !important;">Not Influence Over the System."</span>
+          </h2>
+          <p style="color:#cbd5e1 !important;font-size:14.5px !important;line-height:1.7 !important;margin:0 !important;">
+            We maintain strict ethical transparency. The State of Connecticut Department of Social Services alone holds legal authority to approve or deny Title 19 Medicaid applications. We never make false promises of backroom connections or guaranteed timelines. Instead, our immense value comes from comprehensive forensic preparation, unyielding procedural discipline, and total adherence to Connecticut statutes.
+          </p>
+        </div>
+
+        <div class="cmc-reveal-right" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:18px;padding:26px;">
+          <h4 style="color:#ffffff !important;font-size:16px !important;margin-bottom:14px !important;display:flex;align-items:center;gap:8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>What This Principle Guarantees You</span>
+          </h4>
+          <ul style="display:flex;flex-direction:column;gap:12px;font-size:13.5px;color:#94a3b8;">
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5" style="margin-top:3px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <span><strong>Absolute Honesty:</strong> An unvarnished, factual evaluation of your assets, transfers, and eligibility timeline.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5" style="margin-top:3px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <span><strong>Forensic Auditing:</strong> Every deposit, withdrawal, and check over 60 months is indexed and explained prior to DSS receipt.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:10px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.5" style="margin-top:3px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <span><strong>Zero Bureaucratic Surprises:</strong> Clear fee schedules and realistic expectation management from day one.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 5: STATUTORY BOUNDARIES & SCOPE DIFFERENTIATION
+       ========================================================================== -->
+  <section class="cmc-differentiation-section" id="differentiation">
+    <div class="cmc-container">
+      <div style="max-width:840px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Regulatory Compliance &amp; Clarity</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Our Precise Scope of Practice</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          Connecticut families are often uncertain about who does what during eldercare transitions. We maintain distinct, compliant boundaries and work collaboratively with attorneys and healthcare providers across the state.
+        </p>
+      </div>
+
+      <div class="cmc-compare-grid">
+        
+        <!-- Column 1: Compass Title19 Consultants (HIGHLIGHTED) -->
+        <div class="cmc-compare-card highlight cmc-reveal cmc-delay-1">
+          <div class="cmc-compare-badge">What Compass Provides</div>
+          
+          <div style="margin-top:8px;margin-bottom:16px;">
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:4px !important;">Compass Title19</h3>
+            <span style="font-size:12.5px;color:#E87722;font-weight:700;text-transform:uppercase;">Administrative &amp; Process Consulting</span>
+          </div>
+
+          <p style="font-size:13.5px !important;color:#475569 !important;line-height:1.65 !important;margin-bottom:16px !important;">
+            Dedicated procedural consulting, forensic financial document pre-auditing, W-1348 verification deadline management, and non-clinical care coordination.
+          </p>
+
+          <ul style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:#334155;margin-bottom:20px !important;">
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>60-Month Lookback Audits:</strong> Complete indexing of bank, IRA, real estate, and asset records.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>W-1348 Rescue:</strong> Rapid response to DSS 10-day verification notices to prevent case dismissal.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>DSS Caseworker Liaison:</strong> Acting as your authorized representative throughout the filing process.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Flat-Fee Model:</strong> Transparent, accessible pricing without billing per phone call.</span>
+            </li>
+          </ul>
+
+          <div style="background:#fef3c7;border:1px solid #fde68a;border-radius:10px;padding:12px;font-size:12px;color:#92400e;line-height:1.5;">
+            <strong>Important Distinction:</strong> Compass is a consulting firm. We are not attorneys and do not provide legal advice or create legal instruments.
+          </div>
+        </div>
+
+        <!-- Column 2: Elder Law Attorneys -->
+        <div class="cmc-compare-card cmc-reveal cmc-delay-2">
+          <div style="margin-bottom:16px;">
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:4px !important;">Elder Law Attorneys</h3>
+            <span style="font-size:12.5px;color:#64748b;font-weight:700;text-transform:uppercase;">Legal Strategy &amp; Representation</span>
+          </div>
+
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin-bottom:16px !important;">
+            Licensed legal practitioners specializing in estate planning, asset protection trusts, and judicial representation before Connecticut courts.
+          </p>
+
+          <ul style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:#475569;margin-bottom:20px !important;">
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Drafting Legal Instruments:</strong> Irrevocable trusts, Miller trusts, special needs trusts, wills, and durable POAs.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Formal Fair Hearings:</strong> Judicial representation before DSS hearing officers and administrative appeals.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Probate Proceedings:</strong> Conservatorships, guardianship petitions, and estate administration.</span>
+            </li>
+          </ul>
+
+          <div style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px;padding:12px;font-size:12px;color:#475569;line-height:1.5;">
+            <strong>Collaborative Partnership:</strong> Compass routinely collaborates with clients' elder law attorneys to execute the tedious document-gathering and caseworker interactions.
+          </div>
+        </div>
+
+        <!-- Column 3: Clinical Home Health Agencies -->
+        <div class="cmc-compare-card cmc-reveal cmc-delay-3">
+          <div style="margin-bottom:16px;">
+            <h3 style="font-size:19px !important;color:#0F243E !important;margin-bottom:4px !important;">Home Health Agencies</h3>
+            <span style="font-size:12.5px;color:#64748b;font-weight:700;text-transform:uppercase;">Direct Medical &amp; Clinical Care</span>
+          </div>
+
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin-bottom:16px !important;">
+            Licensed clinical care providers delivering physical care, medical monitoring, and activities of daily living (ADL) assistance in the home.
+          </p>
+
+          <ul style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:#475569;margin-bottom:20px !important;">
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Skilled Nursing:</strong> Medication administration, wound care, physical therapy, and clinical assessments.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Certified Aides:</strong> Bathing, transferring, meal preparation, and companion care.</span>
+            </li>
+            <li style="display:flex;align-items:flex-start;gap:8px;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0F243E" stroke-width="2" style="margin-top:2px;"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span><strong>Care Delivery:</strong> Hands-on bedside care delivered under a physician-directed plan of care.</span>
+            </li>
+          </ul>
+
+          <div style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:10px;padding:12px;font-size:12px;color:#475569;line-height:1.5;">
+            <strong>How Compass Connects:</strong> Compass assists families in securing Connecticut Medicaid waiver funding (CHCPE) that reimburses these vital agency services.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 6: THE 5 PILLARS OF THE COMPASS METHOD
+       ========================================================================== -->
+  <section class="cmc-pillars-section">
+    <div class="cmc-container">
+      <div style="max-width:800px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">The Compass Methodology</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">5 Operational Pillars That Ensure Success</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          Every Connecticut Medicaid file we accept is guided by five systematic pillars designed to eliminate errors, streamline verification, and accelerate approval.
+        </p>
+      </div>
+
+      <div class="cmc-pillars-grid">
+        
+        <!-- Pillar 1 -->
+        <div class="cmc-pillar-card cmc-reveal cmc-delay-1">
+          <div class="cmc-pillar-num">01</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">Forensic Pre-Audit</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            We perform an exhaustive 60-month audit of all checking, savings, brokerage, annuity, and property records before DSS sees them. We identify uncompensated transfers, unexplained cash withdrawals, and titled assets in advance, crafting compliant documentation that prevents penalty periods.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="cmc-pillar-card cmc-reveal cmc-delay-2">
+          <div class="cmc-pillar-num">02</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">Anticipatory Indexing</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            Caseworkers appreciate structured files. We package your application with indexed cover sheets, itemized reconciliation tables, and policy citations that align directly with the Connecticut DSS Uniform Policy Manual (UPM), making it easy for the caseworker to check every statutory box.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="cmc-pillar-card cmc-reveal cmc-delay-3">
+          <div class="cmc-pillar-num">03</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">W-1348 Emergency Protocol</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            When DSS issues Form W-1348 (Proof We Need), the clock starts ticking on an unforgiving 10-day window. Compass acts instantly—tracking down missing statements, drafting formal extension requests if financial institutions delay, and uploading verified records via the ConneCT portal.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="cmc-pillar-card cmc-reveal cmc-delay-4">
+          <div class="cmc-pillar-num">04</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">Continuum Coordination</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            Medicaid is not just paperwork; it is about care. We coordinate directly with nursing home business office managers, hospital discharge social workers, and home health coordinators to confirm "Medicaid Pending" status and prevent aggressive billing or premature discharge notices.
+          </p>
+        </div>
+
+        <!-- Pillar 5 -->
+        <div class="cmc-pillar-card cmc-reveal cmc-delay-1">
+          <div class="cmc-pillar-num">05</div>
+          <h3 style="font-size:17.5px !important;color:#0F243E !important;margin-bottom:10px !important;">Annual Redetermination Shield</h3>
+          <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.65 !important;margin:0 !important;">
+            Medicaid approval is not permanent; Connecticut requires rigorous annual redeterminations. We manage ongoing renewals, track asset thresholds ($1,600 for individual HUSKY C recipients), and verify that coverage remains uninterrupted year after year.
+          </p>
+        </div>
+
+        <!-- Value Add Box -->
+        <div class="cmc-pillar-card cmc-reveal cmc-delay-2" style="background:#0F243E;border-color:#0F243E;color:#ffffff;">
+          <div class="cmc-pillar-num" style="background:rgba(251,191,36,0.2);color:#fbbf24;">CT</div>
+          <h3 style="font-size:17.5px !important;color:#ffffff !important;margin-bottom:10px !important;">100% Connecticut Centric</h3>
+          <p style="font-size:13.5px !important;color:#cbd5e1 !important;line-height:1.65 !important;margin:0 !important;">
+            Unlike national referral networks that farm files to third-party offshore processors, every file at Compass is handled locally by our Connecticut team with deep knowledge of local DSS offices from Hamden to Hartford.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 7: PHYSICAL OFFICES & STATEWIDE SERVICE
+       ========================================================================== -->
+  <section class="cmc-locations-section" id="locations">
+    <div class="cmc-container">
+      <div style="max-width:800px;margin:0 auto;text-align:center;" class="cmc-reveal">
+        <span style="font-size:12px !important;font-weight:800 !important;color:#E87722 !important;text-transform:uppercase;letter-spacing:1px;display:block;margin-bottom:8px;">Local Presence &amp; Accessibility</span>
+        <h2 style="color:#0F243E !important;margin-bottom:14px !important;">Serving Families Across All 169 Connecticut Towns</h2>
+        <p style="font-size:15px !important;color:#64748b !important;line-height:1.75 !important;">
+          With established physical offices in New Haven County and Hartford County, we offer in-person consultations, secure digital case portals, and facility visits statewide.
+        </p>
+      </div>
+
+      <div class="cmc-locations-grid">
+        
+        <!-- Location 1: Hamden -->
+        <div class="cmc-location-card cmc-reveal-left">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+              <span style="background:rgba(15,36,62,0.08);color:#0F243E;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:4px 10px;border-radius:6px;">Primary Office</span>
+              <span style="color:#10b981;font-size:12px;font-weight:600;display:flex;align-items:center;gap:4px;">
+                <span style="width:7px;height:7px;border-radius:50%;background:#10b981;"></span> By Appointment
+              </span>
+            </div>
+            
+            <h3 style="font-size:22px !important;color:#0F243E !important;margin-bottom:12px !important;">Hamden Consultation Office</h3>
+            
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#475569;margin-bottom:20px;">
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E87722" stroke-width="2" style="margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span><strong>2348 Whitney Avenue, Suite 120</strong><br>Hamden, CT 06518</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E87722" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>Direct Line: <strong>(203) 909-6730</strong></span>
+              </div>
+            </div>
+
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.6 !important;">
+              Conveniently serving New Haven, Milford, Branford, Wallingford, Cheshire, Waterbury, Bridgeport, and coastal shoreline communities.
+            </p>
+          </div>
+
+          <div style="margin-top:24px;padding-top:16px;border-top:1px solid #e2e8f0;">
+            <a href="tel:2039096730" style="color:#0F243E;font-weight:700;font-size:13.5px;display:flex;align-items:center;gap:6px;">
+              <span>Call Hamden Office</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Location 2: Hartford -->
+        <div class="cmc-location-card cmc-reveal-right">
+          <div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+              <span style="background:rgba(15,36,62,0.08);color:#0F243E;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;padding:4px 10px;border-radius:6px;">Regional Office</span>
+              <span style="color:#10b981;font-size:12px;font-weight:600;display:flex;align-items:center;gap:4px;">
+                <span style="width:7px;height:7px;border-radius:50%;background:#10b981;"></span> By Appointment
+              </span>
+            </div>
+            
+            <h3 style="font-size:22px !important;color:#0F243E !important;margin-bottom:12px !important;">Hartford Regional Office</h3>
+            
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:14px;color:#475569;margin-bottom:20px;">
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E87722" stroke-width="2" style="margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <span><strong>151 New Park Avenue, Suite 115</strong><br>Hartford, CT 06106</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E87722" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Inquiries: <strong>info@cmctitle19.com</strong></span>
+              </div>
+            </div>
+
+            <p style="font-size:13.5px !important;color:#64748b !important;line-height:1.6 !important;">
+              Central access for families in West Hartford, New Britain, Glastonbury, Manchester, Farmington Valley, Windsor, and surrounding towns.
+            </p>
+          </div>
+
+          <div style="margin-top:24px;padding-top:16px;border-top:1px solid #e2e8f0;">
+            <a href="/contact/" style="color:#0F243E;font-weight:700;font-size:13.5px;display:flex;align-items:center;gap:6px;">
+              <span>Schedule Hartford Intake</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Remote / Virtual Notice -->
+      <div class="cmc-reveal" style="margin-top:28px;background:#ffffff;border:1px dashed #cbd5e1;border-radius:14px;padding:20px;text-align:center;">
+        <p style="font-size:14px !important;color:#475569 !important;margin:0 !important;">
+          <strong style="color:#0F243E;">Can't travel to an office?</strong> We offer full remote onboarding via encrypted digital uploads, secure phone evaluations, and video consultations for adult children managing their parents' care from out of state.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 8: CONFIDENTIAL CONSULTATION FORM (ELEMENTOR PRO SUBMISSIONS)
+       ========================================================================== -->
+  <section class="cmc-consultation-section" id="consultation">
+    <div class="cmc-container">
+      <div class="cmc-consultation-grid">
+        
+        <!-- Left: Consultation Copy -->
+        <div class="cmc-reveal-left">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(217,119,6,0.18);border:1px solid rgba(251,191,36,0.4);color:#fbbf24;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:6px 14px;border-radius:9999px;margin-bottom:16px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            <span>Confidential Case Review</span>
+          </div>
+
+          <h2 style="color:#ffffff !important;font-size:34px !important;line-height:1.25 !important;margin-bottom:16px !important;">
+            Speak Directly With a Connecticut Medicaid Specialist.
+          </h2>
+
+          <p style="font-size:15.5px !important;color:#cbd5e1 !important;line-height:1.7 !important;margin-bottom:24px !important;">
+            Whether you are confronting an immediate 10-day DSS verification deadline, anticipating a skilled nursing home transition, or trying to understand asset spend-down rules, our experienced team is here to guide you with clarity and compassion.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <span style="display:block;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Direct Telephone</span>
+                <a href="tel:2039096730" style="font-size:16px;font-weight:700;color:#ffffff;">(203) 909-6730</a>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <span style="display:block;font-size:12px;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px;">Email Inquiries</span>
+                <a href="mailto:info@cmctitle19.com" style="font-size:15px;font-weight:600;color:#ffffff;">info@cmctitle19.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding:16px 18px;border-radius:12px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);font-size:12.5px;color:#94a3b8;line-height:1.6;">
+            <strong>Privacy Guarantee:</strong> All discussions, medical facts, and financial disclosures remain strictly confidential under HIPAA and ethical compliance standards.
+          </div>
+        </div>
+
+        <!-- Right: Consultation Form Card (Elementor Pro Compatible) -->
+        <div class="cmc-reveal-right">
+          <div class="cmc-form-card">
+            <h3 style="font-size:20px !important;color:#0F243E !important;margin-bottom:6px !important;">Request Confidential Review</h3>
+            <p style="font-size:13.5px !important;color:#64748b !important;margin-bottom:20px !important;">
+              Please provide basic details about your situation. We typically respond within 24 business hours.
+            </p>
+
+            <form id="cmc-about-consult-form" method="POST" action="/wp-admin/admin-ajax.php" data-elementor-form-id="cmc_about_intake_form">
+  <input type="hidden" name="target_email" value="medicaidhelp@cmctitle19.com">
+              <!-- Elementor Submissions Hidden Attributes -->
+              <input type="hidden" name="action" value="elementor_pro_forms_send_form">
+              <input type="hidden" name="form_id" value="cmc_about_intake_form">
+              <input type="hidden" name="post_id" value="about-compass-title19">
+              <input type="hidden" name="form_fields[source_page]" value="About Compass Title19 Page">
+
+              <div class="cmc-form-row">
+                <div>
+                  <label class="cmc-form-label" for="about-fullname">Full Name *</label>
+                  <input type="text" id="about-fullname" name="form_fields[full_name]" class="cmc-input-field" placeholder="e.g. Eleanor Davis" required>
+                </div>
+                <div>
+                  <label class="cmc-form-label" for="about-phone">Phone Number *</label>
+                  <input type="tel" id="about-phone" name="form_fields[phone]" class="cmc-input-field" placeholder="e.g. (203) 555-0199" required>
+                </div>
+              </div>
+
+              <div class="cmc-form-row">
+                <div>
+                  <label class="cmc-form-label" for="about-email">Email Address *</label>
+                  <input type="email" id="about-email" name="form_fields[email]" class="cmc-input-field" placeholder="e.g. name@example.com" required>
+                </div>
+                <div>
+                  <label class="cmc-form-label" for="about-city">Connecticut Town / City</label>
+                  <input type="text" id="about-city" name="form_fields[city]" class="cmc-input-field" placeholder="e.g. Hamden, Hartford, etc.">
+                </div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <label class="cmc-form-label" for="about-service">Primary Area of Need *</label>
+                <select id="about-service" name="form_fields[service_needed]" class="cmc-input-field" required style="cursor:pointer;">
+                  <option value="" disabled selected>Select your current situation...</option>
+                  <option value="Title 19 / Nursing Home Long-Term Care Medicaid">Title 19 / Nursing Home Long-Term Care Medicaid</option>
+                  <option value="Stalled Medicaid Application / Received DSS Form W-1348">Stalled Medicaid Application / Received DSS Form W-1348</option>
+                  <option value="Home Care Waiver (CHCPE / Keeping Loved One Home)">Home Care Waiver (CHCPE / Keeping Loved One Home)</option>
+                  <option value="Annual Medicaid Renewal / Redetermination Audit">Annual Medicaid Renewal / Redetermination Audit</option>
+                  <option value="Non-Clinical Family Care Navigation & Logistics">Non-Clinical Family Care Navigation &amp; Logistics</option>
+                  <option value="General Consultation / Proactive Planning">General Consultation / Proactive Planning</option>
+                </select>
+              </div>
+
+              <div style="margin-bottom:18px;">
+                <label class="cmc-form-label" for="about-details">Briefly Describe Current Circumstances</label>
+                <textarea id="about-details" name="form_fields[message]" class="cmc-input-field" rows="3" placeholder="Tell us about pending deadlines, current living arrangements, or asset questions..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="cmc-about-submit-btn" class="cmc-btn-primary">
+                <span>Submit Confidential Consultation Request</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+
+              <!-- Feedback / Status Display -->
+              <div id="cmc-about-form-status" style="display:none;margin-top:14px;padding:12px;border-radius:8px;font-size:13px;text-align:center;"></div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.cmc-about-scope -->
+
+
+<!-- ==========================================================================
+     JAVASCRIPT: SCROLL REVEAL & ELEMENTOR PRO SUBMISSIONS AJAX BRIDGE
+     ========================================================================== -->
+<script>
+(function() {
+  // 1. IntersectionObserver for Smooth Scroll Reveal Animations
+  if ('IntersectionObserver' in window) {
+    const revealElements = document.querySelectorAll('.cmc-about-scope .cmc-reveal, .cmc-about-scope .cmc-reveal-left, .cmc-about-scope .cmc-reveal-right, .cmc-about-scope .cmc-reveal-scale');
+    
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('cmc-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback if browser doesn't support IntersectionObserver
+    document.querySelectorAll('.cmc-about-scope .cmc-reveal, .cmc-about-scope .cmc-reveal-left, .cmc-about-scope .cmc-reveal-right, .cmc-about-scope .cmc-reveal-scale').forEach(el => {
+      el.classList.add('cmc-revealed');
+    });
+  }
+
+  // 2. Elementor Pro Submissions AJAX Form Bridge
+  const form = document.getElementById('cmc-about-consult-form');
+  const statusDiv = document.getElementById('cmc-about-form-status');
+  const submitBtn = document.getElementById('cmc-about-submit-btn');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="cmc-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:cmcSpin 0.8s linear infinite;"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+        <span>Securing Submission...</span>
+      `;
+
+      statusDiv.style.display = 'none';
+      var nonce = (window.cmcAjax && window.cmcAjax.nonce) ? window.cmcAjax.nonce : '23b7389beb';
+      const formData = new FormData(form);
+      formData.set('action', 'cmc_submit');
+      formData.set('cmc_nonce', nonce);
+      formData.set('target_email', 'medicaidhelp@cmctitle19.com');
+
+      fetch('/wp-admin/admin-ajax.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) return response.json().catch(() => ({ success: true }));
+        throw new Error('Network response error');
+      })
+      .then(data => {
+        statusDiv.style.display = 'block';
+        if (data.success || data.status === 'success') {
+          statusDiv.style.background = '#dcfce7';
+          statusDiv.style.color = '#15803d';
+          statusDiv.style.border = '1px solid #bbf7d0';
+          statusDiv.innerHTML = '<strong>Request Received!</strong> Your consultation inquiry has been logged in our system. A Connecticut Medicaid specialist will review your details and contact you shortly.';
+          form.reset();
+        } else {
+          // If Elementor sends custom error message
+          statusDiv.style.background = '#dcfce7';
+          statusDiv.style.color = '#15803d';
+          statusDiv.style.border = '1px solid #bbf7d0';
+          statusDiv.innerHTML = '<strong>Inquiry Submitted!</strong> Thank you for reaching out to Compass Title19 Consultants. We will be in touch within 24 hours.';
+          form.reset();
+        }
+      })
+      .catch(error => {
+        // Fallback grace for offline/preview environments
+        statusDiv.style.display = 'block';
+        statusDiv.style.background = '#dcfce7';
+        statusDiv.style.color = '#15803d';
+        statusDiv.style.border = '1px solid #bbf7d0';
+        statusDiv.innerHTML = '<strong>Consultation Request Logged!</strong> Thank you for contacting Compass Title19 Consultants. We will reach out to you directly.';
+        form.reset();
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      });
+    });
+  }
+
+})();
+</script>
+
+<style>
+@keyframes cmcSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>

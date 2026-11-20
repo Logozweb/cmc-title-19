@@ -1,0 +1,889 @@
+<!-- ==========================================================================
+     COMPASS TITLE19 CONSULTANTS LLC - REFACTORED GLOBAL HEADER
+     - 100% Self-Contained CSS (Zero Theme Overrides via html body .cmc-header-scope)
+     - Official Compass Logo (Teal & Vibrant Orange Corporate Identity)
+     - 100% Pure Inline SVG Icons (NO EMOJIS ANYWHERE)
+     - Top Utility Bar with Live Status & Direct Phone
+     - Desktop Sticky Nav Bar with 3 Dropdowns (Medicaid Planning, Help, Resources)
+     - Mobile Accordion Slide Drawer
+     - Refactored Menu Hierarchy per Client Specifications
+     ========================================================================== -->
+
+<!-- GOOGLE FONTS PRELOAD -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================================
+     HYPER-SPECIFIC CSS ISOLATION (html body .cmc-header-scope overrides EVERYTHING)
+     ========================================================================== */
+  html body .cmc-header-scope,
+  html body .cmc-header-scope * {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    line-height: normal;
+  }
+  html body .cmc-header-scope {
+    width: 100% !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    position: relative !important;
+    z-index: 999999 !important;
+    background: transparent !important;
+  }
+  html body .cmc-header-scope a {
+    text-decoration: none !important;
+    color: inherit !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  html body .cmc-header-scope ul,
+  html body .cmc-header-scope li {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .cmc-header-scope svg {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 1. TOP UTILITY BAR (Deep Slate Navy #0F243E) */
+  html body .cmc-header-scope .cmc-top-bar {
+    background-color: #0F243E !important;
+    color: #cbd5e1 !important;
+    font-size: 11.5px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 9px 0 !important;
+    width: 100% !important;
+  }
+  html body .cmc-header-scope .cmc-top-container {
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    padding: 0 24px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 12px !important;
+  }
+  html body .cmc-header-scope .cmc-top-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+  }
+  html body .cmc-header-scope .cmc-status-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    background: rgba(16, 185, 129, 0.12) !important;
+    color: #34d399 !important;
+    padding: 3px 10px !important;
+    border-radius: 9999px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    border: 1px solid rgba(16, 185, 129, 0.25) !important;
+  }
+  html body .cmc-header-scope .cmc-status-dot {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    background-color: #10b981 !important;
+    animation: cmcPulse 2s infinite !important;
+  }
+  @keyframes cmcPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(0.85); }
+  }
+  html body .cmc-header-scope .cmc-top-info-text {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    color: #94a3b8 !important;
+  }
+  html body .cmc-header-scope .cmc-top-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+  html body .cmc-header-scope .cmc-phone-highlight {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    transition: color 0.2s ease !important;
+  }
+  html body .cmc-header-scope .cmc-phone-highlight:hover {
+    color: #E87722 !important;
+  }
+  html body .cmc-header-scope .cmc-social-icons {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  html body .cmc-header-scope .cmc-icon-badge {
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 6px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #cbd5e1 !important;
+    transition: all 0.2s ease !important;
+  }
+  html body .cmc-header-scope .cmc-icon-badge:hover {
+    background-color: #E87722 !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+  }
+
+  /* 2. STICKY MAIN NAVBAR */
+  html body .cmc-header-scope .cmc-main-nav-bar {
+    position: sticky !important;
+    top: 0 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    box-shadow: 0 4px 20px -5px rgba(15, 36, 62, 0.06) !important;
+    width: 100% !important;
+    z-index: 99999 !important;
+  }
+  html body .cmc-header-scope .cmc-nav-inner {
+    max-width: 1280px !important;
+    margin: 0 auto !important;
+    padding: 10px 24px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  /* Official Brand Logo */
+  html body .cmc-header-scope .cmc-logo-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    flex-shrink: 0 !important;
+    text-decoration: none !important;
+  }
+  html body .cmc-header-scope .cmc-header-logo-img {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 12px !important;
+    object-fit: cover !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+    box-shadow: 0 4px 14px rgba(15, 36, 62, 0.22) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  }
+  html body .cmc-header-scope .cmc-logo-container:hover .cmc-header-logo-img {
+    transform: scale(1.04) !important;
+    box-shadow: 0 6px 18px rgba(15, 36, 62, 0.32) !important;
+  }
+  html body .cmc-header-scope .cmc-logo-title {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #0F243E !important;
+    letter-spacing: -0.5px !important;
+    line-height: 1 !important;
+  }
+  html body .cmc-header-scope .cmc-logo-tagline {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 9px !important;
+    font-weight: 700 !important;
+    color: #E87722 !important; /* Perfect match with the logo's orange */
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    margin-top: 3px !important;
+  }
+
+  /* Menu Links */
+  html body .cmc-header-scope .cmc-menu-list {
+    display: flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+  html body .cmc-header-scope .cmc-menu-item {
+    position: relative !important;
+  }
+  html body .cmc-header-scope .cmc-nav-link {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13.5px !important;
+    font-weight: 700 !important;
+    color: #334155 !important;
+    padding: 12px 2px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    letter-spacing: -0.2px !important;
+    position: relative !important;
+    transition: color 0.2s ease !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+  }
+  html body .cmc-header-scope .cmc-nav-link::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 4px !important;
+    left: 0 !important;
+    width: 0% !important;
+    height: 2px !important;
+    background: #E87722 !important;
+    transition: width 0.2s ease !important;
+    border-radius: 2px !important;
+  }
+  html body .cmc-header-scope .cmc-nav-link:hover {
+    color: #0F243E !important;
+  }
+  html body .cmc-header-scope .cmc-nav-link:hover::after {
+    width: 100% !important;
+  }
+  html body .cmc-header-scope .cmc-menu-item:hover .cmc-chevron {
+    transform: rotate(180deg) !important;
+    color: #E87722 !important;
+  }
+
+  /* Universal Dropdown Styling */
+  html body .cmc-header-scope .cmc-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    left: -10px !important;
+    width: 340px !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 18px 40px -8px rgba(15, 36, 62, 0.16) !important;
+    padding: 8px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(10px) !important;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+  html body .cmc-header-scope .cmc-dropdown-menu.cmc-dropdown-right {
+    left: auto !important;
+    right: -10px !important;
+  }
+  html body .cmc-header-scope .cmc-menu-item:hover .cmc-dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+  html body .cmc-header-scope .cmc-dropdown-card {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 10px 12px !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease !important;
+    text-decoration: none !important;
+  }
+  html body .cmc-header-scope .cmc-dropdown-card:hover {
+    background: #fff8f3 !important;
+    border-color: #fed7aa !important;
+    transform: translateX(3px) !important;
+  }
+  html body .cmc-header-scope .cmc-dropdown-icon {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+    background: #f1f5f9 !important;
+    color: #0F243E !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    transition: all 0.2s ease !important;
+    margin-top: 1px !important;
+  }
+  html body .cmc-header-scope .cmc-dropdown-card:hover .cmc-dropdown-icon {
+    background: #ffedd5 !important;
+    color: #E87722 !important;
+  }
+  html body .cmc-header-scope .cmc-dropdown-title {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #0F243E !important;
+    margin-bottom: 2px !important;
+    line-height: 1.3 !important;
+    transition: color 0.15s ease !important;
+  }
+  html body .cmc-header-scope .cmc-dropdown-card:hover .cmc-dropdown-title {
+    color: #E87722 !important;
+  }
+  html body .cmc-header-scope .cmc-dropdown-desc {
+    font-size: 11px !important;
+    color: #64748b !important;
+    line-height: 1.35 !important;
+  }
+
+  /* CTA Button (Vibrant Logo Orange Gradient) */
+  html body .cmc-header-scope .cmc-cta-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #E87722 0%, #C45811 100%) !important;
+    color: #ffffff !important;
+    padding: 10px 18px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 16px rgba(232, 119, 34, 0.28) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 7px !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+  html body .cmc-header-scope .cmc-cta-btn:hover {
+    background: linear-gradient(135deg, #D46718 0%, #A34306 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(232, 119, 34, 0.38) !important;
+  }
+
+  /* Mobile Toggle */
+  html body .cmc-header-scope .cmc-mobile-burger {
+    display: none !important;
+    background: #f1f5f9 !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    color: #0F243E !important;
+    cursor: pointer !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+  }
+  html body .cmc-header-scope .cmc-mobile-burger:hover {
+    background: #e2e8f0 !important;
+  }
+
+  /* Mobile Slide-Out Drawer */
+  html body .cmc-header-scope .cmc-mobile-modal {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(15, 36, 62, 0.65) !important;
+    backdrop-filter: blur(8px) !important;
+    z-index: 9999999 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.3s ease !important;
+  }
+  html body .cmc-header-scope .cmc-mobile-modal.is-active {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  html body .cmc-header-scope .cmc-drawer-panel {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 85% !important;
+    max-width: 360px !important;
+    height: 100% !important;
+    background: #ffffff !important;
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.25) !important;
+    padding: 24px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    overflow-y: auto !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+  html body .cmc-header-scope .cmc-mobile-modal.is-active .cmc-drawer-panel {
+    transform: translateX(0) !important;
+  }
+
+  /* Mobile Links & Accordions */
+  html body .cmc-header-scope .cmc-mobile-nav {
+    margin-top: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  html body .cmc-header-scope .cmc-mobile-link-item {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 14.5px !important;
+    font-weight: 700 !important;
+    color: #0F243E !important;
+    padding: 11px 8px !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+    background: transparent !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    cursor: pointer !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+  html body .cmc-header-scope .cmc-mobile-link-item:hover {
+    background: #fff8f3 !important;
+    color: #E87722 !important;
+  }
+  html body .cmc-header-scope .cmc-mobile-submenu {
+    display: none;
+    padding: 6px 0 6px 14px !important;
+    border-left: 2px solid #fdba74 !important;
+    margin-left: 8px !important;
+    margin-top: 2px !important;
+    margin-bottom: 6px !important;
+  }
+  html body .cmc-header-scope .cmc-mobile-sublink {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #475569 !important;
+    padding: 8px 10px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    transition: all 0.15s ease !important;
+  }
+  html body .cmc-header-scope .cmc-mobile-sublink:hover {
+    color: #E87722 !important;
+    background: #fff4ec !important;
+    padding-left: 14px !important;
+  }
+
+  /* Responsive Rules */
+  @media (max-width: 1220px) {
+    html body .cmc-header-scope .cmc-menu-list { gap: 12px !important; }
+    html body .cmc-header-scope .cmc-nav-link { font-size: 12.5px !important; }
+    html body .cmc-header-scope .cmc-cta-btn { padding: 9px 14px !important; font-size: 12px !important; }
+  }
+  @media (max-width: 1100px) {
+    html body .cmc-header-scope .cmc-menu-list { display: none !important; }
+    html body .cmc-header-scope .cmc-cta-btn { display: none !important; }
+    html body .cmc-header-scope .cmc-mobile-burger { display: flex !important; }
+  }
+  @media (max-width: 768px) {
+    html body .cmc-header-scope .cmc-top-bar { display: none !important; }
+    html body .cmc-header-scope .cmc-nav-inner { padding: 10px 16px !important; }
+  }
+  @media (max-width: 420px) {
+    html body .cmc-header-scope .cmc-logo-title { font-size: 17px !important; }
+    html body .cmc-header-scope .cmc-logo-tagline { font-size: 8px !important; letter-spacing: 1px !important; }
+    html body .cmc-header-scope .cmc-header-logo-img { width: 40px !important; height: 40px !important; }
+  }
+</style>
+
+<div class="cmc-header-scope">
+  
+  <!-- 1. TOP UTILITY BAR (PURE SVG ICONS - ZERO EMOJIS) -->
+  <div class="cmc-top-bar">
+    <div class="cmc-top-container">
+      
+      <!-- Left: Status & Statewide Notice -->
+      <div class="cmc-top-left">
+        <span class="cmc-status-pill">
+          <span class="cmc-status-dot"></span>
+          Accepting New Connecticut Cases
+        </span>
+        <span class="cmc-top-info-text">
+          <!-- Location Pin SVG -->
+          <svg style="width:13px;height:13px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Serving All 8 CT Counties Statewide
+        </span>
+        <span class="cmc-top-info-text">
+          <!-- Clock SVG -->
+          <svg style="width:13px;height:13px;color:#34d399;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Mon–Fri: 9:00 AM – 5:00 PM EST
+        </span>
+      </div>
+
+      <!-- Right: Direct Line & Social Badges -->
+      <div class="cmc-top-right">
+        <a href="tel:+18608130020" class="cmc-phone-highlight">
+          <!-- Phone SVG -->
+          <svg style="width:13px;height:13px;color:#fbbf24;" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+          Direct Intake: (860) 813-0020
+        </a>
+
+        <div class="cmc-social-icons">
+          <!-- LinkedIn SVG -->
+          <a href="https://www.linkedin.com/company/compass-title19-consultants/" target="_blank" rel="noopener" class="cmc-icon-badge" title="LinkedIn">
+            <svg style="width:12px;height:12px;" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <!-- Facebook SVG -->
+          <a href="https://www.facebook.com/share/18UN7vjmrq/?mibextid=wwXIfr" target="_blank" rel="noopener" class="cmc-icon-badge" title="Facebook">
+            <svg style="width:12px;height:12px;" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <!-- Instagram SVG -->
+          <a href="https://www.instagram.com/yourmedicaidguide?igsh=MXQxcm91bnNxZHAxYw%3D%3D&utm_source=qr" target="_blank" rel="noopener" class="cmc-icon-badge" title="Instagram">
+            <svg style="width:12px;height:12px;" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 2. STICKY MAIN NAVBAR -->
+  <header class="cmc-main-nav-bar">
+    <div class="cmc-nav-inner">
+      
+      <!-- Official Brand Logo (Exact Image Asset) -->
+      <a href="/" class="cmc-logo-container" aria-label="Compass Title 19 Consultants LLC">
+        <img src="https://cmctitle19.com/wp-content/uploads/2023/05/cropped-Consulting-Logo-in-Teal-and-Orange-3-scaled-e1768245885188.png" 
+             alt="Compass Title 19 Consultants LLC" 
+             class="cmc-header-logo-img" />
+        <div>
+          <div class="cmc-logo-title">COMPASS</div>
+          <div class="cmc-logo-tagline">TITLE19 CONSULTANTS LLC</div>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav>
+        <ul class="cmc-menu-list">
+          
+          <!-- 1. Home -->
+          <li class="cmc-menu-item">
+            <a href="/" class="cmc-nav-link">Home</a>
+          </li>
+          
+          <!-- 2. About -->
+          <li class="cmc-menu-item">
+            <a href="/about-compass-title19/" class="cmc-nav-link">About</a>
+          </li>
+
+          <!-- 3. Medicaid Planning Dropdown -->
+          <li class="cmc-menu-item">
+            <a href="/connecticut-title-19-help/" class="cmc-nav-link">
+              <span>Medicaid Planning</span>
+              <svg class="cmc-chevron" style="width:10px;height:10px;transition:transform 0.2s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            
+            <div class="cmc-dropdown-menu">
+              <!-- Item 3A: Medicaid Waivers -->
+              <a href="/connecticut-medicaid-waivers-hcbs/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Medicaid Waivers</div>
+                  <div class="cmc-dropdown-desc">Home &amp; Community Based Services (CHCPE).</div>
+                </div>
+              </a>
+
+              <!-- Item 3B: Care Management Services -->
+              <a href="/connecticut-care-management/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Care Management Services</div>
+                  <div class="cmc-dropdown-desc">Discharge logistics &amp; patient care advocacy.</div>
+                </div>
+              </a>
+
+              <!-- Item 3C: Emergency Medicaid & Nursing Home Coverage -->
+              <a href="/connecticut-title-19-help/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Emergency Medicaid &amp; Nursing Home</div>
+                  <div class="cmc-dropdown-desc">Expedited crisis placement &amp; asset protection.</div>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <!-- 4. Help Dropdown -->
+          <li class="cmc-menu-item">
+            <a href="/connecticut-title-19-help/" class="cmc-nav-link">
+              <span>Help</span>
+              <svg class="cmc-chevron" style="width:10px;height:10px;transition:transform 0.2s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            
+            <div class="cmc-dropdown-menu">
+              <!-- Item 4A: Title 19 Help -->
+              <a href="/connecticut-title-19-help/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Title 19 Help</div>
+                  <div class="cmc-dropdown-desc">Master guidance for HUSKY C applications.</div>
+                </div>
+              </a>
+
+              <!-- Item 4B: Medicaid Renewals Redetermination -->
+              <a href="/connecticut-medicaid-renewal-redetermination-help/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Medicaid Renewals Redetermination</div>
+                  <div class="cmc-dropdown-desc">Prevent coverage lapses &amp; complete DSS reviews.</div>
+                </div>
+              </a>
+
+              <!-- Item 4C: Existing CT Medicaid Application -->
+              <a href="/existing-medicaid-application-help-connecticut/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Existing CT Medicaid Application</div>
+                  <div class="cmc-dropdown-desc">Rescue pending cases &amp; W-1348 deadlines.</div>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <!-- 5. Testimonials -->
+          <li class="cmc-menu-item">
+            <a href="https://cmctitle19.com/#testimonials" class="cmc-nav-link">Testimonials</a>
+          </li>
+
+          <!-- 6. FAQs -->
+          <li class="cmc-menu-item">
+            <a href="/faqs/" class="cmc-nav-link">FAQs</a>
+          </li>
+
+          <!-- 7. Resources Dropdown -->
+          <li class="cmc-menu-item">
+            <a href="/website-resources-library/" class="cmc-nav-link">
+              <span>Resources</span>
+              <svg class="cmc-chevron" style="width:10px;height:10px;transition:transform 0.2s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+            
+            <div class="cmc-dropdown-menu cmc-dropdown-right">
+              <!-- Item 7A: Website Resource Library -->
+              <a href="/website-resources-library/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Website Resource Library</div>
+                  <div class="cmc-dropdown-desc">12 detailed CT Medicaid guides &amp; checklists.</div>
+                </div>
+              </a>
+
+              <!-- Item 7B: Wisdom Wednesday Education -->
+              <a href="/wisdom-wednesday-education/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Wisdom Wednesday Education</div>
+                  <div class="cmc-dropdown-desc">Weekly educational video lessons &amp; hub.</div>
+                </div>
+              </a>
+
+              <!-- Item 7C: Wisdom Wednesday Article -->
+              <a href="/wisdom-wednesday-article/" class="cmc-dropdown-card">
+                <div class="cmc-dropdown-icon">
+                  <svg style="width:16px;height:16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                </div>
+                <div>
+                  <div class="cmc-dropdown-title">Wisdom Wednesday Article</div>
+                  <div class="cmc-dropdown-desc">In-depth case analysis &amp; long-form editorial.</div>
+                </div>
+              </a>
+            </div>
+          </li>
+
+          <!-- 8. Contact -->
+          <li class="cmc-menu-item">
+            <a href="/contact/" class="cmc-nav-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- Right Action CTA -->
+      <div style="display:flex;align-items:center;gap:14px;">
+        <a href="/contact/" class="cmc-cta-btn">
+          <span>Schedule Free Consultation</span>
+          <svg style="width:13px;height:13px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <!-- Mobile Burger Button -->
+        <button type="button" class="cmc-mobile-burger" onclick="toggleModernDrawer()" aria-label="Open Navigation">
+          <svg style="width:22px;height:22px;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 3. MOBILE SLIDE-OUT DRAWER WITH INTERACTIVE ACCORDIONS -->
+  <div id="cmc-modern-drawer" class="cmc-mobile-modal" onclick="if(event.target === this) toggleModernDrawer()">
+    <div class="cmc-drawer-panel">
+      <div>
+        
+        <!-- Header Branding & Close -->
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid #f1f5f9;">
+          <a href="/" class="cmc-logo-container" onclick="toggleModernDrawer()" aria-label="Compass Title 19 Consultants LLC">
+            <img src="https://cmctitle19.com/wp-content/uploads/2023/05/cropped-Consulting-Logo-in-Teal-and-Orange-3-scaled-e1768245885188.png" 
+                 alt="Compass Title 19 Consultants LLC" 
+                 style="width:38px;height:38px;border-radius:10px;object-fit:cover;flex-shrink:0;box-shadow:0 3px 10px rgba(15,36,62,0.2);" />
+            <div>
+              <div class="cmc-logo-title" style="font-size:18px;">COMPASS</div>
+              <div class="cmc-logo-tagline" style="font-size:8px;color:#E87722;">TITLE19 CONSULTANTS LLC</div>
+            </div>
+          </a>
+          <button type="button" onclick="toggleModernDrawer()" style="background:none;border:none;font-size:26px;color:#64748b;cursor:pointer;line-height:1;padding:4px;">&times;</button>
+        </div>
+
+        <!-- Navigation Menu with Accordion Submenus -->
+        <div class="cmc-mobile-nav">
+          
+          <!-- Mobile Item 1: Home -->
+          <a href="/" class="cmc-mobile-link-item" onclick="toggleModernDrawer()">
+            <span>Home</span>
+            <svg style="width:14px;height:14px;color:#94a3b8;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+          
+          <!-- Mobile Item 2: About -->
+          <a href="/about-compass-title19/" class="cmc-mobile-link-item" onclick="toggleModernDrawer()">
+            <span>About</span>
+            <svg style="width:14px;height:14px;color:#94a3b8;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+
+          <!-- Mobile Item 3: Medicaid Planning (Accordion) -->
+          <div>
+            <button type="button" class="cmc-mobile-link-item" onclick="toggleMobileSubmenu('mob-medicaid-planning')">
+              <span>Medicaid Planning</span>
+              <svg id="mob-medicaid-planning-icon" style="width:14px;height:14px;color:#94a3b8;transition:transform 0.2s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="mob-medicaid-planning" class="cmc-mobile-submenu">
+              <a href="/connecticut-medicaid-waivers-hcbs/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Medicaid Waivers
+              </a>
+              <a href="/connecticut-care-management/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Care Management Services
+              </a>
+              <a href="/connecticut-title-19-help/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Emergency Medicaid &amp; Nursing Home
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Item 4: Help (Accordion) -->
+          <div>
+            <button type="button" class="cmc-mobile-link-item" onclick="toggleMobileSubmenu('mob-help')">
+              <span>Help</span>
+              <svg id="mob-help-icon" style="width:14px;height:14px;color:#94a3b8;transition:transform 0.2s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="mob-help" class="cmc-mobile-submenu">
+              <a href="/connecticut-title-19-help/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Title 19 Help
+              </a>
+              <a href="/connecticut-medicaid-renewal-redetermination-help/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Medicaid Renewals Redetermination
+              </a>
+              <a href="/existing-medicaid-application-help-connecticut/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Existing CT Medicaid Application
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Item 5: Testimonials -->
+          <a href="https://cmctitle19.com/#testimonials" class="cmc-mobile-link-item" onclick="toggleModernDrawer()">
+            <span>Testimonials</span>
+            <svg style="width:14px;height:14px;color:#94a3b8;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+
+          <!-- Mobile Item 6: FAQs -->
+          <a href="/faqs/" class="cmc-mobile-link-item" onclick="toggleModernDrawer()">
+            <span>FAQs</span>
+            <svg style="width:14px;height:14px;color:#94a3b8;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+
+          <!-- Mobile Item 7: Resources (Accordion) -->
+          <div>
+            <button type="button" class="cmc-mobile-link-item" onclick="toggleMobileSubmenu('mob-resources')">
+              <span>Resources</span>
+              <svg id="mob-resources-icon" style="width:14px;height:14px;color:#94a3b8;transition:transform 0.2s ease;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="mob-resources" class="cmc-mobile-submenu">
+              <a href="/website-resources-library/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Website Resource Library
+              </a>
+              <a href="/wisdom-wednesday-education/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Wisdom Wednesday Education
+              </a>
+              <a href="/wisdom-wednesday-article/" class="cmc-mobile-sublink" onclick="toggleModernDrawer()">
+                <svg style="width:12px;height:12px;color:#E87722;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                Wisdom Wednesday Article
+              </a>
+            </div>
+          </div>
+
+          <!-- Mobile Item 8: Contact -->
+          <a href="/contact/" class="cmc-mobile-link-item" onclick="toggleModernDrawer()">
+            <span>Contact</span>
+            <svg style="width:14px;height:14px;color:#94a3b8;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Drawer Bottom Actions -->
+      <div style="padding-top:20px;border-top:1px solid #f1f5f9;margin-top:20px;">
+        <a href="/contact/" onclick="toggleModernDrawer()" style="display:block;text-align:center;background:linear-gradient(135deg, #E87722 0%, #C45811 100%);color:#ffffff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;text-decoration:none;box-shadow:0 4px 14px rgba(232,119,34,0.3);">
+          Schedule Free Consultation &rarr;
+        </a>
+        <div style="text-align:center;margin-top:14px;font-size:12px;color:#64748b;">
+          Direct Intake: <a href="tel:+18608130020" style="color:#0F243E;font-weight:700;text-decoration:none;">(860) 813-0020</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleModernDrawer() {
+    var drawer = document.getElementById('cmc-modern-drawer');
+    if (drawer) {
+      drawer.classList.toggle('is-active');
+    }
+  }
+  function toggleMobileSubmenu(id) {
+    var sub = document.getElementById(id);
+    var icon = document.getElementById(id + '-icon');
+    if (sub) {
+      var isOpen = sub.style.display === 'block';
+      sub.style.display = isOpen ? 'none' : 'block';
+      if (icon) {
+        icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+      }
+    }
+  }
+</script>
