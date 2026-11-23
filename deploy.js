@@ -102,6 +102,7 @@ function deploySingle(target) {
       port: 443,
       path: endpoint,
       method: 'POST',
+      family: 4,
       headers: {
         'Authorization': auth,
         'Content-Type': 'application/json',
@@ -170,7 +171,7 @@ async function runDeployAll() {
   console.log(`\nAll 14 targets deployed.`);
   console.log('Triggering LiteSpeed cache purge via AJAX hook...');
   await new Promise((resolve) => {
-    https.get('https://cmctitle19.com/wp-admin/admin-ajax.php?action=cmc_purge_cache', (res) => {
+    https.get('https://cmctitle19.com/wp-admin/admin-ajax.php?action=cmc_purge_cache', { family: 4 }, (res) => {
       let b = '';
       res.on('data', c => b += c);
       res.on('end', () => {
