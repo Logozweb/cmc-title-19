@@ -10,7 +10,7 @@ Modern, responsive, high-performance website codebase and Elementor templates fo
 - **Specialization**: Administrative Medicaid Consulting, Title 19 / HUSKY C Navigation, Medicaid Renewals, W-1348 Rescue, HCBS Waivers, and Non-Clinical Care Management across all 8 Connecticut counties.
 - **Brand Colors**:
   - **Vibrant Compass Orange**: `#E87722` (Hover: `#C45811`, Tint: `#FFF4EC`)
-  - **Deep Corporate Navy**: `#335E9F` / `#162A45`
+  - **Deep Corporate Navy**: `#1E3F70` / `#162A45`
   - **Metallic Silver & White**: `#FFFFFF` / `#CBD5E1` / `#E2E8F0`
 - **Typography**: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (Headings & UI) and [Inter](https://fonts.google.com/specimen/Inter) (Body Text).
 - **Iconography**: 100% Pure Inline SVGs (`stroke-width="2"`, zero external font-awesome bloat, zero emojis).
